@@ -1,0 +1,7 @@
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\bin\Debug\dbs.exe.config
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\bin\Debug\dbs.exe
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\bin\Debug\dbs.pdb
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.csprojResolveAssemblyReference.cache
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.csproj.CoreCompileInputs.cache
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.exe
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.pdb

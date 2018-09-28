@@ -2,7 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\dbs",
-    "\\dbs\\bin"
+    "\\dbs\\Inheritance",
+    "\\dbs\\Inheritance\\EmployeeExample"
   ],
+  "SelectedNode": "\\dbs.sln",
   "PreviewInSolutionExplorer": false
 }

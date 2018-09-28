@@ -1,4 +1,5 @@
 ﻿using System;
+using System.CodeDom;
 
 namespace dbs.Inheritance.EmployeeExample
 {
@@ -33,12 +34,9 @@ namespace dbs.Inheritance.EmployeeExample
 
         public override string ToString()
         {
-            return base.ToString() + $"\nTheir student no is {ID}" + $"and they are in {Name}";
+            return base.ToString() + $"\nEmployee {ID}" + $"Name of Employee {Name}" + $"Gender: {Gender}" + $"Phone Numer: {Phone}" + $"Employee Status: {Status}" + $"Type of Manager: {Manager}";
         }
 
-        //public int GetIncome(int income)
-        //{
 
-        //}
     }
 }

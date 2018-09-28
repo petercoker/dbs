@@ -46,6 +46,7 @@
     <Compile Include="Inheritance\EmployeeExample\Contractor.cs" />
     <Compile Include="Inheritance\EmployeeExample\Employee.cs" />
     <Compile Include="Inheritance\EmployeeExample\ManagerEnum.cs" />
+    <Compile Include="Inheritance\EmployeeExample\RegularEmployee.cs" />
     <Compile Include="Inheritance\EmployeeExample\StatusEnum.cs" />
     <Compile Include="Inheritance\PersonExample\Lecturer.cs" />
     <Compile Include="Inheritance\PersonExample\Person.cs" />
