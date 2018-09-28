@@ -45,8 +45,27 @@
     <Compile Include="ClassNotes\ClassesObjects\Car.cs" />
     <Compile Include="Inheritance\EmployeeExample\Contractor.cs" />
     <Compile Include="Inheritance\EmployeeExample\Employee.cs" />
+    <Compile Include="Inheritance\EmployeeExample\ManagerEnum.cs" />
+    <Compile Include="Inheritance\EmployeeExample\StatusEnum.cs" />
+    <Compile Include="Inheritance\PersonExample\Lecturer.cs" />
+    <Compile Include="Inheritance\PersonExample\Person.cs" />
+    <Compile Include="Inheritance\PersonExample\Student.cs" />
+    <Compile Include="Inheritance\PersonExample\YearEnum.cs" />
+    <Compile Include="IntroductionToClasses\BookClassExample\Book.cs" />
+    <Compile Include="IntroductionToClasses\DrinkExample\Drink.cs" />
+    <Compile Include="IntroductionToClasses\FilmExample\Film.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RecapExercises\ex1.cs" />
+    <Compile Include="RecapExercises\ex10.cs" />
+    <Compile Include="RecapExercises\ex2.cs" />
+    <Compile Include="RecapExercises\ex3.cs" />
+    <Compile Include="RecapExercises\ex4.cs" />
+    <Compile Include="RecapExercises\ex5.cs" />
+    <Compile Include="RecapExercises\ex6.cs" />
+    <Compile Include="RecapExercises\ex7.cs" />
+    <Compile Include="RecapExercises\ex8.cs" />
+    <Compile Include="RecapExercises\ex9.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

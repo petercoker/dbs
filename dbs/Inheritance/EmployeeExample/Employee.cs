@@ -36,9 +36,9 @@ namespace dbs.Inheritance.EmployeeExample
             return base.ToString() + $"\nTheir student no is {ID}" + $"and they are in {Name}";
         }
 
-        public int GetIncome(int income)
-        {
+        //public int GetIncome(int income)
+        //{
 
-        }
+        //}
     }
 }
