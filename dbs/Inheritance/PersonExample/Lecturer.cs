@@ -33,6 +33,10 @@ namespace dbs.Inheritance.PersonExample
             return 2018 - YearJoined; //Find out how to add DateTime of the current year
         }
 
+        //Add to Main()
+        //Lecturer lecturer = new Lecturer("Sam", "Brown", 1234, "IT", 2013);
+        //Console.WriteLine(lecturer.ToString());
+        //Console.WriteLine($"They have work here for {lecturer.YearsEmployed()} years");
 
 
 

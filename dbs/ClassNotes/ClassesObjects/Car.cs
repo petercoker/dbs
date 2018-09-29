@@ -61,6 +61,7 @@ namespace dbs.ClassNotes.ClassesObjects
         //    this.Colour = colour;
         //}
         //You can define one or more than one constuctor in a class
+
         public Car(string carColour, int doors, double speed)
         {
             Colour = carColour;
@@ -84,5 +85,20 @@ namespace dbs.ClassNotes.ClassesObjects
                 CurrentSpeed = newSpeed;
             }
         }
+
+        //Add to Main()
+        //Car car1 = new Car(); //Default constructor 
+
+        //cart1.Colour = "Blue"; //Calling set
+        //car1.NoOfDoors = 4; //Calling Set
+        //car1.CurrentSpeed = 35; //Calling set
+
+        //Car car1 = new Car("Blue", 4, 35); //You have to call more than one constructors
+        //car1.Accelerate(60);
+        //System.Console.WriteLine("Colour: {0}", car1.Colour);
+        //System.Console.WriteLine("No of Doors: {0}", car1.NoOfDoors);
+        //System.Console.WriteLine("Current Speed: {0}", car1.CurrentSpeed);
+
+        //Console.ReadLine();
     }
 }

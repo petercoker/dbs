@@ -5,15 +5,6 @@ namespace dbs.Inheritance.PersonExample
     class Person
     {
 
-        //Add to Main
-        //Person person1 = new Person("Peter", "Coker", 0123);
-        //Person person2 = new Person("John", "Coker", 0123);
-
-        ////Console.WriteLine("Person First Name: {0}", person1.FirstName);
-        ////Console.WriteLine("Person Last Name: {0}", person1.LastName);
-        ////Console.WriteLine("Person Phone: {0}", person1.Phone);
-        ////Console.WriteLine(person1.ToString());
-        ////Console.WriteLine(person2.ToString());
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -41,6 +32,16 @@ namespace dbs.Inheritance.PersonExample
             return $"Their name is {FirstName} {LastName}" + $" and Their Phone number is {Phone}";
 
         }
+
+        //Add to Main
+        //Person person1 = new Person("Peter", "Coker", 0123);
+        //Person person2 = new Person("John", "Coker", 0123);
+
+        ////Console.WriteLine("Person First Name: {0}", person1.FirstName);
+        ////Console.WriteLine("Person Last Name: {0}", person1.LastName);
+        ////Console.WriteLine("Person Phone: {0}", person1.Phone);
+        ////Console.WriteLine(person1.ToString());
+        ////Console.WriteLine(person2.ToString());
     }
 }
 

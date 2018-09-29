@@ -4,22 +4,6 @@ namespace dbs.IntroductionToClasses.FilmExample
 {
     class Film
     {
-        ////Add to Main()
-
-        //int days;
-
-        //Film film = new Film("Harry Potter", "Fantasy", "Boy Wizard", 5.5, .1);
-
-        //Console.WriteLine($"The films name is {film.Title} and the genre is {film.Genre}");
-        //Console.WriteLine($"Films Description is {film.Description} and its price is {film.Cost}");
-
-        //Console.WriteLine("How many days did you rent it for?");
-        //days = int.Parse(Console.ReadLine());
-        //Console.WriteLine($"The total cost is {film.TotalRental(days)}");
-
-
-        //Console.WriteLine($"The VAT is {film.GetVat(film.TotalRental(days))}");
-
         public string Title { get; set; }
         public string Genre { get; set; }
         public string Description { get; set; }
@@ -45,6 +29,21 @@ namespace dbs.IntroductionToClasses.FilmExample
             return total * VAT;
         }
 
+        ////Add to Main()
+
+        //int days;
+
+        //Film film = new Film("Harry Potter", "Fantasy", "Boy Wizard", 5.5, .1);
+
+        //Console.WriteLine($"The films name is {film.Title} and the genre is {film.Genre}");
+        //Console.WriteLine($"Films Description is {film.Description} and its price is {film.Cost}");
+
+        //Console.WriteLine("How many days did you rent it for?");
+        //days = int.Parse(Console.ReadLine());
+        //Console.WriteLine($"The total cost is {film.TotalRental(days)}");
+
+
+        //Console.WriteLine($"The VAT is {film.GetVat(film.TotalRental(days))}");
     }
 }
 

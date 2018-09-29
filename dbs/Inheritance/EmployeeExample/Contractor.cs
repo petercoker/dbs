@@ -19,7 +19,10 @@ namespace dbs.Inheritance.EmployeeExample
             return DaysWorked * DailyRate;
         }
 
-
+        public override string ToString()
+        {
+            return base.ToString() + $"\nDays Worked: {DaysWorked}" + $"\nDaily Rate: {DailyRate}";
+        }
     }
 
 }
