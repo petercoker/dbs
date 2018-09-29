@@ -22,13 +22,19 @@ namespace dbs
             RegularEmployee regularEmployee = new RegularEmployee(2, "Dare Devil", "Male", 1234, StatusEnum.Fulltime,
                 ManagerEnum.StandInManager, "Software Programmer", 500.00);
 
+            Console.WriteLine("***Employee***");
             Console.WriteLine(employee.ToString());
+            Console.WriteLine();
+            Console.WriteLine("***Contractor***");
             Console.WriteLine(contractor.ToString());
+            Console.WriteLine();
+            Console.WriteLine("***Regular Employee***");
             Console.WriteLine(regularEmployee.ToString());
 
-
-            Console.WriteLine($"The Total cost is {contractor.GetIncome(7000)}");
-
+            Console.WriteLine();
+            Console.WriteLine("***Sum***");
+            Console.WriteLine("Contractor income: $" + contractor.GetIncome());
+            Console.WriteLine("Regular Employee Monthly income: $" + regularEmployee.GetMonthlyIncome());
 
         }
     }

@@ -21,7 +21,7 @@ namespace dbs.Inheritance.EmployeeExample
 
         public override string ToString()
         {
-            return base.ToString() + $"\nDays Worked: {DaysWorked}" + $"\nDaily Rate: {DailyRate}";
+            return base.ToString() + $"\nDays Worked: {DaysWorked}" + $"\nDaily Rate: ${DailyRate}";
         }
     }
 

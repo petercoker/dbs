@@ -15,14 +15,15 @@ namespace dbs.Inheritance.EmployeeExample
             Salary = salary;
         }
 
-        public double GetMonthlyIncome(int monthly = 12)
+        public double GetMonthlyIncome()
         {
+            int monthly = 12;
             return Salary / monthly;
         }
 
         public override string ToString()
         {
-            return base.ToString() + $"Title: {Title}" + $"Salary: {Salary}";
+            return base.ToString() + $"\nTitle: {Title}" + $"\nSalary: ${Salary}";
         }
     }
 }
