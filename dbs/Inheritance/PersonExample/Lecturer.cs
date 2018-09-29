@@ -6,12 +6,15 @@ namespace dbs.Inheritance.PersonExample
     {
         public string Department { get; set; }
         public int YearJoined { get; set; }
-
+        //public DateTime YearJoined { get; set; }
+        
         public Lecturer()
         {
 
         }
+
         public Lecturer(string firstName, string lastName, int phone, string department, int yearJoined)
+        //public Lecturer(string firstName, string lastName, int phone, string department, DateTime yearJoined)
             : base(firstName, lastName, phone)
         {
             Department = department;
@@ -24,8 +27,11 @@ namespace dbs.Inheritance.PersonExample
         }
 
         public int YearsEmployed()
+        //public TimeSpan YearsEmployed()
         {
-            return 2018 - YearJoined; //Find out how to add DateTime of the current year
+            //DateTime year = DateTime.Today;
+            //return YearJoined - year; //Find out how to add DateTime of the current year
+            return 2018 - YearJoined;
         }
 
         //Add to Main()
