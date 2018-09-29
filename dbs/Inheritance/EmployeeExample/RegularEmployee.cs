@@ -6,11 +6,7 @@ namespace dbs.Inheritance.EmployeeExample
     {
         public string Title { get; set; }
         public double Salary { get; set; }
-
-        RegularEmployee()
-        {
-
-        }
+        
 
         RegularEmployee(int iD, string name, string gender, int phone, StatusEnum status, ManagerEnum manager, string title, double salary)
             :base(iD, name, gender, phone, status, manager)
@@ -19,9 +15,9 @@ namespace dbs.Inheritance.EmployeeExample
             Salary = salary;
         }
 
-        public double GetMonthlyIncome(double monthlyIncome)
+        public double GetMonthlyIncome(int monthly = 12)
         {
-            return Salary / 12;
+            return Salary / monthly;
         }
     }
 }

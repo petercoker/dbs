@@ -63,7 +63,7 @@ namespace dbs.ClassNotes.ClassesObjects
         //You can define one or more than one constuctor in a class
         public Car(string carColour, int doors, double speed)
         {
-            carColour = carColour;
+            Colour = carColour;
             NoOfDoors = doors;
             CurrentSpeed = speed;
         }

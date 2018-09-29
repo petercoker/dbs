@@ -17,11 +17,6 @@ namespace dbs.Inheritance.EmployeeExample
 
         public ManagerEnum Manager { get; set; }
 
-        public Employee()
-        {
-
-        }
-
         public Employee(int iD, string name, string gender, int phone, StatusEnum status, ManagerEnum manager)
         {
             ID = iD;
@@ -34,7 +29,7 @@ namespace dbs.Inheritance.EmployeeExample
 
         public override string ToString()
         {
-            return base.ToString() + $"\nEmployee {ID}" + $"Name of Employee {Name}" + $"Gender: {Gender}" + $"Phone Numer: {Phone}" + $"Employee Status: {Status}" + $"Type of Manager: {Manager}";
+            return $"\nEmployee ID: {ID}" + $"\nEmployee Name: {Name}" + $"\nGender: {Gender}" + $"\nPhone Numer: {Phone}" + $"\nEmployee Status: {Status}" + $"\nType of Manager: {Manager}";
         }
 
 
