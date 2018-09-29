@@ -4,8 +4,6 @@ namespace dbs.Inheritance.PersonExample
 {
     class Person
     {
-
-
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public int Phone { get; set; }

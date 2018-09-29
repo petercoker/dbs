@@ -4,11 +4,6 @@ namespace dbs.Inheritance.PersonExample
 {
     class Lecturer : Person
     {
-        //Add to Main()
-        //Lecturer lecturer = new Lecturer("Sam", "Brown", 1234, "IT", 2013);
-        //Console.WriteLine(lecturer.ToString());
-        //Console.WriteLine($"They have work here for {lecturer.YearsEmployed()} years");
-
         public string Department { get; set; }
         public int YearJoined { get; set; }
 
