@@ -4,24 +4,19 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
 {
     class Contractor : Employee
     {
-        public int DaysWorked { get; set; }
         public double DailyRate { get; set; }
-        
-        public Contractor(int iD, string name, string gender, int phone, StatusEnum status, ManagerEnum manager, int daysWorked, double dailyRate)
-            : base(iD, name, gender, phone, status, manager)
+        public double DaysWorked { get; set; }
+
+        public Contractor(int id, string name, string gender, int phone, int age, StatusEnum status, ManagerEnum manager, double rate, double days)
+            :base(id,name,gender,phone,age,status,manager)
         {
-            DaysWorked = daysWorked;
-            DailyRate = dailyRate;
+            DailyRate = rate;
+            DaysWorked = days;
         }
 
         public double GetIncome()
         {
-            return DaysWorked * DailyRate;
-        }
-
-        public override string ToString()
-        {
-            return base.ToString() + $"\nDays Worked: {DaysWorked}" + $"\nDaily Rate: ${DailyRate}";
+            return DailyRate * DaysWorked;
         }
     }
 

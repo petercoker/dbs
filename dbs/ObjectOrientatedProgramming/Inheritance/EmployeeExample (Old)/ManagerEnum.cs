@@ -4,10 +4,10 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
 {
     public enum ManagerEnum
     {
-        Mary,
-        Joe,
-        John,
-        Sarah
+        GeneralManager,
+        FloorManager,
+        AssisantManager,
+        StandInManager
     }
 
 }

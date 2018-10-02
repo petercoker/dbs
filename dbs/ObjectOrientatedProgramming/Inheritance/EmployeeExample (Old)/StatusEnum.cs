@@ -2,12 +2,11 @@
 
 namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
 {
-    public enum ManagerEnum
+    public enum StatusEnum
     {
-        Mary,
-        Joe,
-        John,
-        Sarah
+        Fulltime,
+        PartTime,
+        FlexiTime,
+        RemoteWorker
     }
-
 }

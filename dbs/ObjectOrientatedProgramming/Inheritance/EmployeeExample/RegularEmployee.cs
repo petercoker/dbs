@@ -6,10 +6,9 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
     {
         public string Title { get; set; }
         public double Salary { get; set; }
-        
 
-        public RegularEmployee(int iD, string name, string gender, int phone, StatusEnum status, ManagerEnum manager, string title, double salary)
-            :base(iD, name, gender, phone, status, manager)
+        public RegularEmployee(int id, string name, string gender, int phone, int age, StatusEnum status, ManagerEnum manager, string title, double salary)
+            : base(id, name, gender, phone, age, status, manager)
         {
             Title = title;
             Salary = salary;
@@ -17,13 +16,7 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
 
         public double GetMonthlyIncome()
         {
-            int monthly = 12;
-            return Salary / monthly;
-        }
-
-        public override string ToString()
-        {
-            return base.ToString() + $"\nTitle: {Title}" + $"\nSalary: ${Salary}";
+            return Salary / 12;
         }
     }
 }
