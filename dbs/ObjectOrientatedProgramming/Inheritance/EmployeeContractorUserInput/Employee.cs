@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
+namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeContractorUserInput
 {
     class Employee
     {
@@ -17,9 +17,8 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
         public ManagerEnum Manager { get; set; }
 
         public Employee()
-        {
+        { }
 
-        }
         public Employee(int id, string name, string gender, int phone, int age, StatusEnum status, ManagerEnum manager)
         {
             ID = id;

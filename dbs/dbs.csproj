@@ -42,7 +42,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObjectOrientatedProgramming\AbstractClass\AbstractEmployeeExample\Contractor.cs" />
+    <Compile Include="ObjectOrientatedProgramming\AbstractClass\AbstractEmployeeExample\Employee.cs" />
+    <Compile Include="ObjectOrientatedProgramming\AbstractClass\AbstractEmployeeExample\ManagerEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\AbstractClass\AbstractEmployeeExample\RegularEmployee.cs" />
+    <Compile Include="ObjectOrientatedProgramming\AbstractClass\AbstractEmployeeExample\StatusEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\AbstractClass\Drinks\Alcohol.cs" />
+    <Compile Include="ObjectOrientatedProgramming\AbstractClass\Drinks\Drink.cs" />
+    <Compile Include="ObjectOrientatedProgramming\AbstractClass\Drinks\SoftDrink.cs" />
     <Compile Include="ObjectOrientatedProgramming\ClassNotes\ClassesObjects\Car.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeContractorUserInput\Contractor.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeContractorUserInput\Employee.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeContractorUserInput\ManagerEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeContractorUserInput\RegularEmployee.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeContractorUserInput\StatusEnum.cs" />
     <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeExample\Contractor.cs" />
     <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeExample\Employee.cs" />
     <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeExample\ManagerEnum.cs" />

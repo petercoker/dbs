@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
+namespace dbs.ObjectOrientatedProgramming.AbstractClass.AbstractEmployeeExample
 {
-    class Employee
+    abstract class Employee
     {
         public int ID { get; set; }
         public string Name { get; set; }
@@ -17,9 +17,7 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
         public ManagerEnum Manager { get; set; }
 
         public Employee()
-        {
-
-        }
+        { }
         public Employee(int id, string name, string gender, int phone, int age, StatusEnum status, ManagerEnum manager)
         {
             ID = id;
@@ -35,5 +33,8 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
         {
             return $"{Name} is a {Status} employee who is {Age} and reports to {Manager}"; 
         }
+        //creating the abstract method of GetIncome, no implementation
+        //Just setting up the structure
+        public abstract double GetIncome();
     }
 }

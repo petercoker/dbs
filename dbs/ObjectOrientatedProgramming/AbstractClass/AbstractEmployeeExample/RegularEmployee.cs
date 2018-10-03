@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
+namespace dbs.ObjectOrientatedProgramming.AbstractClass.AbstractEmployeeExample
 {
     class RegularEmployee: Employee
     {
@@ -12,9 +12,7 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
         public double Salary { get; set; }
 
         public RegularEmployee()
-        {
-
-        }
+        { }
         public RegularEmployee(int id, string name, string gender, int phone, int age, StatusEnum status, ManagerEnum manager, string title, double salary)
             : base(id, name, gender, phone, age, status, manager)
         {
@@ -22,14 +20,16 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
             Salary = salary;
         }
 
-        public double GetMonthlyIncome()
+        public override double GetIncome()
         {
             return Salary / 12;
         }
 
         public override string ToString()
         {
-            return base.ToString() + $"Their title is {Title} with a {Salary} salary";
+            return base.ToString() 
+                + $"Their title is {Title} with a {Salary} salary"; 
         }
+
     }
 }
