@@ -31,5 +31,12 @@ namespace dbs.ObjectOrientatedProgramming.Inheritance.EmployeeExample
         {
             return base.ToString() + $"Their title is {Title} with a {Salary} salary";
         }
+
+        //Add to Main()
+        //RegularEmployee regEmp = new RegularEmployee(123, "Joyce", "Female", 1478, 35, StatusEnum.FullTime, ManagerEnum.John, "Developer", 30000);
+        //Contractor contEmp = new Contractor(098, "Brian", "Male", 1365, 42, StatusEnum.RemoteWorker, ManagerEnum.Sarah, 120, 19);
+
+        //Console.WriteLine(regEmp.ToString() + " Their mothly wage is {0} ", regEmp.GetMonthlyIncome());
+        //Console.WriteLine(contEmp.ToString() + " Their monthly income is {0} ", contEmp.GetIncome());
     }
 }
