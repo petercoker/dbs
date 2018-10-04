@@ -10,11 +10,24 @@ namespace dbs
     {
         static void Main(string[] args)
         {
-            RegularEmployee regEmp = new RegularEmployee(123, "Joyce", "Female", 1478, 35, StatusEnum.FullTime, ManagerEnum.John, "Developer", 30000);
-            Contractor contEmp = new Contractor(098, "Brian", "Male", 1365, 42, StatusEnum.RemoteWorker, ManagerEnum.Sarah, 120, 19);
+            //RegularEmployee regEmp = new RegularEmployee();
 
-            Console.WriteLine(regEmp.ToString() + " Their mothly wage is {0} ", regEmp.GetMonthlyIncome());
-            Console.WriteLine(contEmp.ToString() + " Their monthly income is {0} ", contEmp.GetIncome());
+            //Console.WriteLine("Please enter their ID");
+            //regEmp.ID = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Please enter the persons name");
+            //regEmp.Name = Console.ReadLine();
+            //Console.WriteLine("Please enter their phone");
+            //regEmp.Phone = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Please enter their age");
+            //regEmp.Age = int.Parse(Console.ReadLine());
+            //regEmp.Status = StatusEnum.FullTime;
+            //regEmp.Manager = ManagerEnum.Joe;
+            //Console.WriteLine("Please enter their title");
+            //regEmp.Title = Console.ReadLine();
+            //Console.WriteLine("Please enter their salary");
+            //regEmp.Salary = int.Parse(Console.ReadLine());
+
+            //Console.WriteLine(regEmp.ToString());
 
         }
     }

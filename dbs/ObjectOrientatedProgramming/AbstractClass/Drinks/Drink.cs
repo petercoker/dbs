@@ -2,30 +2,26 @@
 
 namespace dbs.ObjectOrientatedProgramming.AbstractClass.Drinks
 {
-    class SoftDrink : Drink
+    abstract class Drink
     {
-        public string Colour { get; set; }
+        public string Name { get; set; }
+        public double Price { get; set; }
 
-        public SoftDrink()
+        public Drink()
+        { }
+
+        public Drink(string name, double price)
         {
-
+            Name = name;
+            Price = price;
         }
+        //abstract method, this makes the whole class an abstract one
+        //Abstract classes cannot be instantiated/cannot create an 
+        //instance of them. All subclasses must enforce/implement the
+        //abstract method
 
-        public SoftDrink(string name, double price, string colour)
-            : base(name, price)
-        {
-            Colour = colour;
-        }
+        public abstract double GetTax();
+        //If you create a abstruct the whole thing becomes abstruct also method
 
-        public override string ToString()
-        {
-            return "This is the soft drink class";
-        }
-
-        public override double GetTax()
-        {
-            return Price * .12;
-            //throw new NotImplementedException(); //This allow you to throw something without implemtentin somthing
-        }
     }
 }

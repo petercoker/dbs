@@ -50,6 +50,12 @@
     <Compile Include="ObjectOrientatedProgramming\AbstractClass\Drinks\Alcohol.cs" />
     <Compile Include="ObjectOrientatedProgramming\AbstractClass\Drinks\Drink.cs" />
     <Compile Include="ObjectOrientatedProgramming\AbstractClass\Drinks\SoftDrink.cs" />
+    <Compile Include="ObjectOrientatedProgramming\CA\Employee.cs" />
+    <Compile Include="ObjectOrientatedProgramming\CA\Person.cs" />
+    <Compile Include="ObjectOrientatedProgramming\CA\Student.cs" />
+    <Compile Include="ObjectOrientatedProgramming\CA\StudentStatusEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\CA\TaughtEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\CA\Teacher.cs" />
     <Compile Include="ObjectOrientatedProgramming\ClassNotes\ClassesObjects\Car.cs" />
     <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeContractorUserInput\Contractor.cs" />
     <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeContractorUserInput\Employee.cs" />

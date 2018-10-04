@@ -4,8 +4,6 @@ namespace dbs.ObjectOrientatedProgramming.IntroductionToClasses.BookExample
 {
     class Book
     {
-
-
         public int ISBN { get; set; }
         public string Title { get; set; }
         public string Author { get; set; }
@@ -19,7 +17,6 @@ namespace dbs.ObjectOrientatedProgramming.IntroductionToClasses.BookExample
             Author = author;
             YearPublished = yrpub;
             Price = price;
-
         }
 
         public double BulkBuying(int noPurch)

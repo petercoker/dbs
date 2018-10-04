@@ -2,23 +2,29 @@
 
 namespace dbs.ObjectOrientatedProgramming.AbstractClass.Drinks
 {
-    abstract class Drink
+    class SoftDrink : Drink
     {
-        public string Name { get; set; }
-        public double Price { get; set; }
+        public string Colour { get; set; }
 
-        public Drink()
+        public SoftDrink()
         {
 
         }
 
-        public Drink(string name, double price)
+        public SoftDrink(string name, double price, string colour)
+            : base(name, price)
         {
-            Name = name;
-            Price = price;
+            Colour = colour;
         }
 
-        //If you create a abstruct the whole thing becomes abstruct also method
-        public abstract double GetTax();
+        public override string ToString()
+        {
+            return "This is the soft drink class";
+        }
+        public override double GetTax()
+        {
+            return Price * .12;
+        }
     }
+
 }
