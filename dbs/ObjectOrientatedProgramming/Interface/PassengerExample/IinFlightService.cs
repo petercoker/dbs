@@ -11,7 +11,7 @@ namespace dbs.ObjectOrientatedProgramming.Interface.PassengerExample
         //Interface by default are public. It should be public becuase we going to reuse
         //Interface are like behaviour is your program (In it's most basic more)
         //Your Interface can be the same
-        //Interface are always used starting with capital "I" e.g IinFlightService
+        //Interface are alw ays used starting with capital "I" e.g IinFlightService
 
         bool IsUpgradeSeat();
 

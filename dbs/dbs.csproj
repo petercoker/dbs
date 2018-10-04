@@ -77,6 +77,8 @@
     <Compile Include="ObjectOrientatedProgramming\Interface\PassengerExample\PassengerTypeEnum.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\PassengerExample\Person.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\PassengerExample\TitleEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\NumberOfGears.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\Vehicle.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\BookClassExample\Book.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\DrinkExample\Drink.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\FilmExample\Film.cs" />
@@ -96,6 +98,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
