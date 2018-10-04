@@ -17,5 +17,10 @@ namespace dbs.ObjectOrientatedProgramming.CA
         {
             Taught = taught;
         }
+
+        public override string ToString()
+        {
+            return base.ToString() + $"Teacher: {Name}\nPhone: {Phone}\nEmail: {Email}\nTaught: {Taught}\nSalary: {Salary}";
+        }
     }
 }

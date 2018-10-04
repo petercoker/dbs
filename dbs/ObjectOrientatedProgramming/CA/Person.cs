@@ -22,7 +22,5 @@ namespace dbs.ObjectOrientatedProgramming.CA
             Phone = phone;
             Email = email;
         }
-
-
     }
 }

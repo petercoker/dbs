@@ -16,6 +16,8 @@ namespace dbs.ObjectOrientatedProgramming.CA
 
             set
             {
+                studentId = value;
+
                 while (true)
                 {
                     int number = Convert.ToInt32(Console.ReadLine());
@@ -46,27 +48,10 @@ namespace dbs.ObjectOrientatedProgramming.CA
             StudentId = studentId;
             Status = status;
         }
-        
 
-        ////Unqiue Number
-        //var numbers = new List<int>();
-
-        //while (numbers.Count < 5)
-        //{
-        //    Console.Write("Enter a number: ");
-        //    var number = Convert.ToInt32(Console.ReadLine());
-        //    if (numbers.Contains(number))
-        //    {
-        //        Console.WriteLine("You've previously entered " + number);
-        //        continue;
-        //    }
-
-        //    numbers.Add(number);
-        //}
-
-        //numbers.Sort();
-
-        //foreach (var number in numbers)
-        //    Console.WriteLine(number);
+        public override string ToString()
+        {
+            return base.ToString() + $"Student ID: {StudentId}\nStudent: {Name}\nStatus: {Status}\nPhone: {Phone}\nEmail: {Email}";
+        }
     }
 }
