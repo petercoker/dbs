@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace dbs.ObjectOrientatedProgramming.CA
+namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
     public enum TaughtEnum
     {

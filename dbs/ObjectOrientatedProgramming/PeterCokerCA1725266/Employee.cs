@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace dbs.ObjectOrientatedProgramming.CA
+namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
     class Employee : Person
     {

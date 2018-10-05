@@ -23,25 +23,25 @@ namespace dbs.ObjectOrientatedProgramming.Interface.PassengerExample
         }
 
         //Add to Main()
-        //Passenger p1 = new Passenger();
-        //Address add1 = new Address();
+        ////Passenger p1 = new Passenger();
+        ////Address add1 = new Address();
 
-        //add1.HouseNumber = "5";
-        //    add1.Street = "Fake Street";
-        //    add1.City = "Dublin";
-        //    add1.County = "Dublin";
+        ////add1.HouseNumber = "5";
+        ////    add1.Street = "Fake Street";
+        ////    add1.City = "Dublin";
+        ////    add1.County = "Dublin";
 
-        //    p1.Title = TitleEnum.Mr;
-        //    p1.FirstName = "John";
-        //    p1.Surname = "Murphy ";
-        //    p1.Address = add1; //The address property is add by "add1"
-        //    p1.PassengerType = PassengerTypeEnum.BusinessClass;
+        ////    p1.Title = TitleEnum.Mr;
+        ////    p1.FirstName = "John";
+        ////    p1.Surname = "Murphy ";
+        ////    p1.Address = add1; //The address property is add by "add1"
+        ////    p1.PassengerType = PassengerTypeEnum.BusinessClass;
 
-        //    Console.WriteLine(p1.Greeting(p1.FirstName));
-        //    Console.WriteLine(p1.Address.ToString());
+        ////    Console.WriteLine(p1.Greeting(p1.FirstName));
+        ////    Console.WriteLine(p1.Address.ToString());
 
-        //    Console.WriteLine(p1.IsUpgradeSeat());
-        //    Console.WriteLine(p1.PurchaseFood(false));
+        ////    Console.WriteLine(p1.IsUpgradeSeat());
+        ////    Console.WriteLine(p1.PurchaseFood(false));
 
     }
 }
