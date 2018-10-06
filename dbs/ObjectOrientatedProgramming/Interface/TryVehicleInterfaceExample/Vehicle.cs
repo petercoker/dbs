@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace dbs.ObjectOrientatedProgramming.Interface.VehicleInterfaceExample
+namespace dbs.ObjectOrientatedProgramming.Interface.TryVehicleInterfaceExample
 {
     class Vehicle
     {
@@ -18,7 +18,8 @@ namespace dbs.ObjectOrientatedProgramming.Interface.VehicleInterfaceExample
 
         public Vehicle(int numberOfWheels, string colour)
         {
-
+            NumberOfWheels = numberOfWheels;
+            Colour = colour;
         }
 
         public bool MoveForward()
@@ -30,15 +31,8 @@ namespace dbs.ObjectOrientatedProgramming.Interface.VehicleInterfaceExample
         {
             bool right = false;
 
-            if (right)
-            {
-                return true;
-            }
 
-            else
-            {
-                return false;
-            }
+            return right ? true : false;
         }
 
         public bool Reverse()
@@ -48,7 +42,7 @@ namespace dbs.ObjectOrientatedProgramming.Interface.VehicleInterfaceExample
 
         public override string ToString()
         {
-            return $"Test";
+            return $"Vehicle's number of wheel: {NumberOfWheels}\nColour of Vehicle: {Colour}";
         }
 
     }

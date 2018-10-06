@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace InterfaceExample
+namespace dbs.ObjectOrientatedProgramming.Interface.FoodInterfaceExample
 {
     //Interface contains definitions for a group of related 
     //functionalities that a class can implement

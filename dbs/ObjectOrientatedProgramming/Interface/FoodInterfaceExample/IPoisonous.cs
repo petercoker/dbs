@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InterfaceExample
+namespace dbs.ObjectOrientatedProgramming.Interface.FoodInterfaceExample
 {
     interface IPoisonous
     {

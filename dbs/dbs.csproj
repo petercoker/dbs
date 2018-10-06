@@ -62,6 +62,10 @@
     <Compile Include="ObjectOrientatedProgramming\Interface\TryFoodInterfaceExample\Food.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\TryFoodInterfaceExample\IEdible.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\TryFoodInterfaceExample\IPoisonious.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Interface\TryVehicleInterfaceExample\Bicycle.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Interface\TryVehicleInterfaceExample\Car.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Interface\TryVehicleInterfaceExample\FuelTypeEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Interface\TryVehicleInterfaceExample\IEngine.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Employee.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Person.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Student.cs" />
@@ -89,8 +93,7 @@
     <Compile Include="ObjectOrientatedProgramming\Interface\PassengerExample\PassengerTypeEnum.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\PassengerExample\Person.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\PassengerExample\TitleEnum.cs" />
-    <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\NumberOfGears.cs" />
-    <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\Vehicle.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Interface\TryVehicleInterfaceExample\Vehicle.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\BookClassExample\Book.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\DrinkExample\Drink.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\FilmExample\Film.cs" />
