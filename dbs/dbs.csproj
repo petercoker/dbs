@@ -50,6 +50,12 @@
     <Compile Include="ObjectOrientatedProgramming\AbstractClass\Drinks\Alcohol.cs" />
     <Compile Include="ObjectOrientatedProgramming\AbstractClass\Drinks\Drink.cs" />
     <Compile Include="ObjectOrientatedProgramming\AbstractClass\Drinks\SoftDrink.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ClassNotes\CollectionsAndLists\ArrayListClass.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ClassNotes\CollectionsAndLists\BookClass.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ClassNotes\CollectionsAndLists\ListClass.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ClassNotes\CollectionsAndLists\QueueClass.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ClassNotes\CollectionsAndLists\SortedListClass.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ClassNotes\CollectionsAndLists\StackClass.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\Apple.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\ColourEnum.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\Fish.cs" />
@@ -113,6 +119,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="people\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
