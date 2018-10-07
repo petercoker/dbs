@@ -18,6 +18,7 @@ namespace dbs.ObjectOrientatedProgramming.AbstractClass.AbstractEmployeeExample
 
         public Employee()
         { }
+
         public Employee(int id, string name, string gender, int phone, int age, StatusEnum status, ManagerEnum manager)
         {
             ID = id;
