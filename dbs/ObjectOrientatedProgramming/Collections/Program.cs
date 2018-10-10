@@ -45,7 +45,6 @@ namespace dbs.ObjectOrientatedProgramming.Collections
                     default:
                         Console.WriteLine("That is not an option");
                         break;
-
                 }
             }
 

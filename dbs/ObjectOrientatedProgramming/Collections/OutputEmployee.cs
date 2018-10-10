@@ -55,9 +55,9 @@ namespace dbs.ObjectOrientatedProgramming.Collections
         {
             bool found = false;
 
-            foreach (Employee employee1 in EmployeeList)
+            foreach (Employee employeeInList in EmployeeList)
             {
-                if (employee == employee1)
+                if (employee.EmployeeID == employeeInList.EmployeeID)
                 {
                     found = true;
                 }
@@ -76,7 +76,7 @@ namespace dbs.ObjectOrientatedProgramming.Collections
             Console.WriteLine("Please enter thier first name");
             employee.FirstName = Console.ReadLine();
 
-            Console.WriteLine("Please enter thier Last name");
+            Console.WriteLine("Please enter thier last name");
             employee.LastName = Console.ReadLine();
 
             Console.WriteLine("Please enter thier wage");
@@ -87,6 +87,7 @@ namespace dbs.ObjectOrientatedProgramming.Collections
                 EmployeeList.Add(employee);
                 Console.WriteLine("Empployee has been added");
             }
+
             else
             {
                 Console.WriteLine("Employee already exists");
@@ -109,12 +110,12 @@ namespace dbs.ObjectOrientatedProgramming.Collections
             iD = int.Parse(Console.ReadLine());
 
 
-            foreach (Employee employee1 in EmployeeList)
+            foreach (Employee employeeInList in EmployeeList)
             {
-                if (employee1.EmployeeID == employee1.EmployeeID)
+                if (employeeInList.EmployeeID == employeeInList.EmployeeID)
                 {
                     Console.WriteLine("Employee Found, Details are: ");
-                    Console.WriteLine(employee1.ToString());
+                    Console.WriteLine(employeeInList.ToString());
                 }
 
                 else
