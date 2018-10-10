@@ -76,6 +76,7 @@
     <Compile Include="ObjectOrientatedProgramming\Interface\TryVehicleInterfaceExample\FuelTypeEnum.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\TryVehicleInterfaceExample\IEngine.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Employee.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\OutputTeacherAndStudent.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Person.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Student.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\StudentStatusEnum.cs" />
