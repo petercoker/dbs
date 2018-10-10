@@ -8,7 +8,6 @@ namespace dbs.ObjectOrientatedProgramming.Collections
         public int EmployeeID { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-
         public double Wage { get; set; }
 
         public Employee()

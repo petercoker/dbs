@@ -5,8 +5,8 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
     class OutputTeacherAndStudent
     {
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        //{
             //RegularEmployee regEmp = new RegularEmployee();
 
             //Console.WriteLine("Please enter their ID");

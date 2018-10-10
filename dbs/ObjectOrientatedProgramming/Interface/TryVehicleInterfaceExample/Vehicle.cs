@@ -6,15 +6,10 @@ using System.Threading.Tasks;
 
 namespace dbs.ObjectOrientatedProgramming.Interface.TryVehicleInterfaceExample
 {
-    class Vehicle
+    public class Vehicle
     {
         public int NumberOfWheels { get; set; }
         public string Colour { get; set; }
-
-        public Vehicle()
-        {
-
-        }
 
         public Vehicle(int numberOfWheels, string colour)
         {
@@ -22,17 +17,30 @@ namespace dbs.ObjectOrientatedProgramming.Interface.TryVehicleInterfaceExample
             Colour = colour;
         }
 
+        public override string ToString()
+        {
+            return $"Vehicle's number of wheel: {NumberOfWheels}\nColour of Vehicle: {Colour}";
+        }
+
         public bool MoveForward()
         {
             return true;
         }
 
-        public bool Turn(string direaction)
+        public bool Turn(string direction)
         {
-            bool right = false;
 
-
-            return right ? true : false;
+            return direction == "left" || direction == "Left" ? true : false;
+             
+            //Alternate way
+            //if (direction == "left" || direction == "Left")
+            //{
+            //    return true;
+            //}
+            //else
+            //{
+            //    return false;
+            //}
         }
 
         public bool Reverse()
@@ -40,10 +48,6 @@ namespace dbs.ObjectOrientatedProgramming.Interface.TryVehicleInterfaceExample
             return true;
         }
 
-        public override string ToString()
-        {
-            return $"Vehicle's number of wheel: {NumberOfWheels}\nColour of Vehicle: {Colour}";
-        }
 
     }
 }
