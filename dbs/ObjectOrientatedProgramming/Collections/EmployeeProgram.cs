@@ -1,12 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace dbs.ObjectOrientatedProgramming.Collections
 {
-    class Program
+    class EmployeeProgram
     {
         static List<Employee> empList = new List<Employee>();
         static void Main(string[] args)

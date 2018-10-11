@@ -59,9 +59,12 @@
     <Compile Include="ObjectOrientatedProgramming\ClassNotes\CollectionsAndLists\QueueClass.cs" />
     <Compile Include="ObjectOrientatedProgramming\ClassNotes\CollectionsAndLists\SortedListClass.cs" />
     <Compile Include="ObjectOrientatedProgramming\ClassNotes\CollectionsAndLists\StackClass.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Collections\Book.cs" />
     <Compile Include="ObjectOrientatedProgramming\Collections\Employee.cs" />
     <Compile Include="ObjectOrientatedProgramming\Collections\OutputEmployee.cs" />
-    <Compile Include="ObjectOrientatedProgramming\Collections\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Collections\OutputTryBook.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Collections\EmployeeProgram.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Collections\BookProgram.cs" />
     <Compile Include="ObjectOrientatedProgramming\Collections\TryBook.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\Apple.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\ColourEnum.cs" />
