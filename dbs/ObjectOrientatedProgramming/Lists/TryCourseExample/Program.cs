@@ -34,27 +34,32 @@ namespace dbs.ObjectOrientatedProgramming.Lists.TryCourseExample
             //}
 
             //You can also get the user to enter the details
-            //Console.Write("Please enter the Course Code: ");
-            //course1.CourseCode = Convert.ToInt32(Console.ReadLine());
+            Course course1 = new Course();
+            Course course2 = new Course();
 
-            //Console.Write("Please enter the name of the course: ");
-            //course1.Name = Console.ReadLine();
+            Console.Write("Please enter the Course Code: ");
+            course1.CourseCode = Convert.ToInt32(Console.ReadLine());
 
-            //Console.Write("Please enter the course level: ");
-            //course1.Level = int.Parse(Console.ReadLine());
+            Console.Write("Please enter the name of the course: ");
+            course1.Name = Console.ReadLine();
 
-            //courseList.Add(course1);
+            Console.Write("Please enter the course level: ");
+            course1.Level = int.Parse(Console.ReadLine());
 
-            //Console.Write("Please enter the Course Code: ");
-            //course2.CourseCode = Convert.ToInt32(Console.ReadLine());
+            courseList.Add(course1);
+            Console.WriteLine($"Course Added");
 
-            //Console.Write("Please enter the name of the course: ");
-            //course2.Name = Console.ReadLine();
+            Console.Write("Please enter the Course Code: ");
+            course2.CourseCode = Convert.ToInt32(Console.ReadLine());
 
-            //Console.Write("Please enter the course level: ");
-            //course2.Level = int.Parse(Console.ReadLine());
+            Console.Write("Please enter the name of the course: ");
+            course2.Name = Console.ReadLine();
 
-            //courseList.Add(course2);
+            Console.Write("Please enter the course level: ");
+            course2.Level = int.Parse(Console.ReadLine());
+
+            courseList.Add(course2);
+            Console.WriteLine($"Course Added");
 
             //Printing out the number of items in the list
             Console.WriteLine($"There are {courseList.Count} number of courses");
