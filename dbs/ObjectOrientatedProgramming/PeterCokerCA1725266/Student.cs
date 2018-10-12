@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
 
 namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
@@ -24,7 +23,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
         public override string ToString()
         {
-            return base.ToString() + $"Student ID: {StudentId}\nStudent: {Name}\nStatus: {Status}\nPhone: {Phone}\nEmail: {Email}";
+            return base.ToString() + $"Student ID: {StudentId}\nStudent is a current student:{IsCurrentStudent}\nStudent: {Name}\nStatus: {Status}\nPhone: {Phone}\nEmail: {Email}";
         }
 
         public int CompareTo(object other)
@@ -40,5 +39,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             return sort;
         }
+
+        
     }
 }

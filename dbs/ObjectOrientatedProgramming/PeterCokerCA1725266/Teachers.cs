@@ -88,6 +88,19 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return removed;
         }
 
-        public List<Teacher> GetTeacherCurrent
+        public List<Teacher> GetTeacherCurrent()
+        {
+            List<Teacher> currentStaffingList = new List<Teacher>();
+
+            foreach (Teacher teacher in currentStaffingList)
+            {
+                if (teacher.IsCurrentEmployee == true)
+                {
+                    currentStaffingList.Add(teacher);
+                }
+            }
+
+            return currentStaffingList;
+        }
     }
 }

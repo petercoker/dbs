@@ -102,6 +102,7 @@
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Person.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Student.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Students.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\StudentStatusEnum.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\TaughtEnum.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Teacher.cs" />
