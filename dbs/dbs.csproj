@@ -89,6 +89,12 @@
     <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\IEngine.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\Vehicle.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\Product.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\Products.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\TryLists\Product.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\TryLists\Products.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\TryLists\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Employee.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\OutputTeacherAndStudent.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Person.cs" />
