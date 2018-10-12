@@ -12,8 +12,8 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             
         }
 
-        public Teacher(string name, int phone, string email, int employeeID, double salary, TaughtEnum taught)
-            : base(name, phone, email, employeeID, salary)
+        public Teacher(string name, int phone, string email, int employeeID, bool isCurrentEmployee, double salary, TaughtEnum taught)
+            : base(name, phone, email, employeeID, isCurrentEmployee, salary)
         {
             Taught = taught;
         }

@@ -6,6 +6,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
     class Student : Person, IComparable
     {
         public int StudentId { get; set; }
+        public bool IsCurrentStudent { get; set; }
         public StudentStatusEnum Status { get; set; }
         
         public Student()
@@ -13,10 +14,11 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
         }
 
-        public Student(string name, int phone, string email, int studentId, StudentStatusEnum status)
+        public Student(string name, int phone, string email, int studentId, bool isCurrentStudent, StudentStatusEnum status)
             : base(name, phone, email)
         {
             StudentId = studentId;
+            IsCurrentStudent = isCurrentStudent;
             Status = status;
         }
 

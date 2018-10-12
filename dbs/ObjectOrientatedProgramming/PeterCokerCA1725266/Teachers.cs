@@ -1,31 +1,36 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
     class Teachers : ICollection<Teacher>
     {
-        public int Count => throw new NotImplementedException();
+        public List<Teacher> TeacherList = new List<Teacher>();
 
-        public bool IsReadOnly => throw new NotImplementedException();
+        public int Count
+        {
+            get { return TeacherList.Count; }
+        }
+
+        public bool IsReadOnly
+        {
+            get { return false; }
+        }
 
         public void Add(Teacher item)
         {
-            throw new NotImplementedException();
+            TeacherList.Add(item);
         }
 
         public void Clear()
         {
-            throw new NotImplementedException();
+            TeacherList.Clear();
         }
 
         public bool Contains(Teacher item)
         {
-            throw new NotImplementedException();
+            return TeacherList.Contains(item);
         }
 
         public void CopyTo(Teacher[] array, int arrayIndex)
@@ -35,17 +40,54 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
         public IEnumerator<Teacher> GetEnumerator()
         {
-            throw new NotImplementedException();
+            return TeacherList.GetEnumerator();
         }
 
         public bool Remove(Teacher item)
         {
-            throw new NotImplementedException();
+            return TeacherList.Remove(item);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
         {
             throw new NotImplementedException();
         }
+
+        public void SortList()
+        {
+            TeacherList.Sort();
+        }
+
+        public Teacher GetTeacher(int id)
+        {
+            Teacher teacher = null;
+
+            foreach (Teacher teachingStaff in TeacherList)
+            {
+                if (teachingStaff.EmployeeID.Equals(id))
+                {
+                    teacher = teachingStaff;
+                    break;
+                }
+            }
+
+            return teacher;
+        }
+
+        public bool RemoveByID(int id)
+        {
+            Teacher teacherDelete = GetTeacher(id);
+            bool removed = false;
+
+            if (teacherDelete != null)
+            {
+                TeacherList.Remove(teacherDelete);
+                removed = true;
+            }
+
+            return removed;
+        }
+
+        public List<Teacher> GetTeacherCurrent
     }
 }
