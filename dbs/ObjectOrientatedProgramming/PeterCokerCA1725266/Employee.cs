@@ -5,16 +5,18 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
     class Employee : Person
     {
-        public List<double> Salary { get; set; }
+        public int EmployeeID { get; set; }
+        public double Salary { get; set; }
 
         public Employee()
         {
             
         }
 
-        public Employee(List<string> name, List<int> phone, List<string> email, List<double> salary)
+        public Employee(string name, int phone, string email, int employeeID, double salary)
             : base(name, phone, email)
         {
+            EmployeeID = employeeID;
             Salary = salary;
         }
     }

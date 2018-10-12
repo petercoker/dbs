@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
-    class Teacher : Employee
+    class Teacher : Employee, IComparable
     {
         public TaughtEnum Taught { get; set; }
 
@@ -12,15 +12,28 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             
         }
 
-        public Teacher(List<string> name, List<int> phone, List<string> email, List<double> salary, TaughtEnum taught)
-            : base(name, phone, email, salary)
+        public Teacher(string name, int phone, string email, int employeeID, double salary, TaughtEnum taught)
+            : base(name, phone, email, employeeID, salary)
         {
             Taught = taught;
         }
 
         public override string ToString()
         {
-            return base.ToString() + $"Teacher: {Name}\nPhone: {Phone}\nEmail: {Email}\nTaught: {Taught}\nSalary: {Salary}";
+            return base.ToString() + $"Employee Number: {EmployeeID}\nTeacher: {Name}\nPhone: {Phone}\nEmail: {Email}\nTaught: {Taught}\nSalary: {Salary}";
+        }
+
+        public int CompareTo(object other)
+        {
+            int sort = 0;
+            Teacher teacher = other as Teacher;
+
+            if (other != null)
+            {
+                sort = this.EmployeeID.CompareTo(teacher.EmployeeID);
+            }
+
+            return sort;
         }
     }
 }

@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>dbs.ObjectOrientatedProgramming.Lists.TryCourseExample.Program</StartupObject>
+    <StartupObject>dbs.ObjectOrientatedProgramming.PeterCokerCA1725266.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -99,7 +99,7 @@
     <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Products.cs" />
     <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Employee.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\OutputTeacherAndStudent.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Person.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Student.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\StudentStatusEnum.cs" />
@@ -130,6 +130,7 @@
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\BookClassExample\Book.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\DrinkExample\Drink.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\FilmExample\Film.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Teachers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ObjectOrientatedProgramming\RecapExercises\ex1.cs" />

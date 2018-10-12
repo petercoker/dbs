@@ -1,22 +1,21 @@
 ﻿using System;
 using System.Collections;
-using System.CodeDom;
 using System.Collections.Generic;
 
 namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
     class Person
     {
-        public List<string> Name { get; set; }
-        public List<int> Phone { get; set; }
-        public List<string> Email { get; set; }
+        public string Name { get; set; }
+        public int Phone { get; set; }
+        public string Email { get; set; }
 
         public Person()
         {
             
         }
 
-        public Person(List<string> name, List<int> phone, List<string> email)
+        public Person(string name, int phone, string email)
         {
             Name = name;
             Phone = phone;

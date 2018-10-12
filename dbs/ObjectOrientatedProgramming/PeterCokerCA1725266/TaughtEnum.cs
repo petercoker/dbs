@@ -19,6 +19,5 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
         SocialStudies,
         MBA,
         ComputerScience
-
     }
 }

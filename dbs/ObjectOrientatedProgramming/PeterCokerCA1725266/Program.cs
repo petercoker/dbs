@@ -3,10 +3,10 @@ using System.Collections.Generic;
 
 namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
-    class OutputTeacherAndStudent
+    class Program
     {
-        //static void Main(string[] args)
-        //{
+        static void Main(string[] args)
+        {
             //RegularEmployee regEmp = new RegularEmployee();
 
             //Console.WriteLine("Please enter their ID");
@@ -119,7 +119,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             //else
             //{
 
-            //}
+            }
 
         }
     }

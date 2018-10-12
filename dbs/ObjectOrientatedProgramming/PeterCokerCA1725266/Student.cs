@@ -3,46 +3,17 @@ using System.Collections.Generic;
 
 namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
-    class Student : Person
+    class Student : Person, IComparable
     {
-        //public new List<int> StudentId { get; set; }
-        private new List<int> studentId;
+        public int StudentId { get; set; }
         public StudentStatusEnum Status { get; set; }
-        //public List<int> StudentId { set; } //User can set not change the Id
-
-        public List<int> StudentId
-        {
-            get { return studentId; }
-
-            set
-            {
-                studentId = value;
-
-                while (true)
-                {
-                    int number = Convert.ToInt32(Console.ReadLine());
-
-                    if (value.Contains(number))
-                    {
-                        continue;
-                    }
-
-                    else
-                    {
-                        studentId = value;
-                    }
-                }
-                
-
-            }
-        }
-
+        
         public Student()
         {
 
         }
 
-        public Student(List<string> name, List<int> phone, List<string> email, List<int> studentId, StudentStatusEnum status)
+        public Student(string name, int phone, string email, int studentId, StudentStatusEnum status)
             : base(name, phone, email)
         {
             StudentId = studentId;
@@ -52,6 +23,20 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
         public override string ToString()
         {
             return base.ToString() + $"Student ID: {StudentId}\nStudent: {Name}\nStatus: {Status}\nPhone: {Phone}\nEmail: {Email}";
+        }
+
+        public int CompareTo(object other)
+        {
+            int sort = 0;
+
+            Student student = other as Student;
+
+            if (other != null)
+            {
+                sort = this.StudentId.CompareTo(student.StudentId);
+            }
+
+            return sort;
         }
     }
 }
