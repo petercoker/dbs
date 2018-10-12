@@ -28,7 +28,7 @@ namespace dbs.ObjectOrientatedProgramming.Lists.TryCourseExample
 
         public override string ToString()
         {
-            return $"Course Code: {CourseCode}\nName: {Name}\nLevel: {Level}\nRunning: {Running}\nNumber of Modules: {NoOfModules}";
+            return $"Course Code: {CourseCode}\nName: {Name}\nLevel: {Level}\nRunning: {Running}\nNumber of Modules: {NoOfModules}\n";
         }
 
         public int CompareTo(object other)
