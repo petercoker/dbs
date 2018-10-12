@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>dbs.Program</StartupObject>
+    <StartupObject>dbs.ObjectOrientatedProgramming.Lists.TryCourseExample.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -89,12 +89,15 @@
     <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\IEngine.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\VehicleInterfaceExample\Vehicle.cs" />
-    <Compile Include="ObjectOrientatedProgramming\Lists\Product.cs" />
-    <Compile Include="ObjectOrientatedProgramming\Lists\Products.cs" />
-    <Compile Include="ObjectOrientatedProgramming\Lists\Program.cs" />
-    <Compile Include="ObjectOrientatedProgramming\Lists\TryLists\Product.cs" />
-    <Compile Include="ObjectOrientatedProgramming\Lists\TryLists\Products.cs" />
-    <Compile Include="ObjectOrientatedProgramming\Lists\TryLists\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\ProductExample\Product.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\ProductExample\Products.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\ProductExample\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\TryCourseExample\Course.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\TryCourseExample\Courses.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\TryCourseExample\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Product.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Products.cs" />
+    <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Employee.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\OutputTeacherAndStudent.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Person.cs" />

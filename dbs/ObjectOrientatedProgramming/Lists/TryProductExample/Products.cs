@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 
-namespace dbs.ObjectOrientatedProgramming.Lists.TryListsLists
+namespace dbs.ObjectOrientatedProgramming.Lists.TryProductExample
 {
 
     class Products : ICollection<Product>
@@ -61,20 +61,6 @@ namespace dbs.ObjectOrientatedProgramming.Lists.TryListsLists
             ProductList.Sort();
         }
 
-        public bool RemoveByID(int id)
-        {
-            Product productDelete = GetProduct(id);
-            bool removed = false;
-
-            if (productDelete != null)
-            {
-                ProductList.Remove(productDelete);
-                removed = true;
-            }
-
-            return removed;
-        }
-
         public Product GetProduct(int id)
         {
             Product prod = null; //Item you have create e.g you have to send back something 
@@ -91,6 +77,21 @@ namespace dbs.ObjectOrientatedProgramming.Lists.TryListsLists
 
             return prod;
         }
+
+        public bool RemoveByID(int id)
+        {
+            Product productDelete = GetProduct(id);
+            bool removed = false;
+
+            if (productDelete != null)
+            {
+                ProductList.Remove(productDelete);
+                removed = true;
+            }
+
+            return removed;
+        }
+
 
         //We are going to include things that are in store
 

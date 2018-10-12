@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace dbs.ObjectOrientatedProgramming.Lists
+namespace dbs.ObjectOrientatedProgramming.Lists.ProductExample
 {
     class Program
     {
@@ -51,6 +51,7 @@ namespace dbs.ObjectOrientatedProgramming.Lists
             //Sorting the items by price
             Console.WriteLine("Products Sorted by Price");
             list.SortList();
+
             foreach (var l in list)
             {
                 Console.WriteLine($"{l.ProductNo} {l.Name} costs {l.Price}");

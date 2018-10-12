@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace dbs.ObjectOrientatedProgramming.Lists
+namespace dbs.ObjectOrientatedProgramming.Lists.ProductExample
 {
     class Products : ICollection<Product>
     {
@@ -57,19 +57,6 @@ namespace dbs.ObjectOrientatedProgramming.Lists
             ProdList.Sort();
         }
 
-        public bool RemoveByID(int id)
-        {
-            Product prodDelete = GetProduct(id);
-            bool removed = false;
-
-            if (prodDelete != null)
-            {
-                ProdList.Remove(prodDelete);
-                removed = true;
-            }
-            return removed;
-        }
-
         public Product GetProduct(int id)
         {
             Product product = null;
@@ -82,6 +69,19 @@ namespace dbs.ObjectOrientatedProgramming.Lists
                 }
             }
             return product;
+        }
+
+        public bool RemoveByID(int id)
+        {
+            Product prodDelete = GetProduct(id);
+            bool removed = false;
+
+            if (prodDelete != null)
+            {
+                ProdList.Remove(prodDelete);
+                removed = true;
+            }
+            return removed;
         }
 
         public List<Product> GetInStockItems()

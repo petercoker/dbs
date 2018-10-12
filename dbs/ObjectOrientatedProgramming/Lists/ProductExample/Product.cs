@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace dbs.ObjectOrientatedProgramming.Lists
+namespace dbs.ObjectOrientatedProgramming.Lists.ProductExample
 {
     class Product: IComparable
     {
@@ -8,7 +8,7 @@ namespace dbs.ObjectOrientatedProgramming.Lists
         public string Name { get; set; }
         public double Price { get; set; }
         public bool InStock { get; set; }
-
+        
         public Product()
         { }
 
@@ -22,7 +22,7 @@ namespace dbs.ObjectOrientatedProgramming.Lists
 
         public override string ToString()
         {
-            return $"{ Name } costs {Price}";
+            return $"{Name} costs {Price}";
         }
 
         //Implementing IComparable interface

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace dbs.ObjectOrientatedProgramming.Lists.TryListsLists
+namespace dbs.ObjectOrientatedProgramming.Lists.TryProductExample
 {
     class Program
     {

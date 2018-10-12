@@ -1,13 +1,12 @@
 ﻿using System;
 
-namespace dbs.ObjectOrientatedProgramming.Lists.TryListsLists
+namespace dbs.ObjectOrientatedProgramming.Lists.TryProductExample
 {
     public class Product : IComparable
     {
         public int ProductNo { get; set; }
         public string Name { get; set; }
         public double Price { get; set; }
-
         public bool InStock { get; set; }
 
         public Product()
