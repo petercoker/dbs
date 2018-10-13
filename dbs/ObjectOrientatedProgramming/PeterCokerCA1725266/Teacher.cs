@@ -20,7 +20,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
         public override string ToString()
         {
-            return base.ToString() + $"Employee Number: {EmployeeID}\nTeacher is current staff: {IsCurrentEmployee}\nTeacher: {Name}\nPhone: {Phone}\nEmail: {Email}\nTaught: {Taught}\nSalary: {Salary}";
+            return $"Employee Number: {EmployeeID}\nTeacher is current staff: {IsCurrentEmployee}\nTeacher: {Name}\nPhone: {Phone}\nEmail: {Email}\nTaught: {Taught}\nSalary: {Salary}";
         }
 
         public int CompareTo(object other)
