@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Runtime.InteropServices;
 
 namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
@@ -20,8 +19,8 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Console.WriteLine("2: Find a Student by entering Student ID");
                 Console.WriteLine("3: Delete a student by entering Student ID");
                 Console.WriteLine("4: Show All Student"); 
-                Console.WriteLine("5*: Show total number of students in Dublin Business School");
-                Console.WriteLine(": Show All Current Students");
+                Console.WriteLine("5: Show total number of students in Dublin Business School");
+                Console.WriteLine("6*: Show All Current Students");
                 Console.WriteLine(": Show total amount of Student");
                 Console.WriteLine(": Clear all students in the student management system");
                 Console.WriteLine(": Quit");
@@ -98,16 +97,23 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         }
                         break;
 
-
                     case 5: 
-                        Console.WriteLine();
-                        Console.WriteLine($"There are {studentList.Count} total number of students in Dublin Business School");
+                        Console.WriteLine($"\nThere are {studentList.Count} total number of students in Dublin Business School");
+                        break;
+
+                    case 6: //Fix issue
+                        Console.WriteLine("\nList of student that are currently studying in Dublin Business School");
+
+                        List<Student> currentStudentList = studentList.GetStudentCurrent();
+                        foreach (var currentStudent in currentStudentList)
+                        {
+                            Console.WriteLine(currentStudent.ToString());
+                        }
                         break;
 
 
 
-
-
+                        
 
 
 
@@ -125,17 +131,6 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         foreach (Student pupil in studentList)
                         {
                             Console.WriteLine($"Student ID: {pupil.StudentId}\nStudent is a current student: {pupil.IsCurrentStudent}\nStudent: {pupil.Name}\nStatus: {pupil.Status}\nPhone: {pupil.Phone}\nEmail: {pupil.Email}");
-                        }
-                        break;
-                    case 30:
-                        //View list of current student studying in DBS
-                        Console.WriteLine();
-                        Console.WriteLine("List of student that are currently studying in Dublin Business School");
-
-                        List<Student> currentStudentList = studentList.GetStudentCurrent();
-                        foreach (var currentStudent in currentStudentList)
-                        {
-                            Console.WriteLine(currentStudent.ToString());
                         }
                         break;
 
