@@ -19,8 +19,8 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Console.WriteLine("1: Add a new Student");
                 Console.WriteLine("2: Find a Student by entering Student ID");
                 Console.WriteLine("3: Delete a student by entering Student ID");
-                Console.WriteLine("4*: Show All Student"); 
-                Console.WriteLine(": Show total number of students");
+                Console.WriteLine("4: Show All Student"); 
+                Console.WriteLine("5*: Show total number of students in Dublin Business School");
                 Console.WriteLine(": Show All Current Students");
                 Console.WriteLine(": Show total amount of Student");
                 Console.WriteLine(": Clear all students in the student management system");
@@ -91,7 +91,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         break;
 
                     case 4:
-                        Console.WriteLine();
+                        Console.WriteLine("\n--All Student in the List--");
                         foreach (Student pupil in studentList)
                         {
                             Console.WriteLine(pupil.ToString());
@@ -99,6 +99,10 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         break;
 
 
+                    case 5: 
+                        Console.WriteLine();
+                        Console.WriteLine($"There are {studentList.Count} total number of students in Dublin Business School");
+                        break;
 
 
 
@@ -133,11 +137,6 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         {
                             Console.WriteLine(currentStudent.ToString());
                         }
-                        break;
-                    case 40: //Works
-                        //View Total number of students
-                        Console.WriteLine();
-                        Console.WriteLine($"There are {studentList.Count} total number of student in Dublin Business");
                         break;
 
                     case 70:
