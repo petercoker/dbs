@@ -8,7 +8,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
     public enum StudentStatusEnum
     {
-        Undergrad = 0,
-        Postgrad = 1
+        Undergrad,
+        Postgrad
     }
 }

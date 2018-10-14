@@ -59,6 +59,7 @@ namespace dbs.ObjectOrientatedProgramming.Lists.ProductExample
 
             //Creating a list of items that are in stock and printing them to the screen
             Console.WriteLine("List of items that are in stock");
+
             List<Product> inStockItems = list.GetInStockItems();
             foreach (Product item in inStockItems)
             {
