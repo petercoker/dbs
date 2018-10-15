@@ -117,7 +117,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return isCurrentStudentList;
         }
 
-        public List<Student> GetPostgradStudent()
+        public List<Student> GetAllPostgradStudent()
         {
             List<Student> postgradStudentList = new List<Student>();
 
@@ -132,7 +132,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return postgradStudentList;
         }
 
-        public List<Student> GetUndergradStudent()
+        public List<Student> GetAllUndergradStudent()
         {
             List<Student> undergradStudentList = new List<Student>();
 
@@ -147,7 +147,51 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return undergradStudentList;
         }
 
+        public List<Student> GetPostgradStudentCurrent()
+        {
+            List<Student> postgradStudentsCurrentList = new List<Student>();
 
+            foreach (Student item in StudentList)
+            {
+                if ((item.Status == StudentStatusEnum.Postgrad) && (item.IsCurrentStudent == true))
+                {
+                    postgradStudentsCurrentList.Add(item);
+                }
+            }
+
+            return postgradStudentsCurrentList;
+        }
+
+        public List<Student> GetUndergradStudentCurrent()
+        {
+            List<Student> undergradStudentsCurrentList = new List<Student>();
+
+            foreach (Student item in StudentList)
+            {
+                if ((item.Status == StudentStatusEnum.Undergrad) && (item.IsCurrentStudent == true))
+                {
+                    undergradStudentsCurrentList.Add(item);
+                }
+            }
+
+            return undergradStudentsCurrentList;
+        }
+
+        public List<Student> GetPostgradStudentNotCurrent()
+        {
+            List<Student> postgradStudentsNotCurrentList = new List<Student>();
+
+            foreach (Student item in StudentList)
+            {
+                if ((item.Status == StudentStatusEnum.Postgrad) && (item.IsCurrentStudent == false))
+                {
+                    postgradStudentsNotCurrentList.Add(item);
+                }
+            }
+
+            return postgradStudentsNotCurrentList;
+        }
+        
         public List<Student> GetUndergradStudentNotCurrent()
         {
             List<Student> undergradStudentsNotCurrentList = new List<Student>();
@@ -162,5 +206,6 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             return undergradStudentsNotCurrentList;
         }
+
     }
 }
