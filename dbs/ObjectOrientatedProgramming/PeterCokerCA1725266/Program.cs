@@ -210,7 +210,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                     //    {
                     //        Console.WriteLine(item.ToString());
                     //    }
-                        break;
+                    //    break;
 
                     case 12:
                         Console.WriteLine("\nList of Students sorted by Student ID");
