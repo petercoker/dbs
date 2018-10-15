@@ -86,12 +86,12 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             return removed;
         }
-        
+
         public List<Student> GetStudentCurrent()
         {
             List<Student> isCurrentStudentList = new List<Student>();
 
-            foreach (var item in StudentList)
+            foreach (Student item in StudentList)
             {
                 if (item.IsCurrentStudent == true)
                 {
@@ -106,7 +106,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
         {
             List<Student> isCurrentStudentList = new List<Student>();
 
-            foreach (var item in StudentList)
+            foreach (Student item in StudentList)
             {
                 if (item.IsCurrentStudent == false)
                 {
@@ -121,7 +121,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
         {
             List<Student> postgradStudentList = new List<Student>();
 
-            foreach (var item in StudentList)
+            foreach (Student item in StudentList)
             {
                 if (item.Status == StudentStatusEnum.Postgrad)
                 {
@@ -136,7 +136,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
         {
             List<Student> undergradStudentList = new List<Student>();
 
-            foreach (var item in StudentList)
+            foreach (Student item in StudentList)
             {
                 if (item.Status == StudentStatusEnum.Undergrad)
                 {
@@ -147,21 +147,20 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return undergradStudentList;
         }
 
-        //public List<Student> GetPostgradAndUndergradStudentNotCurrent()
-        //{
-        //    List<Student> PostgradAndUndergradStudentNotCurrentList = new List<Student>();
 
-        //    foreach (var item in StudentList)
-        //    {
-        //        if ((item.Status == StudentStatusEnum.Undergrad) && (item.Status == StudentStatusEnum.Postgrad) && )
-        //        {
-        //            PostgradAndUndergradStudentNotCurrent.Add(item);
-        //        }
-        //    }
+        public List<Student> GetUndergradStudentNotCurrent()
+        {
+            List<Student> undergradStudentsNotCurrentList = new List<Student>();
 
-        //    return PostgradAndUndergradStudentNotCurrent;
-        //}
+            foreach (Student item in StudentList)
+            {
+                if ((item.Status == StudentStatusEnum.Undergrad) && (item.IsCurrentStudent == false))
+                {
+                    undergradStudentsNotCurrentList.Add(item);
+                }
+            }
 
-
+            return undergradStudentsNotCurrentList;
+        }
     }
 }
