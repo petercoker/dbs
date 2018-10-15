@@ -17,11 +17,11 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Console.WriteLine("\n*************Dublin Business School new management software package**********\n");
                 Console.WriteLine("[Student Management]");
                 Console.WriteLine("1: Add a new Student");
-                Console.WriteLine("2**: Find a Student by entering Student ID");
+                Console.WriteLine("2: Find a Student by entering Student ID");
                 Console.WriteLine("3: Delete a student by entering Student ID");
                 Console.WriteLine("4: Show data of All Students in Dublin Business School");
                 Console.WriteLine("5: Show total number of Students in Dublin Business School");
-                Console.WriteLine("6**: Show All Current Students");
+                Console.WriteLine("6*: Show All Current Students");
                 Console.WriteLine("7: Sort list of students by ID");
                 Console.WriteLine("8**: Get the total number of Students");// Getting the count after an item has been deleted
                 Console.WriteLine("9: Clear all students in the student management system");
@@ -77,14 +77,23 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
                         Console.WriteLine("\nData added to Student List");
                         break;
+                        
+                    case 2: 
+                        Console.Write("\nPlease enter the Student ID you wish to find: ");
+                        id = int.Parse(Console.ReadLine());
 
-                    //case 2: //fix (If uses did not enter a data throw an error
-                    //    Console.Write("\nPlease enter the Student ID you wish to find: ");
-                    //    id = int.Parse(Console.ReadLine());
+                        if (!(student.StudentId == id))
+                        {
+                            Console.WriteLine("\aStudent ID not found, please add a Student by enter 1'st option");
+                            break;
+                        }
 
-                    //    Console.WriteLine(StudentList.GetStudent(id).ToString());
-                    //    break;
+                        else
+                        {
+                            Console.WriteLine(StudentList.GetStudent(id).ToString());
+                        }
 
+                        break;
                     case 3:
                         Console.Write("\nPlease enter the Student ID you wish to delete: ");
                         id = int.Parse(Console.ReadLine());
@@ -119,13 +128,30 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                     //        Console.WriteLine(currentStudent.Equals(true).ToString());
                     //    }
                     //    break;
-                        
+
                     //    Console.WriteLine("List of items that are in stock");
                     //    List<Product> inStockItems = list.GetInStockItems();
                     //    foreach (Product item in inStockItems)
                     //    {
                     //        Console.WriteLine(item.ToString());
                     //    }
+
+                    case 6: //Fix issue
+                        Console.WriteLine("\nList of student that are currently studying in Dublin Business School");
+
+                        List<Student> currentStudentList = StudentList.GetStudentCurrent();
+                        foreach (Student currentStudent in currentStudentList)
+                        {
+                            Console.WriteLine(currentStudent.Equals(true).ToString());
+                        }
+                        break;
+
+                        Console.WriteLine("List of items that are in stock");
+                        List<Product> inStockItems = list.GetInStockItems();
+                        foreach (Product item in inStockItems)
+                        {
+                            Console.WriteLine(item.ToString());
+                        }
 
                     case 7:
                         Console.WriteLine("\nList of Students sorted by Student ID");
