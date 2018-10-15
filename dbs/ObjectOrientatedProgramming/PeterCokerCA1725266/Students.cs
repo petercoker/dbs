@@ -87,20 +87,36 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return removed;
         }
 
+        //public List<Student> GetStudentCurrent()
+        //{
+        //    List<Student> currentStudentList = new List<Student>();
+
+        //    foreach (Student student in currentStudentList)
+        //    {
+        //        if (student.IsCurrentStudent == true)
+        //        {
+        //            currentStudentList.Add(student);
+        //        }
+        //    }
+
+        //    return currentStudentList;
+        //}
+
         public List<Student> GetStudentCurrent()
         {
-            List<Student> currentStudentList = new List<Student>();
+            List<Student> isCurrentStudentList = new List<Student>();
 
-            foreach (Student student in currentStudentList)
+            foreach (var item in StudentList)
             {
-                if (student.IsCurrentStudent == true)
+                if (item.IsCurrentStudent == true)
                 {
-                    currentStudentList.Add(student);
+                    isCurrentStudentList.Add(item);
                 }
             }
 
-            return currentStudentList;
+            return isCurrentStudentList;
         }
-        
+
+
     }
 }
