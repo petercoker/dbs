@@ -80,10 +80,11 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         //Console.Write("Please enter your Student ID: ");
                         //student.StudentId = int.Parse(Console.ReadLine());
 
-
                         Console.WriteLine();
-                        while (true)
+                        bool userInput = false;
+                        while (!userInput)
                         {
+
                             Console.Write("Please enter your Student ID: ");
                             id = int.Parse(Console.ReadLine());
 
@@ -96,39 +97,16 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                             else
                             {
                                 student.StudentId = id;
-                                break;
+                                userInput = true;
                             }
                         }
-
-                        //student.StudentId = id;
 
 
                         //Console.WriteLine(StudentList.CheckUniqueID(id) ? student.StudentId = id : "\n\aStudent ID already created, please enter unique Student ID number");
                         //break;
 
-                        //while (true)
-                        //{
-                        //    //Console.WriteLine(StudentList.CheckUniqueID(id)
-                        //    //if (!(student.StudentId.(id)))
-                        //    //{
-                        //    //    Console.WriteLine("\aStudent ID already created, please enter unique Student ID number");
-                        //    //    continue;
-                        //    //}
-
-                        //    //student.StudentId = id;
-
-                        //}
-                        ////Console.Write("\nPlease enter the Student ID you wish to delete: ");
-                        ////id = int.Parse(Console.ReadLine());
-
                         ////Console.WriteLine(StudentList.RemoveByID(id) ? $"\nThe Student with the ID of {id} has been removed" : "\nThere was no student with that ID in the list\a");
 
-                        ////Console.WriteLine();
-                        ////foreach (Student pupil in StudentList)
-                        ////{
-                        ////    Console.WriteLine(pupil.ToString());
-                        ////}
-                        ////break;
 
 
                         ////////////////////////////////////////////////////////////////

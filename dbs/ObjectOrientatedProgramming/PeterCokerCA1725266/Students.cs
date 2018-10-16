@@ -88,57 +88,19 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return removed;
         }
 
-        //public bool CheckUniqueID(int id)
-        //{
-        //    Student checkNumber = GetStudent(id);
-
-        //    bool duplicate = false;
-
-        //    if (checkNumber.Equals(id))
-        //    {
-        //         duplicate = true;
-        //    }
-
-        //    else
-        //    {
-        //        StudentList.Add(checkNumber);
-        //    }
-
-        //    return duplicate;
-        //}
-
-
         public bool CheckUniqueID(int id)
         {
             Student checkNumber = GetStudent(id);
 
             bool duplicate = false;
 
-            if (!checkNumber.Equals(id))
+            if (checkNumber != null)
             {
                 duplicate = true;
             }
 
             return duplicate;
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         public List<Student> GetStudentCurrent()
         {
