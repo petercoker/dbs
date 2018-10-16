@@ -28,9 +28,9 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Console.WriteLine("6: Show list of all Current Students");
                 Console.WriteLine("7: Show list of all Postgrad Students currently in Dublin Business School");
                 Console.WriteLine("8: Show list of all Undergrad Students currently in Dublin Business School");
-                Console.WriteLine("9**: Show list of all Not Current Students");
-                Console.WriteLine("10**: Show list of all Postgrad Students not currently in Dublin Business School");
-                Console.WriteLine("11**: Show list of all Undergrad Students not currently in Dublin Business School");
+                Console.WriteLine("9: Show list of all Not Current Students");
+                Console.WriteLine("10: Show list of all Postgrad Students not currently in Dublin Business School");
+                Console.WriteLine("11: Show list of all Undergrad Students not currently in Dublin Business School");
                 Console.WriteLine("12: Show list of students by ID");
                 Console.WriteLine("13: Show total number of Students in Dublin Business School");
                 
@@ -57,12 +57,14 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Student student3 = new Student("Sam", 789, "Sam@gmail.com", 3, false, StudentStatusEnum.Postgrad);
                 Student student4 = new Student("Anne", 000, "Anne@gmail.com", 4, true, StudentStatusEnum.Undergrad);
                 Student student5 = new Student("Rock", 111, "Rock@gmail.com", 5, true, StudentStatusEnum.Postgrad);
+                Student student6 = new Student("Paper", 153, "Paper@gmail.com", 6, false, StudentStatusEnum.Undergrad);
 
                 StudentList.Add(student1);
                 StudentList.Add(student2);
                 StudentList.Add(student3);
                 StudentList.Add(student4);
                 StudentList.Add(student5);
+                StudentList.Add(student6);
                 //End of Tessting
 
                 Console.WriteLine();
@@ -182,35 +184,35 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
                         break;
 
-                    //case 9:
-                    //    Console.WriteLine("\nList of all Students that are not currently studying in Dublin Business School\n");
+                    case 9:
+                        Console.WriteLine("\nList of all Students that are not currently studying in Dublin Business School\n");
 
-                    //    List<Student> notCurrentStudents = StudentList.GetUndergradStudentNotCurrent();
-                    //    foreach (Student item in notCurrentStudents)
-                    //    {
-                    //        Console.WriteLine(item.ToString());
-                    //    }
-                    //    break;
+                        List<Student> allNotCurrentStudents = StudentList.GetStudentNotCurrent();
+                        foreach (Student item in allNotCurrentStudents)
+                        {
+                            Console.WriteLine(item.ToString());
+                        }
+                        break;
 
-                    //case 10:
-                    //    Console.WriteLine("\nList of all Students that are Postgrad Students and not currently studying in Dublin Business School\n");
+                    case 10:
+                        Console.WriteLine("\nList of all Students that are Postgrad Students and not currently studying in Dublin Business School\n");
 
-                    //    List<Student> notCurrentStudents = StudentList.GetStudentNotCurrent();
-                    //    foreach (Student item in notCurrentStudents)
-                    //    {
-                    //        Console.WriteLine(item.ToString());
-                    //    }
-                    //    break;
+                        List<Student> allNotCurrentPostgradStudents = StudentList.GetPostgradStudentNotCurrent();
+                        foreach (Student item in allNotCurrentPostgradStudents)
+                        {
+                            Console.WriteLine(item.ToString());
+                        }
+                        break;
 
-                    //case 11:
-                    //    Console.WriteLine("\nList of all Students that are Undergrad Students and not currently studying in Dublin Business School\n");
+                    case 11:
+                        Console.WriteLine("\nList of all Students that are Undergrad Students and not currently studying in Dublin Business School\n");
 
-                    //    List<Student> notCurrentStudents = StudentList.GetStudentNotCurrent();
-                    //    foreach (Student item in notCurrentStudents)
-                    //    {
-                    //        Console.WriteLine(item.ToString());
-                    //    }
-                    //    break;
+                        List<Student> allNotCurrentUndergradStudents = StudentList.GetUndergradStudentNotCurrent();
+                        foreach (Student item in allNotCurrentUndergradStudents)
+                        {
+                            Console.WriteLine(item.ToString());
+                        }
+                        break;
 
                     case 12:
                         Console.WriteLine("\nList of Students sorted by Student ID");
