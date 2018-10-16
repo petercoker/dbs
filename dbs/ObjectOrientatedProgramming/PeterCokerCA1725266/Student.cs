@@ -7,7 +7,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
         public int StudentId { get; set; }
         public bool IsCurrentStudent { get; set; }
         public StudentStatusEnum Status { get; set; }
-        
+
         public Student()
         {
 
@@ -39,7 +39,5 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             return sort;
         }
-
-        
     }
 }

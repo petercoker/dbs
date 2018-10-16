@@ -80,15 +80,17 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         //Console.Write("Please enter your Student ID: ");
                         //student.StudentId = int.Parse(Console.ReadLine());
 
-                        Console.WriteLine();
-                        Console.Write("Please enter your Student ID: ");
-                        id = int.Parse(Console.ReadLine());
 
+                        Console.WriteLine();
                         while (true)
                         {
-                            if (StudentList.Contains(student))
+                            Console.Write("Please enter your Student ID: ");
+                            id = int.Parse(Console.ReadLine());
+
+                            if (StudentList.CheckUniqueID(id))
                             {
-                                Console.WriteLine("\aStudent ID already created, please enter unique Student ID number");
+                                Console.WriteLine("\n\aStudent ID already created, please enter unique Student ID number");
+                                continue;
                             }
 
                             else
@@ -98,40 +100,38 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                             }
                         }
 
-                        id = int.Parse(Console.ReadLine());
-
-                        Console.WriteLine(StudentList.RemoveByID(id) ? $"\nThe Student with the ID of {id} has been removed" : "\nThere was no student with that ID in the list\a");
-
-                        Console.WriteLine();
-                        foreach (Student pupil in StudentList)
-                        {
-                            Console.WriteLine(pupil.ToString());
-                        }
-                        break;
+                        //student.StudentId = id;
 
 
-                        Console.Write("\nPlease enter the Student ID you wish to delete: ");
-                        id = int.Parse(Console.ReadLine());
+                        //Console.WriteLine(StudentList.CheckUniqueID(id) ? student.StudentId = id : "\n\aStudent ID already created, please enter unique Student ID number");
+                        //break;
 
-                        Console.WriteLine(StudentList.RemoveByID(id) ? $"\nThe Student with the ID of {id} has been removed" : "\nThere was no student with that ID in the list\a");
+                        //while (true)
+                        //{
+                        //    //Console.WriteLine(StudentList.CheckUniqueID(id)
+                        //    //if (!(student.StudentId.(id)))
+                        //    //{
+                        //    //    Console.WriteLine("\aStudent ID already created, please enter unique Student ID number");
+                        //    //    continue;
+                        //    //}
 
-                        Console.WriteLine();
-                        foreach (Student pupil in StudentList)
-                        {
-                            Console.WriteLine(pupil.ToString());
-                        }
-                        break;
+                        //    //student.StudentId = id;
+
+                        //}
+                        ////Console.Write("\nPlease enter the Student ID you wish to delete: ");
+                        ////id = int.Parse(Console.ReadLine());
+
+                        ////Console.WriteLine(StudentList.RemoveByID(id) ? $"\nThe Student with the ID of {id} has been removed" : "\nThere was no student with that ID in the list\a");
+
+                        ////Console.WriteLine();
+                        ////foreach (Student pupil in StudentList)
+                        ////{
+                        ////    Console.WriteLine(pupil.ToString());
+                        ////}
+                        ////break;
 
 
-
-
-
-
-
-
-
-
-
+                        ////////////////////////////////////////////////////////////////
 
                         Console.Write("Please enter \"true\" or \"false\" if you are a current Student: ");
                         student.IsCurrentStudent = bool.Parse(Console.ReadLine().ToLower());
