@@ -73,6 +73,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             return student;
         }
+
         public bool RemoveByID(int id)
         {
             Student studentDelete = GetStudent(id);
@@ -86,6 +87,37 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             return removed;
         }
+
+        public bool CheckUniqueID(int id)
+        {
+            Student checkNumber = GetStudent(id);
+            bool removed = false;
+
+            if (checkNumber.Equals(id))
+            {
+                StudentList.Remove(studentDelete);
+                removed = true;
+            }
+
+            return removed;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         public List<Student> GetStudentCurrent()
         {
@@ -206,6 +238,8 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             return undergradStudentsNotCurrentList;
         }
+
+
 
     }
 }

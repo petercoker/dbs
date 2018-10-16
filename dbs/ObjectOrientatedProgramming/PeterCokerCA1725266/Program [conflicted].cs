@@ -11,11 +11,11 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             Student student = new Student();
             int option, studentStatus, id;
             bool keepGoing = true;
-
+            
             while (keepGoing)
             {
                 Console.WriteLine("\n*************Dublin Business School new management software package**********\n");
-
+                
                 Console.WriteLine("[Student Management Menu]");
                 Console.WriteLine("\nStudent Management: Data definition options");
                 Console.WriteLine("1: Add a new Student");
@@ -31,9 +31,9 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Console.WriteLine("9: Show list of all Not Current Students");
                 Console.WriteLine("10: Show list of all Postgrad Students not currently in Dublin Business School");
                 Console.WriteLine("11: Show list of all Undergrad Students not currently in Dublin Business School");
-                Console.WriteLine("12: Show list of Students by ID");
+                Console.WriteLine("12: Show list of students by ID");
                 Console.WriteLine("13: Show total number of Students in Dublin Business School");
-
+                
                 Console.WriteLine("\nStudent Management: Data manipulation options");
                 Console.WriteLine("14: Find a Student by entering Student ID");
                 Console.WriteLine("15: Delete a Student by entering Student ID");
@@ -76,62 +76,9 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 switch (option)
                 {
                     case 1:
-                        //Console.WriteLine();
-                        //Console.Write("Please enter your Student ID: ");
-                        //student.StudentId = int.Parse(Console.ReadLine());
-
                         Console.WriteLine();
                         Console.Write("Please enter your Student ID: ");
-                        id = int.Parse(Console.ReadLine());
-
-                        while (true)
-                        {
-                            if (StudentList.Contains(student))
-                            {
-                                Console.WriteLine("\aStudent ID already created, please enter unique Student ID number");
-                            }
-
-                            else
-                            {
-                                student.StudentId = id;
-                                break;
-                            }
-                        }
-
-                        id = int.Parse(Console.ReadLine());
-
-                        Console.WriteLine(StudentList.RemoveByID(id) ? $"\nThe Student with the ID of {id} has been removed" : "\nThere was no student with that ID in the list\a");
-
-                        Console.WriteLine();
-                        foreach (Student pupil in StudentList)
-                        {
-                            Console.WriteLine(pupil.ToString());
-                        }
-                        break;
-
-
-                        Console.Write("\nPlease enter the Student ID you wish to delete: ");
-                        id = int.Parse(Console.ReadLine());
-
-                        Console.WriteLine(StudentList.RemoveByID(id) ? $"\nThe Student with the ID of {id} has been removed" : "\nThere was no student with that ID in the list\a");
-
-                        Console.WriteLine();
-                        foreach (Student pupil in StudentList)
-                        {
-                            Console.WriteLine(pupil.ToString());
-                        }
-                        break;
-
-
-
-
-
-
-
-
-
-
-
+                        student.StudentId = int.Parse(Console.ReadLine());
 
                         Console.Write("Please enter \"true\" or \"false\" if you are a current Student: ");
                         student.IsCurrentStudent = bool.Parse(Console.ReadLine().ToLower());
@@ -312,7 +259,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                             Console.WriteLine(pupil.ToString());
                         }
                         break;
-
+                        
                     //case 16:
                     //    //Getting the count after an item has been deleted
                     //    Console.WriteLine(StudentList.Count);
