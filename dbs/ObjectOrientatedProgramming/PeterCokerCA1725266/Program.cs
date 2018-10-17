@@ -10,7 +10,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             Students StudentList = new Students();
             Student student = new Student();
             int option, studentStatus, id;
-            bool keepGoing = true;
+            bool keepGoing = true, userInput = false;
 
             while (keepGoing)
             {
@@ -19,7 +19,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Console.WriteLine("[Student Management Menu]");
                 Console.WriteLine("\nStudent Management: Data definition options");
                 Console.WriteLine("1: Add a new Student");
-                Console.WriteLine("2**: Change data of a Student by finding ID and editing the rest of the data");
+                Console.WriteLine("2*: Change data of a Student by finding ID and editing the rest of the data");
 
                 Console.WriteLine("\nStudent Management: Viewing options");
                 Console.WriteLine("3: Show list of all Students in Dublin Business School");
@@ -35,7 +35,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Console.WriteLine("13: Show total number of Students in Dublin Business School");
 
                 Console.WriteLine("\nStudent Management: Data manipulation options");
-                Console.WriteLine("14: Find a Student by entering Student ID");
+                Console.WriteLine("14**: Find a Student by entering Student ID"); //Fix issue only allow you to use the find once
                 Console.WriteLine("15: Delete a Student by entering Student ID");
                 Console.WriteLine("16**: Get the total number of Students deleted from the Student Management");// Getting the count after an item has been deleted
                 Console.WriteLine("17: Clear all Students in the Student management system");
@@ -58,7 +58,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Student student4 = new Student("Anne", 000, "Anne@gmail.com", 4, true, StudentStatusEnum.Undergrad);
                 Student student5 = new Student("Rock", 111, "Rock@gmail.com", 5, true, StudentStatusEnum.Postgrad);
                 Student student6 = new Student("Paper", 153, "Paper@gmail.com", 6, false, StudentStatusEnum.Undergrad);
-                Student student7 = new Student("Water", 153, "Water@gmail.com", 7, false, StudentStatusEnum.Undergrad);
+                //Student student7 = new Student("Water", 153, "Water@gmail.com", 7, false, StudentStatusEnum.Undergrad);
 
                 StudentList.Add(student1);
                 StudentList.Add(student2);
@@ -66,7 +66,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 StudentList.Add(student4);
                 StudentList.Add(student5);
                 StudentList.Add(student6);
-                StudentList.Add(student7);
+                //StudentList.Add(student7);
                 //End of Tessting
 
                 Console.WriteLine();
@@ -76,12 +76,9 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 switch (option)
                 {
                     case 1:
-                        //Console.WriteLine();
-                        //Console.Write("Please enter your Student ID: ");
-                        //student.StudentId = int.Parse(Console.ReadLine());
-
                         Console.WriteLine();
-                        bool userInput = false;
+                        userInput = false;
+
                         while (!userInput)
                         {
 
@@ -100,16 +97,6 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                                 userInput = true;
                             }
                         }
-
-
-                        //Console.WriteLine(StudentList.CheckUniqueID(id) ? student.StudentId = id : "\n\aStudent ID already created, please enter unique Student ID number");
-                        //break;
-
-                        ////Console.WriteLine(StudentList.RemoveByID(id) ? $"\nThe Student with the ID of {id} has been removed" : "\nThere was no student with that ID in the list\a");
-
-
-
-                        ////////////////////////////////////////////////////////////////
 
                         Console.Write("Please enter \"true\" or \"false\" if you are a current Student: ");
                         student.IsCurrentStudent = bool.Parse(Console.ReadLine().ToLower());
@@ -142,20 +129,62 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         break;
 
                     //case 2://fix
-                    //    Console.Write("\nPlease enter the Student ID you wish to find to change the data: ");
-                    //    id = int.Parse(Console.ReadLine());
 
-                    //    if (!(student.StudentId == id))
+                    //    while (!userInput)
                     //    {
-                    //        Console.WriteLine("\aStudent ID not found, please add a Student by enter 1'st option");
-                    //        break;
+                    //        Console.Write("\nPlease enter the Student ID number to change data information: ");
+                    //        id = int.Parse(Console.ReadLine());
+
+                    //        if (!StudentList.CheckUniqueID(id))
+                    //        {
+                    //            Console.WriteLine("\aStudent ID not found, this Student ID was not added into the Student Management");
+                    //            continue;
+                    //        }
+
+                    //        else
+                    //        {
+                    //            List<Student> undergradStudents = StudentList.GetAllUndergradStudent();
+                    //            foreach (var item in undergradStudents)
+                    //            {
+                    //                Console.WriteLine(item.ToString());
+                    //            }
+
+                    //            Console.Write("Please enter \"true\" or \"false\" if you are a current Student: ");
+                    //            student.IsCurrentStudent = bool.Parse(Console.ReadLine().ToLower());
+                                
+                    //            Console.Write("Please enter your name: ");
+                    //            student.Name = Console.ReadLine();
+
+                    //            Console.Write("Please enter \"0\" for Undergrad or \"1\" for Postgrad: ");
+                    //            studentStatus = int.Parse(Console.ReadLine());
+
+                    //            if (studentStatus == 0)
+                    //            {
+                    //                student.Status = StudentStatusEnum.Undergrad;
+                    //            }
+
+                    //            else if (studentStatus == 1)
+                    //            {
+                    //                student.Status = StudentStatusEnum.Postgrad;
+                    //            }
+
+                    //            Console.Write("Please enter your phone number: ");
+                    //            student.Phone = int.Parse(Console.ReadLine());
+
+                    //            Console.Write("Please enter your email: ");
+                    //            student.Email = Console.ReadLine();
+
+                    //            StudentList.Add(student);
+
+                    //            Console.WriteLine("\nData added to Student List");
+                    //            userInput = true;
+                    //        }
+
                     //    }
 
-                    //    else
-                    //    {
-                    //        Console.WriteLine(StudentList.GetStudent(id).ToString());
-                    //    }
-                    //    break;
+                       // break;
+
+                        
 
                     case 3:
                         Console.WriteLine("\nAll Students in Dublin Business School");
@@ -203,7 +232,6 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         {
                             Console.WriteLine(item.ToString());
                         }
-
                         break;
 
                     case 8:
@@ -214,7 +242,6 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         {
                             Console.WriteLine(item.ToString());
                         }
-
                         break;
 
                     case 9:
@@ -262,20 +289,23 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         break;
 
                     case 14:
-                        Console.Write("\nPlease enter the Student ID you wish to find: ");
-                        id = int.Parse(Console.ReadLine());
-
-                        if (!(student.StudentId == id))
+                        while (!userInput)
                         {
-                            Console.WriteLine("\aStudent ID not found, please add a Student by enter 1'st option");
-                            break;
-                        }
+                            Console.Write("\nPlease enter the Student ID you wish to find: ");
+                            id = int.Parse(Console.ReadLine());
 
-                        else
-                        {
-                            Console.WriteLine(StudentList.GetStudent(id).ToString());
-                        }
+                            if (!StudentList.CheckUniqueID(id))
+                            {
+                                Console.WriteLine("\aStudent ID not found, this Student ID was not added into the Student Management");
+                                continue;
+                            }
 
+                            else
+                            {
+                                Console.WriteLine(StudentList.GetStudent(id).ToString());
+                                userInput = true;
+                            }
+                        }
                         break;
 
                     case 15:
@@ -302,6 +332,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
                     case 17:
                         StudentList.Clear();
+                        Console.WriteLine("Student List Cleared");
                         break;
 
                     case 18:

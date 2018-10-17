@@ -222,7 +222,19 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return undergradStudentsNotCurrentList;
         }
 
+        //public void ChangeData(int id)
+        //{
+        //    List<Student> listOfStudent = new List<Student>(); //{ "abc", "123", "ghi" };
 
+        //    int index = listOfStudent.FindIndex(ind => ind.Equals(id));
+        //    if (index > -1)
+        //        listOfStudent[index] = "def";
+        //}
+
+        //public void Add(Student item)
+        //{
+        //    StudentList.Add(item);
+        //}
 
     }
 }
