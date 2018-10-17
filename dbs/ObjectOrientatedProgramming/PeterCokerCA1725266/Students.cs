@@ -224,11 +224,12 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
         //public void ChangeData(int id)
         //{
-        //    List<Student> listOfStudent = new List<Student>(); //{ "abc", "123", "ghi" };
+        //    List<Student> newStudentList = new List<Student>();
 
-        //    int index = listOfStudent.FindIndex(ind => ind.Equals(id));
-        //    if (index > -1)
-        //        listOfStudent[index] = "def";
+        //    foreach (Student item in StudentList)
+        //    {
+
+        //    }
         //}
 
         //public void Add(Student item)

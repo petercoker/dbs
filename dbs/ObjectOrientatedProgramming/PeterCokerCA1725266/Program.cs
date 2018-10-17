@@ -129,7 +129,6 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         break;
 
                     //case 2://fix
-
                     //    while (!userInput)
                     //    {
                     //        Console.Write("\nPlease enter the Student ID number to change data information: ");
@@ -151,7 +150,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
                     //            Console.Write("Please enter \"true\" or \"false\" if you are a current Student: ");
                     //            student.IsCurrentStudent = bool.Parse(Console.ReadLine().ToLower());
-                                
+
                     //            Console.Write("Please enter your name: ");
                     //            student.Name = Console.ReadLine();
 
@@ -183,8 +182,6 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                     //    }
 
                        // break;
-
-                        
 
                     case 3:
                         Console.WriteLine("\nAll Students in Dublin Business School");
