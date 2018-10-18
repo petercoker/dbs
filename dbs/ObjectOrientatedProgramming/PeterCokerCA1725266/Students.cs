@@ -206,7 +206,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             return postgradStudentsNotCurrentList;
         }
-        
+
         public List<Student> GetUndergradStudentNotCurrent()
         {
             List<Student> undergradStudentsNotCurrentList = new List<Student>();
@@ -222,20 +222,169 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return undergradStudentsNotCurrentList;
         }
 
-        //public void ChangeData(int id)
+        //public bool ChangeStudentName(int id, string name)
         //{
-        //    List<Student> newStudentList = new List<Student>();
+        //    Student studentChange = GetStudent(id);
 
-        //    foreach (Student item in StudentList)
+        //    bool isChange = false;
+
+        //    if (studentChange != null)
         //    {
+        //        studentChange.Name = name;
 
+        //        isChange = true;
         //    }
+
+        //    return isChange;
         //}
 
-        //public void Add(Student item)
+        //public bool ChangeStudentPhone(int id, int phone)
         //{
-        //    StudentList.Add(item);
+        //    Student studentChange = GetStudent(id);
+
+        //    bool isChange = false;
+
+        //    if (studentChange != null)
+        //    {
+        //        studentChange.Phone = phone;
+
+        //        isChange = true;
+        //    }
+
+        //    return isChange;
+        //}
+
+        //public bool ChangeStudentEmail(int id, string email)
+        //{
+        //    Student studentChange = GetStudent(id);
+
+        //    bool isChange = false;
+
+        //    if (studentChange != null)
+        //    {
+        //        studentChange.Email = email;
+
+        //        isChange = true;
+        //    }
+
+        //    return isChange;
+        //}
+
+        //public bool ChangeStudentIfStudentCurrent(int id, bool isCurrentStudent)
+        //{
+        //    Student studentChange = GetStudent(id);
+
+        //    bool isChange = false;
+
+        //    if (studentChange != null)
+        //    {
+        //        studentChange.IsCurrentStudent = isCurrentStudent;
+
+        //        isChange = true;
+        //    }
+
+        //    return isChange;
+        //}
+
+        //public bool ChangeStudentStatus(int id, int status)
+        //{
+        //    Student studentChange = GetStudent(id);
+
+        //    bool isChange = false;
+
+        //    if (studentChange != null)
+        //    {
+        //        if (status == 0)
+        //        {
+        //            studentChange.Status = StudentStatusEnum.Undergrad;
+        //        }
+
+        //        else if (status == 1)
+        //        {
+        //            studentChange.Status = StudentStatusEnum.Postgrad;
+        //        }
+
+        //        isChange = true;
+        //    }
+
+        //    return isChange;
+        //}
+
+        public bool ChangeStudentInfo(int id, bool isCurrentStudent, string name, int status, int phone, string email)
+        {
+            Student studentChange = GetStudent(id);
+
+            bool isChange = false;
+
+            if (studentChange != null)
+            {
+
+                studentChange.IsCurrentStudent = isCurrentStudent;
+
+                studentChange.Name = name;
+
+                if (status == 0)
+                {
+                    studentChange.Status = StudentStatusEnum.Undergrad;
+                }
+
+                else if (status == 1)
+                {
+                    studentChange.Status = StudentStatusEnum.Postgrad;
+                }
+
+                studentChange.Phone = phone;
+
+                studentChange.Email = email;
+
+                isChange = true;
+            }
+
+            return isChange;
+        }
+
+        //public bool ChangeStudentInfo(int id, bool isCurrentStudent, string name, int status, int phone, string email)
+        //{
+        //    Student studentDelete = GetStudent(id);
+        //    Student studentChange = GetStudent(id);
+
+        //    bool isChange = false;
+
+        //    bool removed = false;
+
+        //    if (studentDelete != null)
+        //    {
+        //        StudentList.IndexOf();
+        //        removed = true;
+        //    }
+
+        //    if (studentChange != null)
+        //    {
+
+        //        studentChange.IsCurrentStudent = isCurrentStudent;
+
+        //        studentChange.Name = name;
+
+        //        if (status == 0)
+        //        {
+        //            studentChange.Status = StudentStatusEnum.Undergrad;
+        //        }
+
+        //        else if (status == 1)
+        //        {
+        //            studentChange.Status = StudentStatusEnum.Postgrad;
+        //        }
+
+        //        studentChange.Phone = phone;
+
+        //        studentChange.Email = email;
+
+        //        isChange = true;
+        //    }
+
+        //    return isChange;
         //}
 
     }
+
 }
