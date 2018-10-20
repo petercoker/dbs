@@ -98,6 +98,7 @@
     <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Product.cs" />
     <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Products.cs" />
     <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\DBSMenus.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Employee.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Person.cs" />
