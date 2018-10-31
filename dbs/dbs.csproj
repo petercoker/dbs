@@ -68,6 +68,7 @@
     <Compile Include="ObjectOrientatedProgramming\Collections\EmployeeProgram.cs" />
     <Compile Include="ObjectOrientatedProgramming\Collections\BookProgram.cs" />
     <Compile Include="ObjectOrientatedProgramming\Collections\TryBook.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\March2018\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\GUI\CarAge\CarAge.cs">
       <SubType>Form</SubType>
     </Compile>
