@@ -1,0 +1,6 @@
+C:\Users\sonol\Documents\X College Project\ClassProjects\PeterCokerStringExercise\PeterCokerStringExercise\bin\Debug\PeterCokerStringExercise.exe.config
+C:\Users\sonol\Documents\X College Project\ClassProjects\PeterCokerStringExercise\PeterCokerStringExercise\bin\Debug\PeterCokerStringExercise.exe
+C:\Users\sonol\Documents\X College Project\ClassProjects\PeterCokerStringExercise\PeterCokerStringExercise\bin\Debug\PeterCokerStringExercise.pdb
+C:\Users\sonol\Documents\X College Project\ClassProjects\PeterCokerStringExercise\PeterCokerStringExercise\obj\Debug\PeterCokerStringExercise.csprojResolveAssemblyReference.cache
+C:\Users\sonol\Documents\X College Project\ClassProjects\PeterCokerStringExercise\PeterCokerStringExercise\obj\Debug\PeterCokerStringExercise.exe
+C:\Users\sonol\Documents\X College Project\ClassProjects\PeterCokerStringExercise\PeterCokerStringExercise\obj\Debug\PeterCokerStringExercise.pdb

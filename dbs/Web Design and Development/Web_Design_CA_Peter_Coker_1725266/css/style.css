@@ -1,0 +1,397 @@
+/* 
+    Peter Coker 1725266 Web Design and Development  
+ */
+
+body {
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 0px;
+}
+
+small {
+    font-weight: bold;
+}
+
+#input {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 5%;
+    display: inline-block;
+
+
+}
+
+#footer {
+    padding-right: 2%;
+}
+
+
+hr {
+    width: 90%;
+}
+
+#main h1,
+#main h2,
+#main h3 {
+    margin: 0px;
+    padding: 2%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+#main p {
+    margin-left: 2%;
+    font-weight: 200;
+    line-height: 1.5;
+
+}
+
+ul {}
+
+a {
+    text-decoration: none;
+    color: #73d800;
+    font-weight: bold;
+}
+
+a:hover {
+    border-bottom: none;
+}
+
+a img {
+    border: none;
+}
+
+#main img.left {
+
+    margin: 0 20px 0 0;
+}
+
+#main img.right {
+
+    margin: 0 0 0 20px;
+}
+
+table {
+    font-family: serif;
+    border-collapse: collapse;
+    width: 69%;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+td,
+th {
+    border: 1px solid #54d41e;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #54d41e;
+}
+
+/* Wrapper */
+
+#wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 30px;
+    height: 1040px;
+    color: black;
+    background-color: #ff6f04;
+}
+
+/* Header */
+
+#header {
+    height: 365px;
+    margin: 0 auto;
+    font-size: 20px;
+    background: url(../images/header.jpg) no-repeat center;
+    background-size: cover;
+}
+
+/* Navbar */
+
+#navbar div {
+    background: #73d800;
+    color: #f8f8f8;
+    padding: 0.6em;
+    cursor: pointer;
+    display: none;
+}
+
+#menu {
+    display: none;
+    font-weight: bold;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background: #73d800;
+    position: relative;
+    text-align: center;
+}
+
+#navbar ul li {
+    display: inline-block;
+}
+
+#navbar ul li a {
+    color: #f8f8f8;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    font-weight: bolder;
+}
+
+#navbar ul li:hover {
+    background: #ff6f04;
+}
+
+#navbar ul ul {
+    position: absolute;
+    width: inherit;
+    background: green;
+    display: none;
+}
+
+#navbar ul ul li {
+    display: block;
+    background: #73d800;
+}
+
+#navbar ul li:hover ul {
+    display: block;
+}
+
+
+
+#navbar ul li i {
+    color: #f8f8f8;
+    float: right;
+    padding-left: 20px;
+}
+
+/* Logo */
+
+#logo {
+    height: 150px;
+    padding-top: 24%;
+}
+
+#logo h1,
+#logo p {
+    margin: 0px;
+    padding-left: 17px;
+    padding-right: 20px;
+    text-shadow: 0 2px 0 black;
+    position: relative;
+}
+
+#logo h1 {
+    color: #f8f8f8;
+    font-size: 36px;
+    font-weight: bolder;
+}
+
+#logo p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 23px;
+}
+
+#logo a {
+    border: none;
+    text-decoration: none;
+    color: #ff6f04;
+}
+
+/* Main */
+
+#main,
+#leftsidebar,
+#main_content,
+#rightsidebar {
+    font-size: 14px;
+    height: 100%;
+    background-color: #ff6f04;
+}
+
+
+
+/* Both Sidebar */
+
+#leftsidebar,
+#rightsidebar {
+    width: 25%;
+
+}
+
+
+
+
+/* Left Sidebar */
+
+#leftsidebar {
+    float: left;
+}
+
+#leftsidebar img {
+    display: block;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+}
+
+
+
+
+/* Content */
+
+#content {}
+
+/* Main Content */
+
+#main_content {
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+#main_content img {
+    display: block;
+    max-width: 60%;
+    margin-right: auto;
+    margin-top: 5%;
+    overflow: hidden;
+    margin-left: auto;
+}
+
+
+.middle_content {}
+
+
+
+/* Right Sidebar */
+
+#rightsidebar {
+    float: right;
+}
+
+/* Right Rightsidebar Content */
+
+#rightsidebar img {
+    display: block;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+
+}
+
+
+.rightsidebar_content {}
+
+
+
+/* Foot */
+
+#footer {
+    min-height: 30px;
+    height: 60px;
+    text-align: right;
+    background-color: #6E2C00;
+}
+
+/* Media query */
+
+@media(max-width: 768px) {
+    #navbar div {
+        display: block;
+        position: relative;
+        background: #73d800;
+    }
+
+    #menu {
+        text-align: right;
+
+    }
+
+
+    #navbar ul {
+
+        display: none;
+        position: static;
+        background: #73d800;
+    }
+
+    #navbar ul li {
+        display: block;
+
+    }
+
+    #navbar ul ul {
+        position: static;
+        background: #73d800;
+    }
+
+    #navbar ul ul li {
+        display: block;
+        background: #73d800;
+
+    }
+
+
+    #logo {
+        display: none;
+    }
+
+    #main, #main_content{
+        clear:left;
+
+    }
+
+
+ 
+
+
+    #leftsidebar,
+    #rightsidebar {
+        float: none;
+        width: 100%;
+
+    }
+
+
+    #main_content {
+        margin-left: 0;
+        margin-right: 0;
+        float: none;
+        width: 100%;
+    }
+
+    #footer {
+        float: none;
+        font-weight: bold;
+        text-align: center;
+        background-color: #6E2C00;
+    }
+
+    #input{
+        display: inline-block;
+        margin-top: 70%;
+    }
+
+
+}

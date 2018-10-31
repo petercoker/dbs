@@ -1,0 +1,12 @@
+C:\Users\sonol\Downloads\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\bin\Debug\PeterCoker Coditional Logic Ex1.exe.config
+C:\Users\sonol\Downloads\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\bin\Debug\PeterCoker Coditional Logic Ex1.exe
+C:\Users\sonol\Downloads\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\bin\Debug\PeterCoker Coditional Logic Ex1.pdb
+C:\Users\sonol\Downloads\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\obj\Debug\PeterCoker Coditional Logic Ex1.csprojResolveAssemblyReference.cache
+C:\Users\sonol\Downloads\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\obj\Debug\PeterCoker Coditional Logic Ex1.exe
+C:\Users\sonol\Downloads\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\obj\Debug\PeterCoker Coditional Logic Ex1.pdb
+C:\Users\sonol\Documents\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\bin\Debug\PeterCoker Coditional Logic Ex1.exe.config
+C:\Users\sonol\Documents\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\bin\Debug\PeterCoker Coditional Logic Ex1.exe
+C:\Users\sonol\Documents\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\bin\Debug\PeterCoker Coditional Logic Ex1.pdb
+C:\Users\sonol\Documents\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\obj\Debug\PeterCoker Coditional Logic Ex1.csprojResolveAssemblyReference.cache
+C:\Users\sonol\Documents\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\obj\Debug\PeterCoker Coditional Logic Ex1.exe
+C:\Users\sonol\Documents\PeterCoker Coditional Logic Ex1\PeterCoker Coditional Logic Ex1\obj\Debug\PeterCoker Coditional Logic Ex1.pdb

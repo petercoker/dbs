@@ -1,0 +1,6 @@
+C:\Users\sonol\Documents\Visual Studio Project\PeterCokerArrarysExercises\PeterCokerArrarysExercises\obj\Debug\PeterCokerArrarysExercises.csprojResolveAssemblyReference.cache
+C:\Users\sonol\Documents\Visual Studio Project\PeterCokerArrarysExercises\PeterCokerArrarysExercises\bin\Debug\PeterCokerArrarysExercises.exe.config
+C:\Users\sonol\Documents\Visual Studio Project\PeterCokerArrarysExercises\PeterCokerArrarysExercises\bin\Debug\PeterCokerArrarysExercises.exe
+C:\Users\sonol\Documents\Visual Studio Project\PeterCokerArrarysExercises\PeterCokerArrarysExercises\bin\Debug\PeterCokerArrarysExercises.pdb
+C:\Users\sonol\Documents\Visual Studio Project\PeterCokerArrarysExercises\PeterCokerArrarysExercises\obj\Debug\PeterCokerArrarysExercises.exe
+C:\Users\sonol\Documents\Visual Studio Project\PeterCokerArrarysExercises\PeterCokerArrarysExercises\obj\Debug\PeterCokerArrarysExercises.pdb

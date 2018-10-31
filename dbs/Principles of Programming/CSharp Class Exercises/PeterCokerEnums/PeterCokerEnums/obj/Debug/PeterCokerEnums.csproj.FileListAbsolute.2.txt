@@ -1,0 +1,6 @@
+C:\Users\sonol\Documents\Visual Studio Project\MyProjects\PeterCokerEnums\PeterCokerEnums\bin\Debug\PeterCokerEnums.exe.config
+C:\Users\sonol\Documents\Visual Studio Project\MyProjects\PeterCokerEnums\PeterCokerEnums\bin\Debug\PeterCokerEnums.exe
+C:\Users\sonol\Documents\Visual Studio Project\MyProjects\PeterCokerEnums\PeterCokerEnums\bin\Debug\PeterCokerEnums.pdb
+C:\Users\sonol\Documents\Visual Studio Project\MyProjects\PeterCokerEnums\PeterCokerEnums\obj\Debug\PeterCokerEnums.csprojResolveAssemblyReference.cache
+C:\Users\sonol\Documents\Visual Studio Project\MyProjects\PeterCokerEnums\PeterCokerEnums\obj\Debug\PeterCokerEnums.exe
+C:\Users\sonol\Documents\Visual Studio Project\MyProjects\PeterCokerEnums\PeterCokerEnums\obj\Debug\PeterCokerEnums.pdb

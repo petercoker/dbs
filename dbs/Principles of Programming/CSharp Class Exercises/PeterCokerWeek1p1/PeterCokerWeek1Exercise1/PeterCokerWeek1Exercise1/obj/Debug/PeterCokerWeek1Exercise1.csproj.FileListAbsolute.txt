@@ -1,0 +1,7 @@
+\\DBS-FS.student.dbs.ie\CTX.XA.Profiles.Data\1725266\Downloads\PeterCokerWeek1Exercise1\PeterCokerWeek1Exercise1\bin\Debug\PeterCokerWeek1Exercise1.exe.config
+\\DBS-FS.student.dbs.ie\CTX.XA.Profiles.Data\1725266\Downloads\PeterCokerWeek1Exercise1\PeterCokerWeek1Exercise1\bin\Debug\PeterCokerWeek1Exercise1.exe
+\\DBS-FS.student.dbs.ie\CTX.XA.Profiles.Data\1725266\Downloads\PeterCokerWeek1Exercise1\PeterCokerWeek1Exercise1\bin\Debug\PeterCokerWeek1Exercise1.pdb
+\\DBS-FS.student.dbs.ie\CTX.XA.Profiles.Data\1725266\Downloads\PeterCokerWeek1Exercise1\PeterCokerWeek1Exercise1\obj\Debug\PeterCokerWeek1Exercise1.csprojResolveAssemblyReference.cache
+\\DBS-FS.student.dbs.ie\CTX.XA.Profiles.Data\1725266\Downloads\PeterCokerWeek1Exercise1\PeterCokerWeek1Exercise1\obj\Debug\PeterCokerWeek1Exercise1.csproj.CoreCompileInputs.cache
+\\DBS-FS.student.dbs.ie\CTX.XA.Profiles.Data\1725266\Downloads\PeterCokerWeek1Exercise1\PeterCokerWeek1Exercise1\obj\Debug\PeterCokerWeek1Exercise1.exe
+\\DBS-FS.student.dbs.ie\CTX.XA.Profiles.Data\1725266\Downloads\PeterCokerWeek1Exercise1\PeterCokerWeek1Exercise1\obj\Debug\PeterCokerWeek1Exercise1.pdb
