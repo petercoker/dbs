@@ -37,6 +37,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +68,58 @@
     <Compile Include="ObjectOrientatedProgramming\Collections\EmployeeProgram.cs" />
     <Compile Include="ObjectOrientatedProgramming\Collections\BookProgram.cs" />
     <Compile Include="ObjectOrientatedProgramming\Collections\TryBook.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\CarAge\CarAge.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\CarAge\CarAge.Designer.cs">
+      <DependentUpon>CarAge.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\CarAge\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\EmployeePromotion\Employee.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\EmployeePromotion\EmployeePromotionQuery.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\EmployeePromotion\EmployeePromotionQuery.Designer.cs">
+      <DependentUpon>EmployeePromotionQuery.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\EmployeePromotion\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\GUIFormRevision\BasicTaxCalculator.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\GUIFormRevision\GUIFormRevision.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\GUIFormRevision\GUIFormRevision.Designer.cs">
+      <DependentUpon>GUIFormRevision.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\GUIFormRevision\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\GUIIntro\GreetUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\GUIIntro\GreetUserForm.Designer.cs">
+      <DependentUpon>GreetUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\GUIIntro\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\LoanRepayment\LoanRepaymentCalculator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\LoanRepayment\LoanRepaymentCalculator.Designer.cs">
+      <DependentUpon>LoanRepaymentCalculator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\LoanRepayment\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\LoanRepayment\LoanRepayment.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\ValidatingExample\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\ValidatingExample\ValidatingExample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\ValidatingExample\ValidatingExample.Designer.cs">
+      <DependentUpon>ValidatingExample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\YearGrad\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\GUI\YearGrad\YearGrad.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ObjectOrientatedProgramming\GUI\YearGrad\YearGrad.Designer.cs">
+      <DependentUpon>YearGrad.cs</DependentUpon>
+    </Compile>
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\Apple.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\ColourEnum.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\Fish.cs" />
@@ -98,15 +152,6 @@
     <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Product.cs" />
     <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Products.cs" />
     <Compile Include="ObjectOrientatedProgramming\Lists\TryProductExample\Program.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\DBSMenus.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Employee.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Program.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Person.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Student.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Students.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\StudentStatusEnum.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\TaughtEnum.cs" />
-    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Teacher.cs" />
     <Compile Include="ObjectOrientatedProgramming\ClassNotes\ClassesObjects\Car.cs" />
     <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeContractorUserInput\Contractor.cs" />
     <Compile Include="ObjectOrientatedProgramming\Inheritance\EmployeeContractorUserInput\Employee.cs" />
@@ -132,6 +177,14 @@
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\BookClassExample\Book.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\DrinkExample\Drink.cs" />
     <Compile Include="ObjectOrientatedProgramming\IntroductionToClasses\FilmExample\Film.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Employee.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Person.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Student.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Students.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\StudentStatusEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\TaughtEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Teacher.cs" />
     <Compile Include="ObjectOrientatedProgramming\PeterCokerCA1725266\Teachers.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -148,7 +201,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="ObjectOrientatedProgramming\GUI\CarAge\CarAge.resx">
+      <DependentUpon>CarAge.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectOrientatedProgramming\GUI\EmployeePromotion\EmployeePromotionQuery.resx">
+      <DependentUpon>EmployeePromotionQuery.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectOrientatedProgramming\GUI\GUIFormRevision\GUIFormRevision.resx">
+      <DependentUpon>GUIFormRevision.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectOrientatedProgramming\GUI\GUIIntro\GreetUserForm.resx">
+      <DependentUpon>GreetUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectOrientatedProgramming\GUI\LoanRepayment\LoanRepaymentCalculator.resx">
+      <DependentUpon>LoanRepaymentCalculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectOrientatedProgramming\GUI\ValidatingExample\ValidatingExample.resx">
+      <DependentUpon>ValidatingExample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ObjectOrientatedProgramming\GUI\YearGrad\YearGrad.resx">
+      <DependentUpon>YearGrad.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ObjectOrientatedProgramming\GUI\YoutubeTutorial\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

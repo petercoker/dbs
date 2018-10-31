@@ -56,12 +56,20 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
         public void SortList()
         {
-            Console.WriteLine("\nList of Students sorted by Student ID");
-            studentList.Sort();
-
-            foreach (Student pupil in studentList)
+            if (!(studentList.Count == 0))
             {
-                Console.Write($"\nStudent ID: {pupil.StudentId}\nStudent is a current Student: {pupil.IsCurrentStudent}\nStudent: {pupil.Name}\nStatus: {pupil.Status}\nPhone: {pupil.Phone}\nEmail: {pupil.Email}\n");
+                Console.WriteLine("\nList of Students sorted by Student ID");
+                studentList.Sort();
+
+                foreach (Student pupil in studentList)
+                {
+                    Console.Write($"\nStudent ID: {pupil.StudentId}\nStudent is a current Student: {pupil.IsCurrentStudent}\nStudent Name: {pupil.Name}\nStatus: {pupil.Status}\nPhone: {pupil.Phone}\nEmail: {pupil.Email}\n");
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Student present in Student managemnt system, please enter add new Student into the Student management system");
             }
         }
 
@@ -81,573 +89,43 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return student;
         }
 
-        //public bool RemoveByID(int id)
-        //{
-        //    Student studentDelete = GetStudent(id);
-        //    bool removed = false;
-
-        //    if (studentDelete != null)
-        //    {
-        //        studentList.Remove(studentDelete);
-        //        removed = true;
-        //    }
-
-        //    return removed;
-        //}
-
-        //public bool CheckUniqueID(int id)
-        //{
-        //    Student checkNumber = GetStudent(id);
-
-        //    bool duplicate = false;
-
-        //    if (checkNumber != null)
-        //    {
-        //        duplicate = true;
-        //    }
-
-        //    return duplicate;
-        //}
-
-        //public void CheckUniqueID(int id)
-        //{
-        //    bool found = false;
-
-        //    for (int i = 0; i < studentList.Count; i++)
-        //    {
-        //        if (studentList[i].StudentId.Equals(id))
-        //        {
-        //            found = true;
-        //        }
-
-        //    }
-        //Console.Write("Enter a few numbers (eg 1-2-3-4): ");
-        //var input = Console.ReadLine();
-
-        //var numbers = new List<int>();
-        //foreach (var number in input.Split('-'))
-        //    numbers.Add(Convert.ToInt32(number));
-
-        //var uniques = new List<int>();
-        //var includesDuplicates = false;
-        //foreach (var number in numbers)
-        //{
-        //    if (!uniques.Contains(number))
-        //        uniques.Add(number);
-        //    else
-        //    {
-        //        includesDuplicates = true;
-        //        break;
-        //    }
-        //}
-
-        //if (includesDuplicates)
-        //    Console.WriteLine("Duplicate");
-
-        //}
-
-        //public List<Student> GetStudentCurrent()
-        //{
-        //    List<Student> isCurrentStudentList = new List<Student>();
-
-        //    foreach (Student item in studentList)
-        //    {
-        //        if (item.IsCurrentStudent == true)
-        //        {
-        //            isCurrentStudentList.Add(item);
-        //        }
-        //    }
-
-        //    return isCurrentStudentList;
-        //}
-
-        //public List<Student> GetStudentNotCurrent()
-        //{
-        //    List<Student> isCurrentStudentList = new List<Student>();
-
-        //    foreach (Student item in studentList)
-        //    {
-        //        if (item.IsCurrentStudent == false)
-        //        {
-        //            isCurrentStudentList.Add(item);
-        //        }
-        //    }
-
-        //    return isCurrentStudentList;
-        //}
-
-        //public List<Student> GetAllPostgradStudent()
-        //{
-        //    List<Student> postgradStudentList = new List<Student>();
-
-        //    foreach (Student item in studentList)
-        //    {
-        //        if (item.Status == StudentStatusEnum.Postgrad)
-        //        {
-        //            postgradStudentList.Add(item);
-        //        }
-        //    }
-
-        //    return postgradStudentList;
-        //}
-
-        //public List<Student> GetAllUndergradStudent()
-        //{
-        //    List<Student> undergradStudentList = new List<Student>();
-
-        //    foreach (Student item in studentList)
-        //    {
-        //        if (item.Status == StudentStatusEnum.Undergrad)
-        //        {
-        //            undergradStudentList.Add(item);
-        //        }
-        //    }
-
-        //    return undergradStudentList;
-        //}
-
-        //public List<Student> GetPostgradStudentCurrent()
-        //{
-        //    List<Student> postgradStudentsCurrentList = new List<Student>();
-
-        //    foreach (Student item in studentList)
-        //    {
-        //        if ((item.Status == StudentStatusEnum.Postgrad) && (item.IsCurrentStudent == true))
-        //        {
-        //            postgradStudentsCurrentList.Add(item);
-        //        }
-        //    }
-
-        //    return postgradStudentsCurrentList;
-        //}
-
-        //public List<Student> GetUndergradStudentCurrent()
-        //{
-        //    List<Student> undergradStudentsCurrentList = new List<Student>();
-
-        //    foreach (Student item in studentList)
-        //    {
-        //        if ((item.Status == StudentStatusEnum.Undergrad) && (item.IsCurrentStudent == true))
-        //        {
-        //            undergradStudentsCurrentList.Add(item);
-        //        }
-        //    }
-
-        //    return undergradStudentsCurrentList;
-        //}
-
-        //public List<Student> GetPostgradStudentNotCurrent()
-        //{
-        //    List<Student> postgradStudentsNotCurrentList = new List<Student>();
-
-        //    foreach (Student item in studentList)
-        //    {
-        //        if ((item.Status == StudentStatusEnum.Postgrad) && (item.IsCurrentStudent == false))
-        //        {
-        //            postgradStudentsNotCurrentList.Add(item);
-        //        }
-        //    }
-
-        //    return postgradStudentsNotCurrentList;
-        //}
-
-        //public List<Student> GetUndergradStudentNotCurrent()
-        //{
-        //    List<Student> undergradStudentsNotCurrentList = new List<Student>();
-
-        //    foreach (Student item in studentList)
-        //    {
-        //        if ((item.Status == StudentStatusEnum.Undergrad) && (item.IsCurrentStudent == false))
-        //        {
-        //            undergradStudentsNotCurrentList.Add(item);
-        //        }
-        //    }
-
-        //    return undergradStudentsNotCurrentList;
-        //}
-
-        //public bool ChangeStudentName(int id, string name)
-        //{
-        //    Student studentChange = GetStudent(id);
-
-        //    bool isChange = false;
-
-        //    if (studentChange != null)
-        //    {
-        //        studentChange.Name = name;
-
-        //        isChange = true;
-        //    }
-
-        //    return isChange;
-        //}
-
-        //public bool ChangeStudentPhone(int id, int phone)
-        //{
-        //    Student studentChange = GetStudent(id);
-
-        //    bool isChange = false;
-
-        //    if (studentChange != null)
-        //    {
-        //        studentChange.Phone = phone;
-
-        //        isChange = true;
-        //    }
-
-        //    return isChange;
-        //}
-
-        //public bool ChangeStudentEmail(int id, string email)
-        //{
-        //    Student studentChange = GetStudent(id);
-
-        //    bool isChange = false;
-
-        //    if (studentChange != null)
-        //    {
-        //        studentChange.Email = email;
-
-        //        isChange = true;
-        //    }
-
-        //    return isChange;
-        //}
-
-        //public bool ChangeStudentIfStudentCurrent(int id, bool isCurrentStudent)
-        //{
-        //    Student studentChange = GetStudent(id);
-
-        //    bool isChange = false;
-
-        //    if (studentChange != null)
-        //    {
-        //        studentChange.IsCurrentStudent = isCurrentStudent;
-
-        //        isChange = true;
-        //    }
-
-        //    return isChange;
-        //}
-
-        //public bool ChangeStudentStatus(int id, int status)
-        //{
-        //    Student studentChange = GetStudent(id);
-
-        //    bool isChange = false;
-
-        //    if (studentChange != null)
-        //    {
-        //        if (status == 0)
-        //        {
-        //            studentChange.Status = StudentStatusEnum.Undergrad;
-        //        }
-
-        //        else if (status == 1)
-        //        {
-        //            studentChange.Status = StudentStatusEnum.Postgrad;
-        //        }
-
-        //        isChange = true;
-        //    }
-
-        //    return isChange;
-        //}
-
-        public bool ChangeStudentInfo(int id, bool isCurrentStudent, string name, int status, int phone, string email)
+        public void DisplayStudentMenu()
         {
-            Student studentChange = GetStudent(id);
+            Console.WriteLine("\n[DBS Student Management System Menu]");
+            Console.WriteLine("\nStudent Management: Data definition options");
+            Console.WriteLine("1: Add a new Student");
 
-            bool isChange = false;
+            Console.WriteLine("\nStudent Management: Viewing options");
+            Console.WriteLine("2: Show list of all Students in Dublin Business School");
+            Console.WriteLine("3: Show list of all postgrad Students");
+            Console.WriteLine("4: Show list of all undergrad Students");
+            Console.WriteLine("5: Show list of all current Students");
+            Console.WriteLine("6: Show list of all postgrad Students currently in Dublin Business School");
+            Console.WriteLine("7: Show list of all undergrad Students currently in Dublin Business School");
+            Console.WriteLine("8: Show list of all not current Students");
+            Console.WriteLine("9: Show list of all postgrad Students not currently in Dublin Business School");
+            Console.WriteLine("10: Show list of all undergrad Students not currently in Dublin Business School");
+            Console.WriteLine("11: Show list of Students sorted by ID");
+            Console.WriteLine("12: Show total number of Students in Dublin Business School");
 
-            if (studentChange != null)
-            {
-
-                studentChange.IsCurrentStudent = isCurrentStudent;
-
-                studentChange.Name = name;
-
-                if (status == 0)
-                {
-                    studentChange.Status = StudentStatusEnum.Undergrad;
-                }
-
-                else if (status == 1)
-                {
-                    studentChange.Status = StudentStatusEnum.Postgrad;
-                }
-
-                studentChange.Phone = phone;
-
-                studentChange.Email = email;
-
-                isChange = true;
-            }
-
-            return isChange;
+            Console.WriteLine("\nStudent Management: Data manipulation options");
+            Console.WriteLine("13: Find a Student by entering Student ID");
+            Console.WriteLine("14: Delete a Student by entering Student ID");
+            Console.WriteLine("15: Clear all Students in the Student management system");
+            Console.WriteLine("16: Clear all Students in the Student management system & Go to Teacher Management System");
+            Console.WriteLine("17: Quit application");
         }
-
-        //public bool ChangeStudentInfo(int id, bool isCurrentStudent, string name, int status, int phone, string email)
-        //{
-        //    Student studentDelete = GetStudent(id);
-        //    Student studentChange = GetStudent(id);
-
-        //    bool isChange = false;
-
-        //    bool removed = false;
-
-        //    if (studentDelete != null)
-        //    {
-        //        StudentList.IndexOf();
-        //        removed = true;
-        //    }
-
-        //    if (studentChange != null)
-        //    {
-
-        //        studentChange.IsCurrentStudent = isCurrentStudent;
-
-        //        studentChange.Name = name;
-
-        //        if (status == 0)
-        //        {
-        //            studentChange.Status = StudentStatusEnum.Undergrad;
-        //        }
-
-        //        else if (status == 1)
-        //        {
-        //            studentChange.Status = StudentStatusEnum.Postgrad;
-        //        }
-
-        //        studentChange.Phone = phone;
-
-        //        studentChange.Email = email;
-
-        //        isChange = true;
-        //    }
-
-        //    return isChange;
-        //}
 
         public void AddStudent()
         {
-        //    Students studentList = new Students();
-        //    Student student = new Student();
-        //    int studentStatus, studentPhone;
-        //    bool userInputID = false, userInputStudentAttendance = false, userInputName = false, userInputStatus = false, userInputPhone = false, userInputEmail = false;
-        //    string inputStudentID, inputStudentStatus, inputStudentEmail, inputStudentName, inputStudentAttendance;
-
-        //    while (!userInputID)
-        //    {
-        //        Console.Write("Please enter your Student ID number (integer): ");
-        //        inputStudentID = Console.ReadLine();
-
-        //        if (String.IsNullOrWhiteSpace(inputStudentID))
-        //        {
-        //            Console.WriteLine("\n\aInvalid Input, please enter a number");
-        //            continue;
-        //        }
-
-        //        else if (int.TryParse(inputStudentID, out int id))
-        //        {
-        //            if (id < 0)
-        //            {
-        //                Console.WriteLine("\n\aPlease enter a postive number");
-        //                continue;
-        //            }
-
-        //            else if (id >= 0)
-        //            {
-        //                Student checkNumber = GetStudent(id);
-
-        //                bool found = false;
-
-        //                if (checkNumber != null)
-        //                {
-        //                    found = true;
-        //                    Console.WriteLine("\n\aStudent already exists");
-        //                    continue;
-        //                }
-
-        //                else
-        //                {
-        //                    student.StudentId = id;
-        //                    userInputID = true;
-        //                }
-        //            }
-        //        }
-
-        //        else
-        //        {
-        //            Console.WriteLine("\n\aNot a number");
-        //            continue;
-        //        }
-
-        //    }
-
-        //    while (!userInputStudentAttendance)
-        //    {
-        //        Console.Write("Please enter \"t\" or \"f\" if you are a current Student: ");
-        //        inputStudentAttendance = Console.ReadLine().ToLower();
-
-        //        if (String.IsNullOrWhiteSpace(inputStudentAttendance))
-        //        {
-        //            Console.WriteLine("\n\aInvalid Input, please enter a string input");
-        //            continue;
-        //        }
-
-        //        else if (inputStudentAttendance == "t")
-        //        {
-        //            student.IsCurrentStudent = true;
-        //            userInputStudentAttendance = true;
-        //        }
-
-        //        else if (inputStudentAttendance == "f")
-        //        {
-        //            student.IsCurrentStudent = false;
-        //            userInputStudentAttendance = true;
-        //        }
-
-        //        else
-        //        {
-        //            Console.WriteLine("\n\aInvalid Input, only enter \"t\" or \"f\" if you are a current Student");
-        //            continue;
-        //        }
-        //    }
-
-        //    while (!userInputName)
-        //    {
-        //        Console.Write("Please enter your name: ");
-        //        inputStudentName = Console.ReadLine();
-
-        //        if (String.IsNullOrWhiteSpace(inputStudentName))
-        //        {
-        //            Console.WriteLine("\n\aInvalid Input, please enter a string input");
-        //            continue;
-        //        }
-
-        //        else
-        //        {
-        //            student.Name = inputStudentName;
-        //            userInputName = true;
-        //        }
-
-        //    }
-
-        //    while (!userInputStatus)
-        //    {
-        //        Console.Write("Please enter \"0\" for Undergrad or \"1\" for Postgrad: ");
-        //        inputStudentStatus = Console.ReadLine();
-
-        //        if (String.IsNullOrWhiteSpace(inputStudentStatus))
-        //        {
-        //            Console.WriteLine("\n\aInvalid Input, please enter a number");
-        //            continue;
-        //        }
-
-        //        else if (int.TryParse(inputStudentStatus, out studentStatus))
-        //        {
-        //            if (studentStatus == 0)
-        //            {
-        //                student.Status = StudentStatusEnum.Undergrad;
-        //                userInputStatus = true;
-        //            }
-
-        //            else if (studentStatus == 1)
-        //            {
-        //                student.Status = StudentStatusEnum.Postgrad;
-        //                userInputStatus = true;
-        //            }
-
-        //            else if (studentStatus < 0 || studentStatus > 1)
-        //            {
-        //                Console.WriteLine("\n\aPlease only enter a number between \"0\" and \"1\"");
-        //                continue;
-        //            }
-        //        }
-
-        //        else
-        //        {
-        //            Console.WriteLine("\n\aNot a number");
-        //            continue;
-        //        }
-        //    }
-
-        //    while (!userInputPhone)
-        //    {
-        //        Console.Write("Please enter your phone number (integer): ");
-        //        string inputStudentPhone = Console.ReadLine();
-
-        //        if (String.IsNullOrWhiteSpace(inputStudentPhone))
-        //        {
-        //            Console.WriteLine("\n\aInvalid Input, please enter a number");
-        //            continue;
-        //        }
-
-        //        else if (int.TryParse(inputStudentPhone, out studentPhone))
-        //        {
-        //            if (studentPhone < 0)
-        //            {
-        //                Console.WriteLine("\n\aPlease enter a postive number");
-        //                continue;
-        //            }
-
-        //            else
-        //            {
-        //                student.Phone = studentPhone;
-        //                userInputPhone = true;
-        //            }
-        //        }
-
-        //        else
-        //        {
-        //            Console.WriteLine("\n\aNot a number");
-        //            continue;
-        //        }
-
-        //    }
-
-        //    while (!userInputEmail)
-        //    {
-        //        Console.Write("Please enter your email: ");
-        //        inputStudentEmail = Console.ReadLine();
-
-        //        if (String.IsNullOrWhiteSpace(inputStudentEmail))
-        //        {
-        //            Console.WriteLine("\n\aInvalid Input, please enter a string input");
-        //            continue;
-        //        }
-
-        //        else
-        //        {
-        //            student.Email = inputStudentEmail;
-        //            userInputEmail = true;
-        //        }
-        //    }
-
-        //    studentList.Add(student);
-        //    Console.WriteLine("\nStudent has been added");
-
-        }
-
-        public void ChangeAllStudentInfo() //fix
-        {
-            //    Students studentList = new Students();
-            Student student = new Student();
-            int id, phone, status;
-            bool changeInput = false;
-            string name, email;
-            bool isCurrentStudent;
-
-            Students studentList = new Students();
             Student student = new Student();
             int studentStatus, studentPhone;
-            bool changeUserInputID = false, userInputStudentAttendance = false, userInputName = false, userInputStatus = false, userInputPhone = false, userInputEmail = false;
-            string inputStudentID, inputStudentStatus, inputStudentEmail, inputStudentName, inputStudentAttendance;
+            bool userInputID = false, userInputStudentAttendance = false, userInputName = false, userInputStatus = false, userInputPhone = false, userInputEmail = false, found = false; //Fix value not found
+            string inputStudentID, inputStudentStatus, inputStudentEmail, inputStudentName, inputStudentAttendance, inputStudentPhone;
 
-            while (!changeUserInputID)
+            while (!userInputID)
             {
-                Console.Write("Please enter your Student ID number (integer): ");
+                Console.Write("\nPlease enter your Student ID number (integer) with no spaces or enter \"q\" to go back to Student Menu: ");
                 inputStudentID = Console.ReadLine();
 
                 if (String.IsNullOrWhiteSpace(inputStudentID))
@@ -656,11 +134,18 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                     continue;
                 }
 
+                else if (inputStudentID == "q")
+                {
+                    Console.Clear();
+                    GetStudentManagementSystem();
+                    userInputID = true;
+                }
+
                 else if (int.TryParse(inputStudentID, out int id))
                 {
-                    if (id < 0)
+                    if (id <= 0)
                     {
-                        Console.WriteLine("\n\aPlease enter a postive number");
+                        Console.WriteLine("\n\aPlease enter a postive number or that's is not 0");
                         continue;
                     }
 
@@ -668,7 +153,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                     {
                         Student checkNumber = GetStudent(id);
 
-                        bool found = false;
+                        found = false;
 
                         if (checkNumber != null)
                         {
@@ -680,14 +165,14 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                         else
                         {
                             student.StudentId = id;
-                            changeUserInputID = true;
+                            userInputID = true;
                         }
                     }
                 }
 
                 else
                 {
-                    Console.WriteLine("\n\aNot a number");
+                    Console.WriteLine("\n\aInvalid Input");
                     continue;
                 }
 
@@ -695,7 +180,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             while (!userInputStudentAttendance)
             {
-                Console.Write("Please enter \"t\" or \"f\" if you are a current Student: ");
+                Console.Write("Please enter \"t\" for True or \"f\" for False if you are a current Student: ");
                 inputStudentAttendance = Console.ReadLine().ToLower();
 
                 if (String.IsNullOrWhiteSpace(inputStudentAttendance))
@@ -728,23 +213,32 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 Console.Write("Please enter your name: ");
                 inputStudentName = Console.ReadLine();
 
-                if (String.IsNullOrWhiteSpace(inputStudentName))
+                if (!(String.IsNullOrWhiteSpace(inputStudentName)))
                 {
-                    Console.WriteLine("\n\aInvalid Input, please enter a string input");
-                    continue;
+                    if (!(int.TryParse(inputStudentName, out int number)))
+                    {
+                        student.Name = inputStudentName;
+                        userInputName = true;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("\n\ainvalid Input");
+                        continue;
+                    }
                 }
 
                 else
                 {
-                    student.Name = inputStudentName;
-                    userInputName = true;
+                    Console.WriteLine("\n\aInvalid input");
+                    continue;
                 }
 
             }
 
             while (!userInputStatus)
             {
-                Console.Write("Please enter \"0\" for Undergrad or \"1\" for Postgrad: ");
+                Console.Write("Please enter \"1\" for Undergrad or \"2\" for Postgrad: ");
                 inputStudentStatus = Console.ReadLine();
 
                 if (String.IsNullOrWhiteSpace(inputStudentStatus))
@@ -755,40 +249,40 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
                 else if (int.TryParse(inputStudentStatus, out studentStatus))
                 {
-                    if (studentStatus == 0)
+                    if (studentStatus == 1)
                     {
                         student.Status = StudentStatusEnum.Undergrad;
                         userInputStatus = true;
                     }
 
-                    else if (studentStatus == 1)
+                    else if (studentStatus == 2)
                     {
                         student.Status = StudentStatusEnum.Postgrad;
                         userInputStatus = true;
                     }
 
-                    else if (studentStatus < 0 || studentStatus > 1)
+                    else
                     {
-                        Console.WriteLine("\n\aPlease only enter a number between \"0\" and \"1\"");
+                        Console.WriteLine("\n\aPlease only enter a number between \"1\" and \"2\"");
                         continue;
                     }
                 }
 
                 else
                 {
-                    Console.WriteLine("\n\aNot a number");
+                    Console.WriteLine("\n\aInvalid Input");
                     continue;
                 }
             }
 
             while (!userInputPhone)
             {
-                Console.Write("Please enter your phone number (integer): ");
-                string inputStudentPhone = Console.ReadLine();
+                Console.Write("Please enter your 10 digit phone number (integer) with no spaces in between the number: ");
+                inputStudentPhone = Console.ReadLine();
 
-                if (String.IsNullOrWhiteSpace(inputStudentPhone))
+                if (inputStudentPhone.Length < 10 || inputStudentPhone.Length > 10)
                 {
-                    Console.WriteLine("\n\aInvalid Input, please enter a number");
+                    Console.WriteLine("\n\aInvalid input, please enter a 10 positive digit phone number");
                     continue;
                 }
 
@@ -796,7 +290,6 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
                 {
                     if (studentPhone < 0)
                     {
-                        Console.WriteLine("\n\aPlease enter a postive number");
                         continue;
                     }
 
@@ -809,7 +302,7 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
                 else
                 {
-                    Console.WriteLine("\n\aNot a number");
+                    Console.WriteLine("\n\aInvalid Input");
                     continue;
                 }
 
@@ -817,312 +310,590 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
             while (!userInputEmail)
             {
-                Console.Write("Please enter your email: ");
-                inputStudentEmail = Console.ReadLine();
+                Console.Write("Please enter a valid email address that contains \"@\" and \".com\": ");
+                inputStudentEmail = Console.ReadLine().ToLower();
 
-                if (String.IsNullOrWhiteSpace(inputStudentEmail))
+                if (!(String.IsNullOrWhiteSpace(inputStudentEmail)))
                 {
-                    Console.WriteLine("\n\aInvalid Input, please enter a string input");
-                    continue;
+                    if (inputStudentEmail.Contains(".com") && inputStudentEmail.Contains("@"))
+                    {
+                        student.Email = inputStudentEmail;
+                        userInputEmail = true;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("\n\aInvalid Input, please enter a valid email address");
+                        continue;
+                    }
+
                 }
 
                 else
                 {
-                    student.Email = inputStudentEmail;
-                    userInputEmail = true;
+                    Console.WriteLine("\n\aInvalid Input, please enter a string email");
+                    continue;
                 }
             }
 
             studentList.Add(student);
             Console.WriteLine("\nStudent has been added");
-
-        
-
-    }
-
-    public void ShowAllStudents()
-    {
-        Console.WriteLine("\nAll Students in Dublin Business School");
-        foreach (Student pupil in studentList)
-        {
-            Console.WriteLine(pupil.ToString());
         }
-    }
 
-    public void ShowAllPostgradStudents()
-    {
-        Console.WriteLine("\nList of Students that are Postgrad Students of Dublin Business School\n");
-
-        List<Student> postgradStudentList = new List<Student>();
-
-        foreach (Student item in studentList)
+        public void ShowAllStudents()
         {
-            if (item.Status == StudentStatusEnum.Postgrad)
+            if (!(studentList.Count == 0))
             {
-                postgradStudentList.Add(item);
-            }
-        }
+                Console.WriteLine("\nAll Students in Dublin Business School");
 
-        foreach (var item in postgradStudentList)
-        {
-            Console.WriteLine(item.ToString());
-        }
-    }
-
-    public void ShowAllUndergradStudents()
-    {
-        Console.WriteLine("\nList of Students that are Undergrad Students of Dublin Business School\n");
-
-        List<Student> undergradStudentList = new List<Student>();
-
-        foreach (Student item in studentList)
-        {
-            if (item.Status == StudentStatusEnum.Undergrad)
-            {
-                undergradStudentList.Add(item);
-            }
-        }
-
-        foreach (var item in undergradStudentList)
-        {
-            Console.WriteLine(item.ToString());
-        }
-    }
-
-    public void ShowAllCurrentStudents()
-    {
-        Console.WriteLine("\nList of all Students that are currently studying in Dublin Business School\n");
-
-        List<Student> isCurrentStudentList = new List<Student>();
-
-        foreach (Student item in studentList)
-        {
-            if (item.IsCurrentStudent == true)
-            {
-                isCurrentStudentList.Add(item);
-            }
-        }
-
-        foreach (Student item in isCurrentStudentList)
-        {
-            Console.WriteLine(item.ToString());
-        }
-
-    }
-
-    public void ShowAllPostgradCurrentStudents()
-    {
-        Console.WriteLine("\nList of all Students that are Postgrad Students and currently studying in Dublin Business School\n");
-
-        List<Student> postgradStudentsCurrentList = new List<Student>();
-
-        foreach (Student item in studentList)
-        {
-            if ((item.Status == StudentStatusEnum.Postgrad) && (item.IsCurrentStudent == true))
-            {
-                postgradStudentsCurrentList.Add(item);
-            }
-        }
-
-        foreach (Student item in postgradStudentsCurrentList)
-        {
-            Console.WriteLine(item.ToString());
-        }
-
-    }
-
-    public void ShowAllUndergradCurrentStudents()
-    {
-        Console.WriteLine("\nList of all Students that are Undergrad Students and currently studying in Dublin Business School\n");
-
-        List<Student> undergradStudentsCurrentList = new List<Student>();
-
-        foreach (Student item in studentList)
-        {
-            if ((item.Status == StudentStatusEnum.Undergrad) && (item.IsCurrentStudent == true))
-            {
-                undergradStudentsCurrentList.Add(item);
-            }
-        }
-
-        foreach (Student item in undergradStudentsCurrentList)
-        {
-            Console.WriteLine(item.ToString());
-        }
-
-    }
-
-    public void ShowAllNotCurrentStudents()
-    {
-        Console.WriteLine("\nList of all Students that are not currently studying in Dublin Business School\n");
-
-        List<Student> isCurrentStudentList = new List<Student>();
-
-        foreach (Student item in studentList)
-        {
-            if (item.IsCurrentStudent == false)
-            {
-                isCurrentStudentList.Add(item);
-            }
-        }
-
-        foreach (Student item in isCurrentStudentList)
-        {
-            Console.WriteLine(item.ToString());
-        }
-    }
-
-    public void ShowAllPostgradNotCurrentStudents()
-    {
-        Console.WriteLine("\nList of all Students that are Postgrad Students and not currently studying in Dublin Business School\n");
-
-        List<Student> postgradStudentsNotCurrentList = new List<Student>();
-
-        foreach (Student item in studentList)
-        {
-            if ((item.Status == StudentStatusEnum.Postgrad) && (item.IsCurrentStudent == false))
-            {
-                postgradStudentsNotCurrentList.Add(item);
-            }
-        }
-
-        foreach (Student item in postgradStudentsNotCurrentList)
-        {
-            Console.WriteLine(item.ToString());
-        }
-
-    }
-
-    public void ShowAllUndergradNotCurrentStudents()
-    {
-        List<Student> undergradStudentsNotCurrentList = new List<Student>();
-
-        foreach (Student item in studentList)
-        {
-            if ((item.Status == StudentStatusEnum.Undergrad) && (item.IsCurrentStudent == false))
-            {
-                undergradStudentsNotCurrentList.Add(item);
-            }
-        }
-
-        foreach (Student item in undergradStudentsNotCurrentList)
-        {
-            Console.WriteLine(item.ToString());
-        }
-
-    }
-
-    public void ShowAllTotalNumberStudents()
-    {
-        Console.WriteLine($"\nThere are {studentList.Count} total number of Students in Dublin Business School");
-    }
-
-    public void FindStudent()
-    {
-        bool findInput = false, found = false;
-        Student student1 = new Student();
-
-        while (!findInput)
-        {
-            Console.Write("\nPlease enter the Student ID you wish to find: ");
-            string inputID = Console.ReadLine();
-
-            if (String.IsNullOrWhiteSpace(inputID))
-            {
-                Console.WriteLine("\n\aInvalid Input, please enter a number");
-                continue;
-            }
-
-            else if (int.TryParse(inputID, out int id))
-            {
-                foreach (Student student in studentList)
+                foreach (Student pupil in studentList)
                 {
-                    if (student.StudentId == id)
-                    {
-                        student1 = student;
-                        found = true;
-                        findInput = true;
-                    }
-
-                }
-
-                if (found)
-                {
-                    Console.Write(student1.ToString());
-                }
-
-                else
-                {
-                    Console.WriteLine("\a\nStudent ID not found, Please add Student ID into Student Management System");
-                    continue;
+                    Console.WriteLine(pupil.ToString());
                 }
             }
 
             else
             {
-                Console.WriteLine("\n\aNot a number");
-                continue;
+                Console.WriteLine("\n\aNo Student present in Student managemnt system, please enter add new Student into the Student management system");
             }
-
         }
-    }
 
-    public void DeleteStudent()
-    {
-
-        bool deleteInput = false, removed = false;
-
-        while (!deleteInput)
+        public void ShowAllPostgradStudents()
         {
-            Console.Write("\nPlease enter the Student ID you wish to delete: ");
-            string inputID = Console.ReadLine();
-
-            if (String.IsNullOrWhiteSpace(inputID))
+            if (!(studentList.Count == 0))
             {
-                Console.WriteLine("\n\aInvalid Input, please enter a number");
-                continue;
+                Console.WriteLine("\nList of Students that are Postgrad Students of Dublin Business School");
+
+                List<Student> postgradStudentList = new List<Student>();
+
+                foreach (Student item in studentList)
+                {
+                    if (item.Status == StudentStatusEnum.Postgrad)
+                    {
+                        postgradStudentList.Add(item);
+                    }
+                }
+
+                if (!(postgradStudentList.Count == 0))
+                {
+                    foreach (var item in postgradStudentList)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aNo postgrad Students present in Student managemnt system, please enter add Student into the Student management system");
+                }
+
             }
 
-            else if (int.TryParse(inputID, out int id))
+            else
             {
+                Console.WriteLine("\n\aNo Student present in Student managemnt system, please enter add Student into the Student management system");
+            }
+        }
 
-                for (int i = 0; i < studentList.Count; i++)
+        public void ShowAllUndergradStudents()
+        {
+            if (!(studentList.Count == 0))
+            {
+                Console.WriteLine("\nList of Students that are Undergrad Students of Dublin Business School");
+
+                List<Student> undergradStudentList = new List<Student>();
+
+                foreach (Student item in studentList)
                 {
-                    if (studentList[i].StudentId == id)
+                    if (item.Status == StudentStatusEnum.Undergrad)
                     {
-                        studentList.Remove(studentList[i]);
-                        removed = true;
+                        undergradStudentList.Add(item);
                     }
 
                 }
 
-                if (removed)
+                if (!(undergradStudentList.Count == 0))
                 {
-                    Console.WriteLine($"\nThe Student ID: {id} has been removed");
-
-                    foreach (Student pupil in studentList)
+                    foreach (var item in undergradStudentList)
                     {
-                        Console.WriteLine(pupil.ToString());
+                        Console.WriteLine(item.ToString());
                     }
 
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aNo undergrad Students present in Student managemnt system, please enter add Student into the Student management system");
+                }
+
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Students present in Student managemnt system, please enter add Student into the Student management system");
+            }
+        }
+
+        public void ShowAllCurrentStudents()
+        {
+            if (!(studentList.Count == 0))
+            {
+                Console.WriteLine("\nList of all Students that are currently studying in Dublin Business School");
+
+                List<Student> isCurrentStudentList = new List<Student>();
+
+                foreach (Student item in studentList)
+                {
+                    if (item.IsCurrentStudent == true)
+                    {
+                        isCurrentStudentList.Add(item);
+                    }
+
+                }
+
+                if (!(isCurrentStudentList.Count == 0))
+                {
+                    foreach (Student item in isCurrentStudentList)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aNo current Student present in Student managemnt system, please enter add Student into the Student management system");
+                }
+
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Students present in Student managment system, please enter add new Student into the Student management system");
+            }
+        }
+
+        public void ShowAllPostgradCurrentStudents()
+        {
+            if (!(studentList.Count == 0))
+            {
+                Console.WriteLine("\nList of all Students that are Postgrad Students and currently studying in Dublin Business School");
+
+                List<Student> postgradStudentsCurrentList = new List<Student>();
+
+                foreach (Student item in studentList)
+                {
+                    if ((item.Status == StudentStatusEnum.Postgrad) && (item.IsCurrentStudent == true))
+                    {
+                        postgradStudentsCurrentList.Add(item);
+                    }
+                }
+
+                if (!(postgradStudentsCurrentList.Count == 0))
+                {
+                    foreach (Student item in postgradStudentsCurrentList)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aNo current postgrad Students present in student management, please enter a new student into the Student management system");
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Students present in student management, please enter a new student into the Student management system");
+            }
+        }
+
+        public void ShowAllUndergradCurrentStudents()
+        {
+            if (!(studentList.Count == 0))
+            {
+                Console.WriteLine("\nList of all Students that are Undergrad Students and currently studying in Dublin Business School");
+
+                List<Student> undergradStudentsCurrentList = new List<Student>();
+
+                foreach (Student item in studentList)
+                {
+                    if ((item.Status == StudentStatusEnum.Undergrad) && (item.IsCurrentStudent == true))
+                    {
+                        undergradStudentsCurrentList.Add(item);
+                    }
+                }
+
+                if (!(undergradStudentsCurrentList.Count == 0))
+                {
+                    foreach (Student item in undergradStudentsCurrentList)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aNo current undergrad Students present in student management, please enter a new student into the Student management system");
+                }
+
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Students present in student management, please enter a new student into the Student management system");
+            }
+        }
+
+        public void ShowAllNotCurrentStudents()
+        {
+            if (!(studentList.Count == 0))
+            {
+                Console.WriteLine("\nList of all Students that are not currently studying in Dublin Business School");
+
+                List<Student> isCurrentStudentList = new List<Student>();
+
+                foreach (Student item in studentList)
+                {
+                    if (item.IsCurrentStudent == false)
+                    {
+                        isCurrentStudentList.Add(item);
+                    }
+                }
+
+                if (!(isCurrentStudentList.Count == 0))
+                {
+                    foreach (Student item in isCurrentStudentList)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aNo past Students present in student management system, please enter student into the Student management system");
+                }
+
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Student present in student mannagement system, please enter a new student into the Student management system");
+            }
+        }
+
+        public void ShowAllPostgradNotCurrentStudents()
+        {
+            if (!(studentList.Count == 0))
+            {
+                Console.WriteLine("\nList of all Students that are Postgrad Students and not currently studying in Dublin Business School");
+
+                List<Student> postgradStudentsNotCurrentList = new List<Student>();
+
+                foreach (Student item in studentList)
+                {
+                    if ((item.Status == StudentStatusEnum.Postgrad) && (item.IsCurrentStudent == false))
+                    {
+                        postgradStudentsNotCurrentList.Add(item);
+                    }
+                }
+
+                if (!(postgradStudentsNotCurrentList.Count == 0))
+                {
+                    foreach (Student item in postgradStudentsNotCurrentList)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aNo past postgrad Students present in student management system, please enter student into the Student management system");
+                }
+
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Student present in student mannagement system, please enter a new student into the Student management system");
+            }
+        }
+
+        public void ShowAllUndergradNotCurrentStudents()
+        {
+            if (!(studentList.Count == 0))
+            {
+                List<Student> undergradStudentsNotCurrentList = new List<Student>();
+
+                foreach (Student item in studentList)
+                {
+                    if ((item.Status == StudentStatusEnum.Undergrad) && (item.IsCurrentStudent == false))
+                    {
+                        undergradStudentsNotCurrentList.Add(item);
+                    }
+                }
+
+                if (!(undergradStudentsNotCurrentList.Count == 0))
+                {
+                    foreach (Student item in undergradStudentsNotCurrentList)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aNo past undergrad Students present in student management system, please enter student into the Student management system");
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Student present in student mannagement system, please enter a new student into the Student management system");
+            }
+        }
+
+        public void ShowAllTotalNumberStudents()
+        {
+            Console.WriteLine($"\nThere are {studentList.Count} total number of Students in Dublin Business School management system");
+        }
+
+        public void FindStudent()
+        {
+            bool findInput = false, found = false;
+            string inputID;
+            Student student1 = new Student();
+
+            while (!findInput)
+            {
+                Console.Write("\nPlease enter the Student ID you wish to find with no spaces in between the numbers or enter \"q\" to go back to Student Menu: ");
+                inputID = Console.ReadLine();
+
+                if (String.IsNullOrWhiteSpace(inputID))
+                {
+                    Console.WriteLine("\n\aInvalid Input, please enter a number");
+                    continue;
+                }
+
+                else if (inputID == "q")
+                {
+                    Console.Clear();
+                    GetStudentManagementSystem();
+                    findInput = true;
+                }
+
+                else if (int.TryParse(inputID, out int id))
+                {
+                    foreach (Student student in studentList)
+                    {
+                        if (student.StudentId == id)
+                        {
+                            student1 = student;
+                            found = true;
+                            findInput = true;
+                        }
+
+                    }
+
+                    if (found)
+                    {
+                        Console.Write(student1.ToString());
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("\a\nStudent ID not found, please add Student into Student Management System");
+                        continue;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aInvalid Input");
+                    continue;
+                }
+
+            }
+        }
+
+        public void DeleteStudent()
+        {
+            Student student = new Student();
+            bool deleteInput = false, removed = false;
+
+            while (!deleteInput)
+            {
+                Console.Write("\nPlease enter the Student ID you wish to delete with no spaces in between the number or enter \"q\" to go back to Student Menu: ");
+                string inputID = Console.ReadLine();
+
+                if (String.IsNullOrWhiteSpace(inputID))
+                {
+                    Console.WriteLine("\n\aInvalid Input, please enter a number");
+                    continue;
+                }
+
+                else if (inputID == "q")
+                {
+                    Console.Clear();
+                    GetStudentManagementSystem();
                     deleteInput = true;
                 }
 
+                else if (int.TryParse(inputID, out int id))
+                {
+
+                    for (int i = 0; i < studentList.Count; i++)
+                    {
+                        if (studentList[i].StudentId == id)
+                        {
+                            studentList.Remove(studentList[i]);
+                            removed = true;
+                        }
+
+                    }
+
+                    if (removed)
+                    {
+                        Console.WriteLine($"\nThe Student account number: {id} has been removed from the Student management system");
+
+                        foreach (Student pupil in studentList)
+                        {
+                            Console.WriteLine(pupil.ToString());
+                        }
+
+                        deleteInput = true;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("\a\nStudent does exist, please add Student into Student Management System");
+                        continue;
+                    }
+                }
+
                 else
                 {
-                    Console.WriteLine("\a\nStudent does exist, Please add Student ID into Student Management System");
+                    Console.WriteLine("\n\aInvalid Input");
                     continue;
                 }
             }
+        }
 
-            else
+        public void GetStudentManagementSystem()
+        {
+            Student student = new Student();
+            Teachers teacher = new Teachers();
+            bool keepGoing = true, userOption = true;
+            string inputOption;
+
+            while (keepGoing)
             {
-                Console.WriteLine("\n\aNot a number");
-                continue;
+                keepGoing = false;
+
+                while (userOption)
+                {
+                    DisplayStudentMenu();
+
+                    Console.Write("\nPlease enter a number listed by the menu above, with no spaces in between the number: ");
+                    inputOption = Console.ReadLine();
+
+                    if (String.IsNullOrWhiteSpace(inputOption))
+                    {
+                        Console.WriteLine("\n\aInvalid Input, please enter a number");
+                        continue;
+                    }
+
+                    else if (int.TryParse(inputOption, out int option))
+                    {
+                        switch (option)
+                        {
+                            case 1:
+                                AddStudent();
+                                break;
+
+                            case 2:
+                                ShowAllStudents();
+                                break;
+
+                            case 3:
+                                ShowAllPostgradStudents();
+                                break;
+
+                            case 4:
+                                ShowAllUndergradStudents();
+                                break;
+
+                            case 5:
+                                ShowAllCurrentStudents();
+                                break;
+
+                            case 6:
+                                ShowAllPostgradCurrentStudents();
+                                break;
+
+                            case 7:
+                                ShowAllUndergradCurrentStudents();
+                                break;
+
+                            case 8:
+                                ShowAllNotCurrentStudents();
+                                break;
+
+                            case 9:
+                                ShowAllPostgradNotCurrentStudents();
+                                break;
+
+                            case 10:
+                                ShowAllUndergradNotCurrentStudents();
+                                break;
+
+                            case 11:
+                                SortList();
+                                break;
+
+                            case 12:
+                                ShowAllTotalNumberStudents();
+                                break;
+
+                            case 13:
+                                FindStudent();
+                                break;
+
+                            case 14:
+                                DeleteStudent();
+                                break;
+
+                            case 15:
+                                Clear();
+                                break;
+
+                            case 16:
+                                Console.Clear();
+                                teacher.GetTeacherManagementSystem();
+                                break;
+
+                            case 17:
+                                Console.Clear();
+                                Console.WriteLine("Thank you for using the Student management system");
+                                userOption = false;
+                                break;
+
+                            default:
+                                Console.WriteLine("\n\aThat is not an option");
+                                continue;
+                        }
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("\n\aInvalid Input ");
+                        continue;
+                    }
+                }
+
             }
         }
+
+
     }
-
 }
-}
-

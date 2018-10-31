@@ -12,3 +12,11 @@ C:\Users\1725266\Source\Repos\petercoker\dbs\dbs\obj\Debug\dbs.csproj.CoreCompil
 C:\Users\1725266\Source\Repos\petercoker\dbs\dbs\obj\Debug\dbs.exe
 C:\Users\1725266\Source\Repos\petercoker\dbs\dbs\obj\Debug\dbs.pdb
 C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.csprojAssemblyReference.cache
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.csproj.GenerateResource.cache
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.ObjectOrientatedProgramming.GUI.GUIIntro.GreetUserForm.resources
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.ObjectOrientatedProgramming.GUI.ValidatingExample.ValidatingExample.resources
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.ObjectOrientatedProgramming.GUI.CarAge.CarAge.resources
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.ObjectOrientatedProgramming.GUI.YearGrad.YearGrad.resources
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.ObjectOrientatedProgramming.GUI.EmployeePromotion.EmployeePromotionQuery.resources
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.ObjectOrientatedProgramming.GUI.LoanRepayment.LoanRepaymentCalculator.resources
+C:\Users\sonol\Downloads\_pcloud\_repositories\github\dbs\dbs\obj\Debug\dbs.ObjectOrientatedProgramming.GUI.GUIFormRevision.GUIFormRevision.resources

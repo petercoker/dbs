@@ -6,11 +6,11 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 {
     class Teachers : ICollection<Teacher>
     {
-        public List<Teacher> TeacherList = new List<Teacher>();
+        public List<Teacher> teacherList = new List<Teacher>();
 
         public int Count
         {
-            get { return TeacherList.Count; }
+            get { return teacherList.Count; }
         }
 
         public bool IsReadOnly
@@ -20,17 +20,18 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
         public void Add(Teacher item)
         {
-            TeacherList.Add(item);
+            teacherList.Add(item);
         }
 
         public void Clear()
         {
-            TeacherList.Clear();
+            teacherList.Clear();
+            Console.WriteLine($"\nTeacher List Cleared, there are {teacherList.Count} total number of Teachers in the DBS Student Management System");
         }
 
         public bool Contains(Teacher item)
         {
-            return TeacherList.Contains(item);
+            return teacherList.Contains(item);
         }
 
         public void CopyTo(Teacher[] array, int arrayIndex)
@@ -40,12 +41,12 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
         public IEnumerator<Teacher> GetEnumerator()
         {
-            return TeacherList.GetEnumerator();
+            return teacherList.GetEnumerator();
         }
 
         public bool Remove(Teacher item)
         {
-            return TeacherList.Remove(item);
+            return teacherList.Remove(item);
         }
 
         IEnumerator IEnumerable.GetEnumerator()
@@ -55,14 +56,28 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
 
         public void SortList()
         {
-            TeacherList.Sort();
+            if (!(teacherList.Count == 0))
+            {
+                Console.WriteLine("\nList of Teachers sorted by Employee ID");
+                teacherList.Sort();
+
+                foreach (Teacher staff in teacherList)
+                {
+                    Console.Write($"\nEmployee ID: {staff.EmployeeID}\nTeacher is current staff: {staff.IsCurrentEmployee}\nTeacher Name: {staff.Name}\nPhone: {staff.Phone}\nEmail: {staff.Email}\nTaught: {staff.Taught}\nSalary: ${staff.Salary}\n");
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Teacher present in Teacher managemnt system, please enter add neew Teacher into the Teacher management system");
+            }
         }
 
         public Teacher GetTeacher(int id)
         {
             Teacher teacher = null;
 
-            foreach (Teacher teachingStaff in TeacherList)
+            foreach (Teacher teachingStaff in teacherList)
             {
                 if (teachingStaff.EmployeeID.Equals(id))
                 {
@@ -74,436 +89,612 @@ namespace dbs.ObjectOrientatedProgramming.PeterCokerCA1725266
             return teacher;
         }
 
-        public bool RemoveByID(int id)
+        public void DisplayTeacherMenu()
         {
-            Teacher teacherDelete = GetTeacher(id);
-            bool removed = false;
+            Console.WriteLine("\n[DBS Teacher Management System Menu]");
+            Console.WriteLine("\nTeacher Management: Data definition options");
+            Console.WriteLine("1: Add a new Teacher");
 
-            if (teacherDelete != null)
-            {
-                TeacherList.Remove(teacherDelete);
-                removed = true;
-            }
+            Console.WriteLine("\nTeacher Management: Viewing options");
+            Console.WriteLine("2: Show list of all Teachers in Dublin Business School");
+            Console.WriteLine("3: Show list of all current Teachers in Dublin Business School");
+            Console.WriteLine("4: Show list of all not current Teachers in Dublin Business School");
+            Console.WriteLine("5: Show list of Teachers sorted by Employee ID");
+            Console.WriteLine("6: Show total number of Teachers in Dublin Business School");
 
-            return removed;
+            Console.WriteLine("\nTeacher Management: Data manipulation options");
+            Console.WriteLine("7: Find a Teacher by entering Employee ID");
+            Console.WriteLine("8: Delete a Teacher by entering Employee ID");
+            Console.WriteLine("9: Clear all Teachers in the Teacher management system");
+            Console.WriteLine("10: Clear all Teachers in the Teacher management system & Go to Student Management System");
+            Console.WriteLine("11: Quit application");
         }
 
-        public List<Teacher> GetTeacherCurrent()
+        public void AddTeacher()
         {
-            List<Teacher> currentStaffingList = new List<Teacher>();
+            Teacher teacher = new Teacher();
+            int teacherStatus, teacherPhone;
+            double teacherSalary;
+            bool userInputID = false, userInputTeacherStatus = false, userInputName = false, userInputTaught = false, userInputPhone = false, userInputEmail = false, userInputSalary = false, found = false;
+            string inputTeacherID, inputTeacherTaught, inputTeacherEmail, inputTeacherName, inputTeacherPhone, inputAttendance, inputTeacherSalary;
 
-            foreach (Teacher teacher in currentStaffingList)
+            while (!userInputID)
             {
-                if (teacher.IsCurrentEmployee == true)
+                Console.Write("\nPlease enter your Employee ID number (integer) with no spaces or enter \"q\" to go back to Teacher Menu: ");
+                inputTeacherID = Console.ReadLine();
+
+                if (String.IsNullOrWhiteSpace(inputTeacherID))
                 {
-                    currentStaffingList.Add(teacher);
+                    Console.WriteLine("\n\aInvalid Input, please enter a number");
+                    continue;
+                }
+
+                else if (inputTeacherID == "q")
+                {
+                    Console.Clear();
+                    GetTeacherManagementSystem();
+                    userInputID = true;
+                }
+
+                else if (int.TryParse(inputTeacherID, out int id))
+                {
+                    if (id <= 0)
+                    {
+                        Console.WriteLine("\n\aPlease enter a postive number or that's is not 0");
+                        continue;
+                    }
+
+                    else if (id >= 0)
+                    {
+                        Teacher checkNumber = GetTeacher(id);
+                        
+                        if (checkNumber != null)
+                        {
+                            found = true;
+                            Console.WriteLine("\n\aTeacher already exists");
+                            continue;
+                        }
+
+                        else
+                        {
+                            teacher.EmployeeID = id;
+                            userInputID = true;
+                        }
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aInvalid Input");
+                    continue;
+                }
+
+            }
+
+            while (!userInputTeacherStatus)
+            {
+                Console.Write("Please enter \"t\" for True or \"f\" for False if you are a current Staff: ");
+                inputAttendance = Console.ReadLine().ToLower();
+
+                if (String.IsNullOrWhiteSpace(inputAttendance))
+                {
+                    Console.WriteLine("\n\aInvalid input, please enter a string input");
+                    continue;
+                }
+
+                else if (inputAttendance == "t")
+                {
+                    teacher.IsCurrentEmployee = true;
+                    userInputTeacherStatus = true;
+                }
+
+                else if (inputAttendance == "f")
+                {
+                    teacher.IsCurrentEmployee = false;
+                    userInputTeacherStatus = true;
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aInvalid Input, only enter \"t\" or \"f\" if you are a current Staff");
+                    continue;
                 }
             }
 
-            return currentStaffingList;
+            while (!userInputName)
+            {
+                Console.Write("Please enter your name: ");
+                inputTeacherName = Console.ReadLine();
+                
+                if (!(String.IsNullOrWhiteSpace(inputTeacherName)))
+                {
+                    if (!(int.TryParse(inputTeacherName, out int number)))
+                    {
+                        teacher.Name = inputTeacherName;
+                        userInputName = true;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("\n\ainvalid Input");
+                        continue;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aInvalid input");
+                    continue;
+                }
+            }
+
+            while (!userInputTaught)
+            {
+                Console.Write("Please enter \"1\" if you taught Business and Management or \"2\" if you taught Computer science: ");
+                inputTeacherTaught = Console.ReadLine();
+
+                if (String.IsNullOrWhiteSpace(inputTeacherTaught))
+                {
+                    Console.WriteLine("\n\aInvalid Input, please enter a number");
+                    continue;
+                }
+
+                else if (int.TryParse(inputTeacherTaught, out teacherStatus))
+                {
+                    if (teacherStatus == 1)
+                    {
+                        teacher.Taught = TaughtEnum.BusinessAndManagement;
+                        userInputTaught = true;
+                    }
+
+                    else if (teacherStatus == 2)
+                    {
+                        teacher.Taught = TaughtEnum.ComputerScience;
+                        userInputTaught = true;
+                    }
+                    
+                    else
+                    {
+                        Console.WriteLine("\n\aPlease only enter a number between \"1\" and \"2\" if you teach either Business and Management or Computer science");
+                        continue;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aInvalid Input");
+                    continue;
+                }
+            }
+
+            while (!userInputPhone)
+            {
+                Console.Write("Please enter your 10 digit phone number (integer) with no spaces in between the number: ");
+                inputTeacherPhone = Console.ReadLine();
+
+                if (inputTeacherPhone.Length < 10 || inputTeacherPhone.Length > 10)
+                {
+                    Console.WriteLine("\n\aInvalid input, please enter 10 positive digit phone number");
+                    continue;
+                }
+
+                else if (int.TryParse(inputTeacherPhone, out teacherPhone))
+                {
+                    if (teacherPhone < 0)
+                    {
+                        continue;
+                    }
+
+                    else
+                    {
+                        teacher.Phone = teacherPhone;
+                        userInputPhone = true;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aInvalid Input");
+                    continue;
+                }
+
+            }
+
+            while (!userInputEmail)
+            {
+                Console.Write("Please enter a valid email address that contains \"@\" and \".com\": ");
+                inputTeacherEmail = Console.ReadLine();
+                
+                if (!(String.IsNullOrWhiteSpace(inputTeacherEmail)))
+                {
+                    if (inputTeacherEmail.Contains(".com") && inputTeacherEmail.Contains("@"))
+                    {
+                        teacher.Email = inputTeacherEmail;
+                        userInputEmail = true;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("\n\aInvalid Input, please enter a valid email address");
+                        continue;
+                    }
+               
+                }
+                
+                else
+                {
+                    Console.WriteLine("\n\aInvalid Input, please enter a string email");
+                    continue;
+                }
+            }
+
+            while (!userInputSalary)
+            {
+                Console.Write("Please enter your salary (double) with no spaces e.g 50.00: ");
+                inputTeacherSalary = Console.ReadLine();
+
+                if (String.IsNullOrWhiteSpace(inputTeacherSalary))
+                {
+                    Console.WriteLine("\n\aInvalid Input, please enter a number");
+                    continue;
+                }
+
+                else if (double.TryParse(inputTeacherSalary, out teacherSalary))
+                {
+                   
+                   if (teacherSalary <= 0 || teacherSalary <= 0.00 || teacherSalary <= 0.0)
+                    {
+                        Console.WriteLine("\n\aPlease enter your salary, salary must not be null or  a positive number");
+                        continue;
+                    }
+
+                    else
+                    {
+                        teacher.Salary = teacherSalary;
+                        userInputSalary = true;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aInvalid Input");
+                    continue;
+                }
+
+            }
+
+            teacherList.Add(teacher);
+            Console.WriteLine("\nTeacher has been added");
         }
 
+        public void ShowAllTeachers()
+        {
+            if (!(teacherList.Count == 0))
+            {
+                Console.WriteLine("\nAll Teachers in Dublin Business School");
+
+                foreach (Teacher teacher in teacherList)
+                {
+                    Console.WriteLine(teacher.ToString());
+                }
+                
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Teacher present in Teacher managemnt system, please enter add neew Teacher into the Teacher management system");
+            }
+        }
+
+        public void ShowAllCurrentTeachers()
+        {
+            if (!(teacherList.Count == 0))
+            {
+                Console.WriteLine("\nList of all Teachers that are currently working for Dublin Business School");
+
+                List<Teacher> isCurrentTeacherList = new List<Teacher>();
+
+                foreach (Teacher item in teacherList)
+                {
+                    if (item.IsCurrentEmployee == true)
+                    {
+                        isCurrentTeacherList.Add(item);
+                    }
+                }
+
+                if (!(isCurrentTeacherList.Count == 0))
+                {
+                    foreach (Teacher item in isCurrentTeacherList)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aNo Current Teacher present in Teacher managemnt system, please enter add Teacher into the Student management system");
+                }
+
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Teacher present in Teacher managemnt system, please enter add neew Teacher into the Teacher management system");
+            }
+        }
+
+        public void ShowAllNotCurrentTeachers()
+        {
+            if (!(teacherList.Count == 0))
+            {
+                Console.WriteLine("\nList of all Teachers that are not currently working for Dublin Business School");
+
+                List<Teacher> isCurrentTeacherList = new List<Teacher>();
+
+                foreach (Teacher item in teacherList)
+                {
+                    if (item.IsCurrentEmployee == false)
+                    {
+                        isCurrentTeacherList.Add(item);
+                    }
+                }
+
+                if (!(isCurrentTeacherList.Count == 0))
+                {
+                    foreach (Teacher item in isCurrentTeacherList)
+                    {
+                        Console.WriteLine(item.ToString());
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aAll Teacher are working for DBS and present in Teacher managemnt system, please enter add Teacher into the Student management system");
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("\n\aNo Teacher present in Teacher managemnt system, please enter add neew Teacher into the Teacher management system");
+            }
+        }
+
+        public void ShowAllTotalNumberTeachers()
+        {
+            Console.WriteLine($"\nThere are {teacherList.Count} total number of Teachers in Dublin Business School management system");
+        }
+
+        public void FindTeacher()
+        {
+            bool findInput = false, found = false;
+            string inputID;
+            Teacher teacher1 = new Teacher();
+
+            while (!findInput)
+            {
+                Console.Write("\nPlease enter the Teacher's employee ID you wish to find with no spaces in between the numbers or enter \"q\" to go back to Teacher Menu: ");
+                inputID = Console.ReadLine();
+
+                if (String.IsNullOrWhiteSpace(inputID))
+                {
+                    Console.WriteLine("\n\aInvalid Input, please enter a number");
+                    continue;
+                }
+
+                else if (inputID == "q")
+                {
+                    Console.Clear();
+                    GetTeacherManagementSystem();
+                    findInput = true;
+                }
+
+                else if (int.TryParse(inputID, out int id))
+                {
+                    foreach (Teacher teacher in teacherList)
+                    {
+                        if (teacher.EmployeeID == id)
+                        {
+                            teacher1 = teacher;
+                            found = true;
+                            findInput = true;
+                        }
+
+                    }
+
+                    if (found)
+                    {
+                        Console.Write(teacher1.ToString());
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("\a\nTeacher's employee ID not found, please add Teacher into Teacher Management System");
+                        continue;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aInvalid Input");
+                    continue;
+                }
+
+            }
+        }
+
+        public void DeleteTeacher()
+        {
+            Teacher teacher = new Teacher();
+            bool deleteInput = false, removed = false;
+
+            while (!deleteInput)
+            {
+                Console.Write("\nPlease enter the Teacher's Employee ID you wish to delete with no spaces in between the number or enter \"q\" to go back to Teacher Menu: ");
+                string inputID = Console.ReadLine();
+
+                if (String.IsNullOrWhiteSpace(inputID))
+                {
+                    Console.WriteLine("\n\aInvalid Input, please enter a number");
+                    continue;
+                }
+
+                else if (inputID == "q")
+                {
+                    Console.Clear();
+                    GetTeacherManagementSystem();
+                    deleteInput = true;
+                }
+
+                else if (int.TryParse(inputID, out int id))
+                {
+
+                    for (int i = 0; i < teacherList.Count; i++)
+                    {
+                        if (teacherList[i].EmployeeID == id)
+                        {
+                            teacherList.Remove(teacherList[i]);
+                            removed = true;
+                        }
+
+                    }
+
+                    if (removed)
+                    {
+                        Console.WriteLine($"\nThe Teacher account number: {id} has been removed from the Teacher management system");
+
+                        foreach (Teacher teachingStaff in teacherList)
+                        {
+                            Console.WriteLine(teachingStaff.ToString());
+                        }
+
+                        deleteInput = true;
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("\a\nTeacher does exist, please add Teacher into Teacher Management System");
+                        continue;
+                    }
+                }
+
+                else
+                {
+                    Console.WriteLine("\n\aInvalid Input");
+                    continue;
+                }
+            }
+        }
+        
         public void GetTeacherManagementSystem()
         {
-            Students StudentList = new Students();
-            Student student = new Student();
-            int option, studentStatus, id, phone, status;
-            bool softwarePageOption = false, keepGoing = true, userInputID = false, userInputStudentAttendance = false, userInputStatus = false, userInput = false, userInputName = false, userOption = false; ;
-            string studentName, name, email, studentAttendance, inputOption;
-            bool isCurrentStudent;
+            Teacher teacher = new Teacher();
+            Students student = new Students();
+            bool keepGoing = true, userOption = true;
+            string inputOption;
 
             while (keepGoing)
             {
-                Console.WriteLine("\n[DBS Teacher Management System Menu]");
-                Console.WriteLine("\nStudent Management: Data definition options");
-                Console.WriteLine("1: Add a new Student");
-                Console.WriteLine("2*: Change data of a Student by finding ID and editing the rest of the data");
-
-                Console.WriteLine("\nStudent Management: Viewing options");
-                Console.WriteLine("3: Show list of all Students in Dublin Business School");
-                Console.WriteLine("4: Show list of all Postgrad Students");
-                Console.WriteLine("5: Show list of all Undergrad Students");
-                Console.WriteLine("6: Show list of all Current Students");
-                Console.WriteLine("7: Show list of all Postgrad Students currently in Dublin Business School");
-                Console.WriteLine("8: Show list of all Undergrad Students currently in Dublin Business School");
-                Console.WriteLine("9: Show list of all Not Current Students");
-                Console.WriteLine("10: Show list of all Postgrad Students not currently in Dublin Business School");
-                Console.WriteLine("11: Show list of all Undergrad Students not currently in Dublin Business School");
-                Console.WriteLine("12: Show list of Students by ID");
-                Console.WriteLine("13: Show total number of Students in Dublin Business School");
-
-                Console.WriteLine("\nStudent Management: Data manipulation options");
-                Console.WriteLine("14**: Find a Student by entering Student ID"); //Fix issue only allow you to use the find once
-                Console.WriteLine("15: Delete a Student by entering Student ID");
-                Console.WriteLine("16: Clear all Students in the Student management system");
-                Console.WriteLine("17: Quit");
-
-                Console.WriteLine();
-                //Console.WriteLine("[Teacher Management]");
-                //Console.WriteLine(": Add a new Student");
-                //Console.WriteLine(": Find a Student");
-                //Console.WriteLine(": Enter a Student ID to delete a student");
-                //Console.WriteLine(": Show All Student");
-                //Console.WriteLine(": Show All Current Students");
-                //Console.WriteLine(": Show total amount of Student");
-                //Console.WriteLine(": Quit");
-
-                //Start of Testing//
-                Student student1 = new Student("Peter", 123, "peter@gmail.com", 1, true, StudentStatusEnum.Undergrad);
-                Student student2 = new Student("James", 456, "James@gmail.com", 2, false, StudentStatusEnum.Postgrad);
-                //Student student3 = new Student("Sam", 789, "Sam@gmail.com", 3, false, StudentStatusEnum.Postgrad);
-                //Student student4 = new Student("Anne", 000, "Anne@gmail.com", 4, true, StudentStatusEnum.Undergrad);
-                //Student student5 = new Student("Rock", 111, "Rock@gmail.com", 5, true, StudentStatusEnum.Postgrad);
-                //Student student6 = new Student("Paper", 153, "Paper@gmail.com", 6, false, StudentStatusEnum.Undergrad);
-                //Student student7 = new Student("Water", 153, "Water@gmail.com", 7, false, StudentStatusEnum.Undergrad);
-
-                StudentList.Add(student1);
-                StudentList.Add(student2);
-                //StudentList.Add(student3);
-                //StudentList.Add(student4);
-                //StudentList.Add(student5);
-                //StudentList.Add(student6);
-                //StudentList.Add(student7);
-                //End of Tessting
-
-                Console.WriteLine();
-
-            //    while (!userOption)
-            //    {
-            //        Console.Write("Please enter a number listed by the menu above: ");
-            //        inputOption = Console.ReadLine();
-
-            //        if (String.IsNullOrWhiteSpace(inputOption))
-            //        {
-            //            Console.WriteLine("\n\aInvalid Input, please enter a number");
-            //            continue;
-            //        }
-
-            //        userOption = true;
-
-            //        option = int.Parse(inputOption);
-            //        switch (option)
-            //        {
-            //            case 1:
-            //                Console.WriteLine();
-            //                userInput = false;
-
-            //                while (!userInputID)
-            //                {
-            //                    Console.Write("Please enter your Student ID: ");
-            //                    string input = Console.ReadLine();
-
-            //                    if (String.IsNullOrWhiteSpace(input))
-            //                    {
-            //                        Console.WriteLine("\n\aInvalid Input, please enter a number");
-            //                        continue;
-            //                    }
-
-            //                    if (int.TryParse(input, out id))
-            //                    {
-            //                        if (StudentList.CheckUniqueID(id))
-            //                        {
-            //                            Console.WriteLine("\n\aStudent ID already created, please enter unique Student ID number");
-            //                            continue;
-            //                        }
-
-            //                        else
-            //                        {
-            //                            student.StudentId = id;
-            //                            userInputID = true;
-            //                        }
-
-            //                    }
-
-            //                    else
-            //                    {
-            //                        Console.WriteLine("\n\aNot a number");
-            //                        continue;
-            //                    }
-
-
-            //                }
-
-            //                while (!userInputStudentAttendance)
-            //                {
-            //                    Console.Write("Please enter \"t\" or \"f\" if you are a current Student: ");
-            //                    studentAttendance = Console.ReadLine().ToLower();
-
-
-            //                    if (studentAttendance == "t")
-            //                    {
-            //                        student.IsCurrentStudent = true;
-            //                        userInputStudentAttendance = true;
-            //                    }
-
-            //                    else if (studentAttendance == "f")
-            //                    {
-            //                        student.IsCurrentStudent = false;
-            //                        userInputStudentAttendance = true;
-            //                    }
-
-            //                    else
-            //                    {
-            //                        Console.WriteLine("\n\aInvalid Input, only enter \"t\" or \"f\" if you are a current Student");
-            //                        continue;
-            //                    }
-            //                }
-
-            //                while (!userInputName)
-            //                {
-            //                    Console.Write("Please enter your name: ");
-            //                    studentName = Console.ReadLine();
-
-            //                    if (String.IsNullOrWhiteSpace(studentName))
-            //                    {
-            //                        Console.WriteLine("\n\aInvalid Input, please enter a string input");
-            //                        continue;
-            //                    }
-
-            //                    else
-            //                    {
-            //                        student.Name = studentName;
-            //                    }
-
-            //                }
-
-            //                while (!userInputStatus)
-            //                {
-            //                    Console.Write("Please enter \"0\" for Undergrad or \"1\" for Postgrad: ");
-            //                    studentStatus = int.Parse(Console.ReadLine());
-
-            //                    if (studentStatus == 0)
-            //                    {
-            //                        student.Status = StudentStatusEnum.Undergrad;
-            //                        userInputStatus = true;
-            //                    }
-
-            //                    else if (studentStatus == 1)
-            //                    {
-            //                        student.Status = StudentStatusEnum.Postgrad;
-            //                        userInputStatus = true;
-            //                    }
-
-            //                    else
-            //                    {
-            //                        continue;
-            //                    }
-            //                }
-
-
-            //                Console.Write("Please enter your phone number: ");
-            //                student.Phone = int.Parse(Console.ReadLine());
-
-            //                Console.Write("Please enter your email: ");
-            //                student.Email = Console.ReadLine();
-
-            //                StudentList.Add(student);
-
-            //                Console.WriteLine("\nData added to Student List");
-            //                break;
-
-            //            case 2://fix
-            //                while (!userInput)
-            //                {
-            //                    Console.Write("\nPlease enter the Student ID you wish to find to change name: ");
-            //                    id = int.Parse(Console.ReadLine());
-
-            //                    if (!StudentList.CheckUniqueID(id))
-            //                    {
-            //                        Console.WriteLine("\aStudent ID not found, this Student ID was not added into the Student Management");
-            //                        continue;
-            //                    }
-
-            //                    else
-            //                    {
-            //                        Console.WriteLine(StudentList.GetStudent(id).ToString());
-
-            //                        Console.Write("Please enter \"true\" or \"false\" to change if you are a current Student: ");
-            //                        isCurrentStudent = bool.Parse(Console.ReadLine().ToLower());
-
-            //                        Console.Write("Please enter the Student's name you wish to change to: ");
-            //                        name = Console.ReadLine();
-
-            //                        Console.Write("Please enter \"0\" to change to Undergrad or \"1\" to change to Postgrad: ");
-            //                        status = int.Parse(Console.ReadLine());
-
-            //                        Console.Write("Please enter the phone number to change to: ");
-            //                        phone = int.Parse(Console.ReadLine());
-
-            //                        Console.Write("Please enter the email address to change to: ");
-            //                        email = Console.ReadLine();
-
-            //                        Console.WriteLine(StudentList.ChangeStudentInfo(id, isCurrentStudent, name, status, phone, email));
-
-            //                        //StudentList.Add(student);
-
-            //                        Console.WriteLine("\nStudent information Changed");
-            //                        Console.WriteLine(StudentList.GetStudent(id).ToString());
-
-            //                        userInput = true;
-            //                    }
-            //                }
-            //                break;
-
-            //            case 3:
-            //                Console.WriteLine("\nAll Students in Dublin Business School");
-            //                foreach (Student pupil in StudentList)
-            //                {
-            //                    Console.WriteLine(pupil.ToString());
-            //                }
-            //                break;
-
-            //            case 4:
-            //                Console.WriteLine("\nList of Students that are Postgrad Students of Dublin Business School\n");
-
-            //                List<Student> postgradStudents = StudentList.GetAllPostgradStudent();
-            //                foreach (Student item in postgradStudents)
-            //                {
-            //                    Console.WriteLine(item.ToString());
-            //                }
-            //                break;
-
-            //            case 5:
-            //                Console.WriteLine("\nList of Students that are Undergrad Students of Dublin Business School\n");
-
-            //                List<Student> undergradStudents = StudentList.GetAllUndergradStudent();
-            //                foreach (var item in undergradStudents)
-            //                {
-            //                    Console.WriteLine(item.ToString());
-            //                }
-            //                break;
-
-            //            case 6:
-            //                Console.WriteLine("\nList of all Students that are currently studying in Dublin Business School\n");
-
-            //                List<Student> currentStudents = StudentList.GetStudentCurrent();
-            //                foreach (Student item in currentStudents)
-            //                {
-            //                    Console.WriteLine(item.ToString());
-            //                }
-            //                break;
-
-            //            case 7:
-            //                Console.WriteLine("\nList of all Students that are Postgrad Students and currently studying in Dublin Business School\n");
-
-            //                List<Student> postgradCurrent = StudentList.GetPostgradStudentCurrent();
-            //                foreach (Student item in postgradCurrent)
-            //                {
-            //                    Console.WriteLine(item.ToString());
-            //                }
-            //                break;
-
-            //            case 8:
-            //                Console.WriteLine("\nList of all Students that are Undergrad Students and currently studying in Dublin Business School\n");
-
-            //                List<Student> undergradCurrent = StudentList.GetUndergradStudentCurrent();
-            //                foreach (Student item in undergradCurrent)
-            //                {
-            //                    Console.WriteLine(item.ToString());
-            //                }
-            //                break;
-
-            //            case 9:
-            //                Console.WriteLine("\nList of all Students that are not currently studying in Dublin Business School\n");
-
-            //                List<Student> allNotCurrentStudents = StudentList.GetStudentNotCurrent();
-            //                foreach (Student item in allNotCurrentStudents)
-            //                {
-            //                    Console.WriteLine(item.ToString());
-            //                }
-            //                break;
-
-            //            case 10:
-            //                Console.WriteLine("\nList of all Students that are Postgrad Students and not currently studying in Dublin Business School\n");
-
-            //                List<Student> allNotCurrentPostgradStudents = StudentList.GetPostgradStudentNotCurrent();
-            //                foreach (Student item in allNotCurrentPostgradStudents)
-            //                {
-            //                    Console.WriteLine(item.ToString());
-            //                }
-            //                break;
-
-            //            case 11:
-            //                Console.WriteLine("\nList of all Students that are Undergrad Students and not currently studying in Dublin Business School\n");
-
-            //                List<Student> allNotCurrentUndergradStudents = StudentList.GetUndergradStudentNotCurrent();
-            //                foreach (Student item in allNotCurrentUndergradStudents)
-            //                {
-            //                    Console.WriteLine(item.ToString());
-            //                }
-            //                break;
-
-            //            case 12:
-            //                Console.WriteLine("\nList of Students sorted by Student ID");
-            //                StudentList.SortList();
-
-            //                foreach (Student pupil in StudentList)
-            //                {
-            //                    Console.Write($"\nStudent ID: {pupil.StudentId}\nStudent is a current Student: {pupil.IsCurrentStudent}\nStudent: {pupil.Name}\nStatus: {pupil.Status}\nPhone: {pupil.Phone}\nEmail: {pupil.Email}\n");
-            //                }
-            //                break;
-
-            //            case 13:
-            //                Console.WriteLine($"\nThere are {StudentList.Count} total number of Students in Dublin Business School");
-            //                break;
-
-            //            case 14:
-            //                while (!userInput)
-            //                {
-            //                    Console.Write("\nPlease enter the Student ID you wish to find: ");
-            //                    id = int.Parse(Console.ReadLine());
-
-            //                    if (!StudentList.CheckUniqueID(id))
-            //                    {
-            //                        Console.WriteLine("\aStudent ID not found, this Student ID was not added into the Student Management");
-            //                        continue;
-            //                    }
-
-            //                    else
-            //                    {
-            //                        Console.WriteLine(StudentList.GetStudent(id).ToString());
-            //                        userInput = true;
-            //                    }
-            //                }
-            //                break;
-
-            //            case 15:
-            //                Console.Write("\nPlease enter the Student ID you wish to delete: ");
-            //                id = int.Parse(Console.ReadLine());
-
-            //                Console.WriteLine(StudentList.RemoveByID(id) ? $"\nThe Student with the ID of {id} has been removed" : "\nThere was no student with that ID in the list\a");
-
-            //                Console.WriteLine();
-            //                foreach (Student pupil in StudentList)
-            //                {
-            //                    Console.WriteLine(pupil.ToString());
-            //                }
-            //                break;
-
-            //            //case 16:
-            //            //    //Getting the count after an item has been deleted
-            //            //    Console.WriteLine(StudentList.Count);
-
-            //            //    Console.WriteLine("Look for ID");
-            //            //    id = int.Parse(Console.ReadLine());
-            //            //    Console.WriteLine(StudentList.GetStudent(id).ToString());
-            //            //    break;
-
-            //            case 17:
-            //                StudentList.Clear();
-            //                Console.WriteLine("Student List Cleared");
-            //                break;
-
-            //            case 18:
-            //                keepGoing = false;
-            //                break;
-
-            //            default:
-            //                Console.WriteLine("\n\aThat is not an option");
-            //                continue;
-            //        }
-            //    }
+                keepGoing = false;
+                
+                while (userOption)
+                    {
+                        DisplayTeacherMenu();
+
+                        Console.Write("\nPlease enter a number listed by the menu above, with no spaces in between the number: ");
+                        inputOption = Console.ReadLine();
+
+                        if (String.IsNullOrWhiteSpace(inputOption))
+                        {
+                            Console.WriteLine("\n\aInvalid Input, please enter a number");
+                            continue;
+                        }
+
+                        else if (int.TryParse(inputOption, out int option))
+                        {
+                            switch (option)
+                            {
+                                case 1:
+                                    AddTeacher();
+                                    break;
+
+                                case 2:
+                                    ShowAllTeachers();
+                                    break;
+
+                                case 3:
+                                    ShowAllCurrentTeachers();
+                                    break;
+
+                                case 4:
+                                    ShowAllNotCurrentTeachers();
+                                    break;
+
+                                case 5:
+                                    SortList();
+                                    break;
+
+                                case 6:
+                                    ShowAllTotalNumberTeachers();
+                                    break;
+
+                                case 7:
+                                    FindTeacher();
+                                    break;
+
+                                case 8:
+                                    DeleteTeacher();
+                                    break;
+
+                                case 9:
+                                    Clear();
+                                    break;
+
+                                case 10:
+                                    Console.Clear();
+                                    student.GetStudentManagementSystem();
+                                    break;
+
+                                case 11:
+                                    Console.Clear();
+                                    Console.WriteLine("Thank you for using the Teacher management system");
+                                    userOption = false;
+                                    break;
+
+                                default:
+                                    Console.WriteLine("\n\aThat is not an option");
+                                    continue;
+                            }
+
+                        }
+
+                        else
+                        {
+                            Console.WriteLine("\n\aInvalid Input");
+                            continue;
+                        }
+                    }
+               
             }
         }
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
 }
