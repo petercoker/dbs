@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>dbs.ObjectOrientatedProgramming.PeterCokerCA1725266.Program</StartupObject>
+    <StartupObject>dbs.ObjectOrientatedProgramming.ExamPaper.ClassExamRevision.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -68,6 +68,16 @@
     <Compile Include="ObjectOrientatedProgramming\Collections\EmployeeProgram.cs" />
     <Compile Include="ObjectOrientatedProgramming\Collections\BookProgram.cs" />
     <Compile Include="ObjectOrientatedProgramming\Collections\TryBook.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\ClassExamRevision\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\ClassExamRevision\Rectangle.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\ClassExamRevision\Shape.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\ClassExamRevision\Square.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\InterfaceRevision\Admin.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\InterfaceRevision\IClient.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\InterfaceRevision\Person.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\InterfaceRevision\PositionEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\InterfaceRevision\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\ExamPaper\InterfaceRevision\Student.cs" />
     <Compile Include="ObjectOrientatedProgramming\ExamPaper\March2018\Program.cs" />
     <Compile Include="ObjectOrientatedProgramming\GUI\CarAge\CarAge.cs">
       <SubType>Form</SubType>
