@@ -131,6 +131,16 @@
     <Compile Include="ObjectOrientatedProgramming\GUI\YearGrad\YearGrad.Designer.cs">
       <DependentUpon>YearGrad.cs</DependentUpon>
     </Compile>
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\DublinBooks\Book.cs" />
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\DublinBooks\eBook.cs" />
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\DublinBooks\PrintedBook.cs" />
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\DublinBooks\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\Liffey\ICustomer.cs" />
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\Liffey\Program.cs" />
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\Liffey\RatingEnum.cs" />
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\Liffey\Restaurant.cs" />
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\Liffey\Shop.cs" />
+    <Compile Include="ObjectOrientatedProgramming\InClassExam\Liffey\SweetShop.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\Apple.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\ColourEnum.cs" />
     <Compile Include="ObjectOrientatedProgramming\Interface\FoodInterfaceExample\Fish.cs" />
