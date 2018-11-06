@@ -4,42 +4,54 @@ namespace dbs.ObjectOrientatedProgramming.RecapExercises
 {
     class ex8
     {
-        public void GuessNumber()
+        public void GuessNumberWhile()
         {
-            int player1, player2;
-            const int GuessLimit = 4;
+            //Declare Variables
+            int secretNumber, guessedNumber;
+            int count = 0;
 
-            Console.Write("First player enter a number: ");
-            player1 = Convert.ToInt32(Console.ReadLine());
+            //Get player 1 to enter a number
+            Console.WriteLine("Player 1 please enter number");
+            secretNumber = int.Parse(Console.ReadLine());
 
-            Console.Write("You have 3 chances to guess player 1's number: ");
+            //Clears the screen
+            Console.Clear();
 
-            for (int i = 0; i <= GuessLimit; i++)
+            //Player 2 to start guessing
+            Console.WriteLine("Please guess a number");
+
+            while (count < 3)
             {
-                player2 = Convert.ToInt32(Console.ReadLine());
+                guessedNumber = int.Parse(Console.ReadLine());
 
-                if (player1 == player2)
+                if (guessedNumber == secretNumber)
                 {
-                    Console.WriteLine("Congratulations you guessed correctly. Player one chose {0}", player1);
-                    break;
+                    Console.WriteLine($"congrats you guessed correctly, " +
+                        $"the secret number was {secretNumber}");
+                    count = 3;
                 }
-
-                else if (player2 > player1)
+                else if (count < 2)
                 {
-                    Console.WriteLine("Wrong, you guessed too high, please try again");
+                    if (guessedNumber < secretNumber)
+                    {
+                        Console.WriteLine("Guess is too low");
+                        count++;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Guess is too high");
+                        count++;
+                    }
                 }
-
                 else
                 {
-                    Console.WriteLine("Wrong, you guessed too low, please try again");
-
+                    Console.WriteLine($"You are out of guesses the secret" +
+                        $"Number was {secretNumber}");
+                    count++;
                 }
-
             }
-
-            Console.WriteLine("Sorry player one guessed {0}", player1);
-
         }
+        
 
     }
 }

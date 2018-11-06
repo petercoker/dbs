@@ -1,18 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace dbs.ObjectOrientatedProgramming.RecapExercises
 {
-    class ex10
+    class ex11
     {
-        public void CheckPinForLoop()
+        public void GetPinDoWhile()
         {
             string input;
             int correctPin = 1234;
             int userPin;
+            int goes = 0;
 
-            for (int goes = 0; goes < 3; goes++)
+            do
             {
-                Console.WriteLine("Enter pin");
+                goes++;
+                Console.WriteLine("Please enter pin");
                 input = Console.ReadLine();
                 userPin = int.Parse(input);
 
@@ -26,7 +32,10 @@ namespace dbs.ObjectOrientatedProgramming.RecapExercises
                     Console.WriteLine("Invalid Pin");
                 }
             }
+            while (goes < 3);
+
             Console.WriteLine("Goodbye");
+
 
         }
     }

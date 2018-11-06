@@ -6,14 +6,31 @@ namespace dbs.ObjectOrientatedProgramming.RecapExercises
     {
         public void GetNumberBetween()
         {
+            string input;
             int number;
-            const int limit = 10;
 
-            Console.Write("Enter a number between 1-20: ");
-            number = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Please enter a number");
+            input = Console.ReadLine();
+            number = int.Parse(input);
 
-            Console.WriteLine(number > limit ? "The number is high" : "The number is low");
-
+            while (number < 1 || number > 20)
+            {
+                Console.WriteLine("Number must be between 1 and 20");
+                input = Console.ReadLine();
+                number = int.Parse(input);
+            }
+            if (number > 10)
+            {
+                Console.WriteLine("The number is high");
+            }
+            else if (number < 10)
+            {
+                Console.WriteLine("The number is low");
+            }
+            else
+            {
+                Console.WriteLine("The number is 10");
+            }
 
         }
     }

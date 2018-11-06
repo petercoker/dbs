@@ -6,12 +6,17 @@ namespace dbs.ObjectOrientatedProgramming.RecapExercises
     {
         public void GetTemperature()
         {
-            int temp;
-
-            Console.Write("Enter the temp: ");
-            temp = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine(((temp - 32) * 5) / 9);
+            //Declare variables
+            string input;
+            double temp, celsius;
+            //get fahrenheit from user
+            Console.WriteLine("Please enter fahrenheit temp");
+            input = Console.ReadLine();
+            temp = double.Parse(input);
+            //calculate celsius
+            celsius = ((temp - 32) * 5) / 9;
+            //Print out temp to screen 
+            Console.WriteLine("The temp in Celsius is " + celsius);
         }
 
     }

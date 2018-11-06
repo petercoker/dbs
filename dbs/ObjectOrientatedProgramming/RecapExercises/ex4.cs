@@ -6,12 +6,19 @@ namespace dbs.ObjectOrientatedProgramming.RecapExercises
     {
         public void GetCircumference()
         {
-            int radius;
+            //declare variables
+            string input;
+            double radius, circumference;
 
-            Console.Write("Enter the radius: ");
-            radius = Convert.ToInt32(Console.ReadLine());
+            //take in radius
+            Console.WriteLine("Please enter the radius");
+            input = Console.ReadLine();
+            radius = double.Parse(input);
+            //calculate circumference
+            circumference = 2 * Math.PI * radius;
+            //print answer to the screen 
+            Console.WriteLine("The circumference of the circle is " + circumference);
 
-            Console.WriteLine(2 * Math.PI * radius);
         }
     }
 }
