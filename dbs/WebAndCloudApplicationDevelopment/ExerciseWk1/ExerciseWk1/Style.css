@@ -1,0 +1,4 @@
+﻿.lable::after{
+    content:"\A";
+    White-space:pre
+}
